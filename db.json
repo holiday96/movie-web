@@ -1,0 +1,58 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Anh"
+    },
+    {
+      "id": "2",
+      "name": "Mỹ"
+    },
+    {
+      "id": "3",
+      "name": "Pháp"
+    },
+    {
+      "id": "4",
+      "name": "Thái Lan"
+    },
+    {
+      "id": "5",
+      "name": "Ấn độ"
+    },
+    {
+      "id": "6",
+      "name": "Đức"
+    },
+    {
+      "id": "7",
+      "name": "Nga"
+    },
+    {
+      "id": "8",
+      "name": "Đài Loan"
+    },
+    {
+      "id": "9",
+      "name": "Nhật Bản"
+    },
+    {
+      "id": "10",
+      "name": "Trung Quốc"
+    }
+  ],
+  "movies": [
+    {
+      "id":"1",
+      "title": "New Horizon",
+      "content": "Chí Khí Bay Cao là câu chuyện về những nhân viên hàng không thế hệ mới, bằng những nỗ lực cá nhân, vượt qua thử thách của bản thân để dần trưởng thành. Trong phim, Kiều Ân diễn vai Ngô Địch, ban đầu là tiếp viên hàng không, sau đó chuyển sang học để trở thành phi công. Trong quá trình học, Ngô Địch được hai chàng trai Tiêu Mặc và Hạ Vũ cùng theo đuổi. Tiêu Mặc từng là phi công, vì gián tiếp gây ra cái chết của mẹ Hạ Vũ trong một chuyến bay nên bị bóng đen tâm lý, chuyển sang làm kỹ thuật viên bảo trì máy bay một thời gian. Hạ Vũ là “thái tử gia” – người thừa kế của hãng hàng không Trọng Hạ.",
+      "episodes": "1",
+      "runtime": "45",
+      "actor": "Trần Kiều Ân, Trịnh Khải, Chu Tử Kiêu",
+      "country": "Trung Quốc",
+      "genre": "Hoa Ngữ",
+      "releases": "2021",
+      "poster": "https://i.mydramalist.com/24D37f.jpg"
+    }
+  ]
+}
