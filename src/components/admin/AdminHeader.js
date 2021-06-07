@@ -1,6 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import WebSearchBar from "../web/WebSearchBar";
+import styled from "styled-components";
+
+const TitleHeader = styled.span`
+  font-size: 35px;
+  font-family: "Bungee Shade", cursive;
+  color: white;
+  margin-left: 20px;
+`;
 
 const AdminHeader = () => {
   return (
@@ -10,19 +17,8 @@ const AdminHeader = () => {
         to={"/admin"}
       >
         <img src="./../../logo.png" width={57} height={50} alt="" />
-        <span className="mx-3">WaMo</span>
+        <TitleHeader>WaMo</TitleHeader>
       </NavLink>
-      <button
-        className="navbar-toggler position-absolute d-md-none collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#sidebarMenu"
-        aria-controls="sidebarMenu"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon" />
-      </button>
       <ul className="navbar-nav px-3">
         <li className="nav-item text-nowrap">
           <NavLink className="nav-link" to="#">

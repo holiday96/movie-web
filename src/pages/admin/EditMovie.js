@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useParams, useHistory } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const EditMovie = ({ onEditMovie }) => {
   const {
@@ -23,21 +24,27 @@ const EditMovie = ({ onEditMovie }) => {
       }
     };
     getMovies();
-  });
+  },[]);
 
   const onSubmit = (data) => {
     const newData = {
       id: id,
       ...data
     };
-    onEditMovie(newData);
-    history.push("/admin/movie");
+    Swal.fire(
+      "Good job!",
+      "Movie was updated!",
+      "success"
+    ).then(() => {
+      onEditMovie(newData);
+      history.push("/admin/movie");
+    });
   };
 
   return (
     <div>
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Edit movie</h1>
+        <h1 class="h2 text-primary">Edit movie</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
             <Link
@@ -51,7 +58,7 @@ const EditMovie = ({ onEditMovie }) => {
         </div>
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="form-floating">
+        <div className="form-floating input-movie">
           <input
             type="text"
             className="form-control"
@@ -67,7 +74,7 @@ const EditMovie = ({ onEditMovie }) => {
           )}
           <label htmlFor="title">Title</label>
         </div>
-        <div className="form-floating">
+        <div className="form-floating input-movie">
           <textarea
             class="form-control"
             placeholder="Leave a comment here"
@@ -83,7 +90,7 @@ const EditMovie = ({ onEditMovie }) => {
           )}
           <label htmlFor="content">Content</label>
         </div>
-        <div className="form-floating">
+        <div className="form-floating input-movie">
           <input
             type="number"
             className="form-control"
@@ -101,7 +108,7 @@ const EditMovie = ({ onEditMovie }) => {
             Episodes
           </label>
         </div>
-        <div className="form-floating">
+        <div className="form-floating input-movie">
           <input
             type="number"
             className="form-control"
@@ -119,7 +126,7 @@ const EditMovie = ({ onEditMovie }) => {
             Runtime (.min)
           </label>
         </div>
-        <div className="form-floating">
+        <div className="form-floating input-movie">
           <input
             type="text"
             className="form-control"
@@ -137,7 +144,7 @@ const EditMovie = ({ onEditMovie }) => {
             Actors
           </label>
         </div>
-        <div className="form-floating">
+        <div className="form-floating input-movie">
           <input
             type="text"
             className="form-control"
@@ -155,7 +162,7 @@ const EditMovie = ({ onEditMovie }) => {
             Country
           </label>
         </div>
-        <div className="form-floating">
+        <div className="form-floating input-movie">
           <input
             type="text"
             className="form-control"
@@ -173,7 +180,7 @@ const EditMovie = ({ onEditMovie }) => {
             Genre
           </label>
         </div>
-        <div className="form-floating">
+        <div className="form-floating input-movie">
           <input
             type="number"
             className="form-control"
@@ -191,7 +198,7 @@ const EditMovie = ({ onEditMovie }) => {
             Releases
           </label>
         </div>
-        <div className="form-floating">
+        <div className="form-floating input-movie">
           <input
             type="text"
             className="form-control"
@@ -207,6 +214,42 @@ const EditMovie = ({ onEditMovie }) => {
           )}
           <label htmlFor="poster" className="form-label">
             Poster (URL)
+          </label>
+        </div>
+        <div className="form-floating input-movie">
+          <input
+            type="text"
+            className="form-control"
+            id="trailer"
+            placeholder="Trailer"
+            defaultValue={movies.trailer}
+            {...register("trailer", { required: true })}
+          />
+          {errors.trailer && (
+            <div id="errorTrailer" className="form-text text-danger">
+              Chưa nhập trailer phim.
+            </div>
+          )}
+          <label htmlFor="trailer" className="form-label">
+            Trailer (URL)
+          </label>
+        </div>
+        <div className="form-floating input-movie">
+          <input
+            type="text"
+            className="form-control"
+            id="movie"
+            placeholder="Link of Movie"
+            defaultValue={movies.movie}
+            {...register("movie", { required: true })}
+          />
+          {errors.movie && (
+            <div id="errorPoster" className="form-text text-danger">
+              Chưa nhập link phim.
+            </div>
+          )}
+          <label htmlFor="movie" className="form-label">
+            Link of Movie (URL)
           </label>
         </div>
         <button type="submit" className="btn btn-primary">

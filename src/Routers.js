@@ -10,6 +10,9 @@ import AdminHomePage from "./pages/admin/HomePage";
 import AddMovie from "./pages/admin/AddMovie";
 import EditMovie from "./pages/admin/EditMovie";
 import UsersPage from "./pages/admin/UsersPage";
+import Detail from "./pages/web/Detail";
+import EditUser from "./pages/admin/EditUser";
+import AddUser from "./pages/admin/AddUser";
 // import AccountContainer from "./components/login/accountBox/AccountContainer";
 
 
@@ -25,6 +28,12 @@ const Routers = (props) => {
               </Route>
               <Route path="/admin/movie/:id">
                 <EditMovie {...props} />
+              </Route>
+              <Route path="/admin/users/add">
+                <AddUser {...props} />
+              </Route>
+              <Route path={["/admin/users/:id"]}>
+                <EditUser {...props} />
               </Route>
               <Route path={["/admin/users"]}>
                 <UsersPage {...props} />
@@ -48,6 +57,9 @@ const Routers = (props) => {
         <Route path="/">
           <WebPageLayout>
             <Switch>
+              <Route path="/:id">
+                <Detail {...props} />
+              </Route>
               <Route path="/">
                 <WebHomePage {...props} />
               </Route>

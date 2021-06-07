@@ -37,6 +37,13 @@ function App() {
     if (response) getMovies();
   };
 
+  const editUser = async (item) => {
+    const response = await axios
+      .put(`/users/${item.id}`, item)
+      .catch((e) => console.log(e));
+    if (response) getUsers();
+  };
+
   const removeMovie = (id) => {
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
@@ -81,6 +88,50 @@ function App() {
     if (response) getMovies();
   };
 
+  const removeUser = (id) => {
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: "btn btn-success",
+        cancelButton: "btn btn-danger",
+      },
+      buttonsStyling: false,
+    });
+
+    swalWithBootstrapButtons
+      .fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, delete it!",
+        cancelButtonText: "No, cancel!",
+        reverseButtons: true,
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+          removeUserItem(id);
+          swalWithBootstrapButtons.fire(
+            "Deleted!",
+            "Your data has been deleted.",
+            "success"
+          );
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+          swalWithBootstrapButtons.fire(
+            "Cancelled",
+            "Your imaginary file is safe :)",
+            "error"
+          );
+        }
+      });
+  };
+
+  const removeUserItem = async (id) => {
+    const response = await axios
+      .delete(`/users/${id}`)
+      .catch((e) => console.log(e));
+    if (response) getUsers();
+  };
+
   const register = async (item) => {
     const response = await axios
       .post("/users", item)
@@ -96,6 +147,8 @@ function App() {
       onAddMovie={addMovie}
       onEditMovie={editMovie}
       onRemoveMovie={removeMovie}
+      onEditUser={editUser}
+      onRemoveUser={removeUser}
       onRegister={register}
     />
   );

@@ -12,7 +12,7 @@ const SearchBarContainer = styled(motion.div)`
   display: flex;
   position: fixed;
   top: 18px;
-  left: 500px;
+  right: 200px;
   flex-direction: column;
   width: 34em;
   height: 3.8em;

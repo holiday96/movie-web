@@ -12,18 +12,21 @@ const AdminHomePage = (props) => {
   let history = useHistory();
 
   function posterFormatter(cell, row, rowIndex) {
-    return (
-      <img src={cell} width="80" alt={cell}></img>
-    );
+    return <img src={cell} width="80" alt={cell}></img>;
   }
 
   const onDelete = (row, rowIndex) => {
-    
-  }
+    props.onRemoveMovie(rowIndex.id);
+  };
 
   function functionDelete(row, rowIndex) {
     return (
-      <button onClick={() => props.onRemoveMovie(row.id)} className="btn btn-danger">Delete</button>
+      <button
+        onClick={() => onDelete(row, rowIndex)}
+        className="btn btn-danger"
+      >
+        Delete
+      </button>
     );
   }
 
@@ -37,7 +40,7 @@ const AdminHomePage = (props) => {
     { dataField: "genre", text: "Genre", filter: textFilter() },
     { dataField: "releases", text: "Releases", filter: numberFilter() },
     { dataField: "poster", text: "Poster", formatter: posterFormatter },
-    {formatter: functionDelete},
+    { formatter: functionDelete },
   ];
 
   const rowEvents = {
@@ -86,8 +89,8 @@ const AdminHomePage = (props) => {
       <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
         <h1 className="h2 text-primary">List of Movies</h1>
       </div>
-      <div className="function d-flex">
-        <select className="form-select">
+      <div className="function d-flex mb-4">
+        <select className="form-select col-2 me-auto">
           <option defaultValue>-- Hành động --</option>
           <option value={1}>Xoá</option>
         </select>
@@ -105,61 +108,6 @@ const AdminHomePage = (props) => {
           Add
         </Link>
       </div>
-      {/* <div className="table-responsive">
-        <table className="table table-striped table-hover table-sm">
-          <thead className="table-dark text-center">
-            <tr>
-              <th>#</th>
-              <th>ID</th>
-              <th>Title</th>
-              <th>Content</th>
-              <th>Episodes</th>
-              <th>Runtime</th>
-              <th>Actors</th>
-              <th>Country</th>
-              <th>Genre</th>
-              <th>Release</th>
-              <th>Poster</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            {props.movies.map((movie, index) => (
-              <tr key={index} className="table-light text-center">
-                <td>
-                  <input
-                    className=""
-                    name="movieIds[]"
-                    type="checkbox"
-                    defaultValue
-                    id={movie.id}
-                  />
-                </td>
-                <td>{movie.id}</td>
-                <td>{movie.title}</td>
-                <td className="text-start">{movie.content}</td>
-                <td>{movie.episodes}</td>
-                <td>{movie.runtime} min</td>
-                <td>{movie.actor}</td>
-                <td>{movie.country}</td>
-                <td>{movie.genre}</td>
-                <td>{movie.releases}</td>
-                <td>
-                  <img src={movie.poster} width="80" alt={movie.poster} />
-                </td>
-                <td className="d-flex">
-                  <Link to={`/admin/movie/${movie.id}`} className="btn btn-sm btn-primary">
-                    Edit
-                  </Link>
-                  <button onClick={() => props.onRemoveMovie(movie.id)}className="btn btn-sm btn-danger">
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div> */}
       <BootstrapTable
         keyField="id"
         data={props.movies}

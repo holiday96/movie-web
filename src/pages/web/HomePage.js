@@ -1,35 +1,73 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { motion } from "framer-motion";
+
+const WebPageContainer = styled(motion.div)`
+  background-color: #111;
+  margin-top: 147px;
+`;
+
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
 
 const WebHomePage = (props) => {
-
   return (
-    <div className="album py-5 bg-secondary bg-gradient">
-      <div className="container-xl">
-        <div className="d-flex flex-row">
-          {props.movies.map((movie, index) => (
-            <div key={index} className="item mx-3" style={{ width: 180 }}>
-              <NavLink to={"#"} className="rounded">
-                <img
-                  src={movie.poster}
-                  className="rounded"
-                  width="180"
-                  height="276"
-                  alt=""
-                />
-              </NavLink>
-              <NavLink
+    <WebPageContainer>
+      <div className="album py-5 bg-gradient">
+        <div className="container-xl">
+          <motion.ul
+            variants={container}
+            initial="hidden"
+            animate="visible"
+            className="d-flex flex-row"
+          >
+            {props.movies.map((movie, index) => (
+              <motion.li
+                variants={item}
                 key={index}
-                to={"#"}
-                className="d-flex text-warning justify-content-center p-2 fs-5"
+                className="item mx-3"
+                style={{ width: 180 }}
               >
-                {movie.title}
-              </NavLink>
-            </div>
-          ))}
+                <Link to={`/${movie.id}`} className="rounded">
+                  <img
+                    src={movie.poster}
+                    className="rounded"
+                    width="180"
+                    height="276"
+                    alt=""
+                  />
+                </Link>
+                <Link
+                  key={index}
+                  to={`/${movie.id}`}
+                  className="d-flex text-warning justify-content-center p-2 fs-5"
+                >
+                  {movie.title}
+                </Link>
+              </motion.li>
+            ))}
+          </motion.ul>
         </div>
       </div>
-    </div>
+    </WebPageContainer>
   );
 };
 
