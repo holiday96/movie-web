@@ -1,0 +1,1 @@
+export const API = process.env.LOCAL_HOST_API_URL;

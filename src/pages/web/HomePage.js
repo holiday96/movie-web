@@ -2,14 +2,21 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const WebHomePage = (props) => {
+
   return (
-    <div className="album py-5 bg-light">
+    <div className="album py-5 bg-secondary bg-gradient">
       <div className="container-xl">
         <div className="d-flex flex-row">
           {props.movies.map((movie, index) => (
-            <div key={index} className="item">
-              <NavLink to={"#"} className="d-flex">
-                <img src={movie.poster} width="180" alt="" />
+            <div key={index} className="item mx-3" style={{ width: 180 }}>
+              <NavLink to={"#"} className="rounded">
+                <img
+                  src={movie.poster}
+                  className="rounded"
+                  width="180"
+                  height="276"
+                  alt=""
+                />
               </NavLink>
               <NavLink
                 key={index}

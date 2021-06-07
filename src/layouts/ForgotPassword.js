@@ -23,7 +23,7 @@ const ForgotPasswordLayout = () => {
                   className="form-control"
                   placeholder="Enter email address"
                   required="required"
-                  autofocus="autofocus"
+                  autoFocus="autofocus"
                 />
                 <label htmlFor="inputEmail">Enter email address</label>
               </div>

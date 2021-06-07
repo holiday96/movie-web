@@ -10,33 +10,13 @@ const AdminNav = () => {
       <div className="position-sticky pt-3">
         <ul className="nav flex-column">
           <li className="nav-item">
-            <NavLink className="nav-link text-secondary active" aria-current="page" to="#">
-              Dashboard
+            <NavLink className="nav-link text-secondary" to={'/admin/movie'}>
+              Movies
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link text-secondary" to="#">
-              Orders
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link text-secondary" to="#">
-              Products
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link text-secondary" to="#">
-              Customers
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link text-secondary" to="#">
-              Reports
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link text-secondary" to="#">
-              Integrations
+            <NavLink className="nav-link text-secondary" to={'/admin/users'}>
+              Users
             </NavLink>
           </li>
         </ul>

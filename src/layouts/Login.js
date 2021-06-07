@@ -1,24 +1,27 @@
 // import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import "../assets/login/sb-admin.css";
-import axios from "axios";
+import { axios } from "../axios";
 
-const LoginLayout = () => {
-
+const LoginLayout = (props) => {
   const {
     register,
     handleSubmit,
   } = useForm();
+  const [user, setUser] = useState([]);
+
+  const getUser = async (data) => {
+    const response = await axios
+      .get(`/users?username=${data.username}`)
+      .catch((e) => console.log(e));
+    if (response && response.data) setUser(response.data);
+  };
 
   const onSubmit = (data) => {
-    axios.post('http://localhost:3001/login', data).then(
-      response => {
-        console.log(response)
-      }
-    ).catch(err => {
-        console.log(err)
-    })
+    console.log(user);
+    getUser(data);
   };
 
   return (
@@ -33,8 +36,8 @@ const LoginLayout = () => {
                   type="text"
                   id="inputEmail"
                   className="form-control"
-                  // placeholder="Username"
-                  autofocus="autofocus"
+                  placeholder="Username"
+                  autoFocus="autofocus"
                   {...register("username", { required: true })}
                 />
                 <label htmlFor="inputUsername">Username</label>

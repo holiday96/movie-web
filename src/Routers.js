@@ -7,6 +7,11 @@ import RegisterLayout from "./layouts/Register";
 import WebPageLayout from "./layouts/Web";
 import WebHomePage from "./pages/web/HomePage";
 import AdminHomePage from "./pages/admin/HomePage";
+import AddMovie from "./pages/admin/AddMovie";
+import EditMovie from "./pages/admin/EditMovie";
+import UsersPage from "./pages/admin/UsersPage";
+// import AccountContainer from "./components/login/accountBox/AccountContainer";
+
 
 const Routers = (props) => {
   return (
@@ -15,20 +20,29 @@ const Routers = (props) => {
         <Route path="/admin">
           <AdminPageLayout>
             <Switch>
-              <Route path="/admin">
-                <AdminHomePage {...props}/>
+              <Route path="/admin/movie/add">
+                <AddMovie {...props} />
+              </Route>
+              <Route path="/admin/movie/:id">
+                <EditMovie {...props} />
+              </Route>
+              <Route path={["/admin/users"]}>
+                <UsersPage {...props} />
+              </Route>
+              <Route path={["/admin", "/admin/movie"]}>
+                <AdminHomePage {...props} />
               </Route>
             </Switch>
           </AdminPageLayout>
         </Route>
         <Route path="/login">
-          <LoginLayout />
+          <LoginLayout {...props} />
         </Route>
         <Route path="/register">
-          <RegisterLayout />
+          <RegisterLayout {...props} />
         </Route>
         <Route path="/forgot-password">
-          <ForgotPasswordLayout />
+          <ForgotPasswordLayout {...props} />
         </Route>
 
         <Route path="/">

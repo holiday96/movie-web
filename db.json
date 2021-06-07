@@ -43,7 +43,7 @@
   ],
   "movies": [
     {
-      "id":"1",
+      "id": "1",
       "title": "New Horizon",
       "content": "Chí Khí Bay Cao là câu chuyện về những nhân viên hàng không thế hệ mới, bằng những nỗ lực cá nhân, vượt qua thử thách của bản thân để dần trưởng thành. Trong phim, Kiều Ân diễn vai Ngô Địch, ban đầu là tiếp viên hàng không, sau đó chuyển sang học để trở thành phi công. Trong quá trình học, Ngô Địch được hai chàng trai Tiêu Mặc và Hạ Vũ cùng theo đuổi. Tiêu Mặc từng là phi công, vì gián tiếp gây ra cái chết của mẹ Hạ Vũ trong một chuyến bay nên bị bóng đen tâm lý, chuyển sang làm kỹ thuật viên bảo trì máy bay một thời gian. Hạ Vũ là “thái tử gia” – người thừa kế của hãng hàng không Trọng Hạ.",
       "episodes": "1",
@@ -53,6 +53,80 @@
       "genre": "Hoa Ngữ",
       "releases": "2021",
       "poster": "https://i.mydramalist.com/24D37f.jpg"
+    },
+    {
+      "id": "f80edb80-ba60-469e-8013-a8308160e39a",
+      "title": "Sell Your Haunted House",
+      "content": "Xem Phim Miễn Phí: Bộ phim Bất Động Sản Trừ Tà - Sell Your Haunted House với chủ đề siêu nhiên này kể về câu chuyện của Hong Ji-a (Jang Na-ra đóng), một thầy trừ tà nhưng lại điều hành một công ty bất động sản. Không phải là người môi giới thông thường, nhân vật này chuyên giải bùa ếm, giúp các khu đất trở nên \"an toàn\" để tiện buôn bán.",
+      "episodes": "32",
+      "runtime": "35",
+      "actor": "\tJang Na Ra, Jung Yong Hwa, Kang Hong Suk, Kang Mal Geum",
+      "country": "Hàn Quốc",
+      "genre": "Hàn Quốc",
+      "releases": "2021",
+      "poster": "https://www.kdramapal.com/wp-content/uploads/2021/04/Sell-Your-Haunted-House-main-poster-1-scaled.jpg"
+    },
+    {
+      "id": "71652592-bdf5-4bfb-9364-1ffdc82c33d9",
+      "title": "The Tree of Life",
+      "content": "Bộ phim xoay quanh hành trình cuộc đời của người con cả trong gia đình, Jack, qua những năm tháng ngây thơ của tuổi nhỏ cho đến những năm trưởng thành đau khổ và vỡ mộng khi phải cố gắng hoà thuận với người cha kỹ tính và trầm cảm (Brad Pitt). Jack lớn lên trong sự giằng xé giữa hai tính cách trái lập, một bên là người cha đại diện cho những tình cảm ức chế của con người; bên kia là người mẹ dịu dàng, mềm mỏng đầy tình thương. Điều làm thay đổi cuộc sống của anh chính là cái chết của người em ở tuổi 19, anh luôn lạc lõng giữa thế giới, luôn tìm kiếm nguồn cội thực sự của sự sống nhưng có lẽ sự tự nhiên đã từng có sẽ không thể trở về.",
+      "episodes": "1",
+      "runtime": "132",
+      "actor": "Brad Pitt, Jessica Chastain, Sean Penn, Tye Sheridan",
+      "country": "Mỹ",
+      "genre": "Tâm lý",
+      "releases": "2011",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTMwNjQ0NjMzN15BMl5BanBnXkFtZTcwNjMxMTkyNA@@._V1_.jpg"
+    },
+    {
+      "id": "429d77fb-e5c1-4e23-a5dd-39ca609131e1",
+      "title": "a",
+      "content": "c",
+      "episodes": "1",
+      "runtime": "3",
+      "actor": "d",
+      "country": "d",
+      "genre": "s",
+      "releases": "3",
+      "poster": "e"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "role": "admin",
+      "firstName": "John",
+      "lastName": "John",
+      "username": "a",
+      "email": "a",
+      "password": "a"
+    },
+    {
+      "id": "3a0f3a4f-a43a-4b88-8226-430ac1566267",
+      "role": "user",
+      "firstName": "a",
+      "lastName": "a",
+      "username": "b",
+      "email": "a@a.a",
+      "password": "a"
+    },
+    {
+      "id": "821ece9b-7a98-47fc-8db7-d0420536ef46",
+      "role": "user",
+      "firstName": "a",
+      "lastName": "a",
+      "username": "c",
+      "email": "ducbvph12717@fpt.edu.vn",
+      "password": "e"
+    },
+    {
+      "id": "f90e0b14-2318-40d3-8585-4291b6d350e1",
+      "role": "user",
+      "firstName": "c",
+      "lastName": "c",
+      "username": "c",
+      "email": "c@c",
+      "password": "c"
     }
   ]
 }
