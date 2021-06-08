@@ -17,7 +17,6 @@ function App() {
       response.data.map((item) => {
         setGenres(...genres, item.genre);
       });
-      console.log(response);
     }
   };
   const getUsers = async () => {

@@ -793,6 +793,24 @@
       "username": "admin",
       "email": "admin@admin",
       "password": "admin"
+    },
+    {
+      "id": "0c4c5ace-afd3-4661-8d9c-e135cf1bb447",
+      "role": "User",
+      "firstName": " Bách",
+      "lastName": "Nguyễn",
+      "username": "de",
+      "email": "de@de",
+      "password": "de"
+    },
+    {
+      "id": "30bfb004-96ea-467a-a00d-896d750b22b0",
+      "role": "User",
+      "firstName": "Lý",
+      "lastName": "Lê",
+      "username": "ab",
+      "email": "ab@ab",
+      "password": "ab"
     }
   ]
 }

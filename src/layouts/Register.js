@@ -3,12 +3,29 @@ import { NavLink, useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { v4 as uuidv4 } from "uuid";
 import Swal from "sweetalert2";
+import jwt from "jsonwebtoken";
+import { axios } from "../axios";
 
 const RegisterLayout = ({ onRegister }) => {
   const { register, handleSubmit } = useForm();
   const [error, setError] = useState("");
 
   let history = useHistory();
+
+  const getUser = (data) => {
+    axios
+      .get(`/users?username=${data.username}&password=${data.password}`)
+      .then((res) => {
+        if (res.data) {
+          const token = jwt.sign(res.data[0], "secret", { expiresIn: 3600 });
+          localStorage.setItem("token", token);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   const onSubmit = (data) => {
     if (data !== null) {
       const newData = {
@@ -26,6 +43,7 @@ const RegisterLayout = ({ onRegister }) => {
         Swal.fire("Welcome to WaMo!", "Register successfully!", "success").then(
           () => {
             onRegister(newData);
+            getUser(newData);
             history.push("/");
           }
         );
