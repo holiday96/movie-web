@@ -21,7 +21,7 @@ const TitleHeader = styled.span`
   margin-left: 20px;
 `;
 
-const WebHeader = () => {
+const WebHeader = (props) => {
   const checkAuth = () => {
     const token = localStorage.getItem("token");
     const auth = jwt.decode(token);
@@ -65,7 +65,7 @@ const WebHeader = () => {
           )}
           {checkAuth() && <UserAccountMenu />}
         </div>
-        <WebNav />
+        <WebNav {...props} />
         <WebSearchBar />
       </header>
     </WebHeaderContainer>

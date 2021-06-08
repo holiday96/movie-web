@@ -57,7 +57,7 @@ const Routers = (props) => {
         </Route>
 
         <Route path="/">
-          <WebPageLayout>
+          <WebPageLayout {...props}>
             <Switch>
               <Route path="/:id">
                 <Detail {...props} />

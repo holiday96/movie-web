@@ -14,9 +14,6 @@ function App() {
     const response = await axios.get("/movies").catch((e) => console.log(e));
     if (response && response.data) {
       setMovies(response.data);
-      response.data.map((item) => {
-        setGenres(...genres, item.genre);
-      });
     }
   };
   const getUsers = async () => {
@@ -24,9 +21,26 @@ function App() {
     if (response && response.data) setUsers(response.data);
   };
 
+  const getGenres = async () => {
+    const response = await axios.get("/movies").catch((e) => console.log(e));
+    if (response && response.data) {
+      movies.map((item) => {
+        if (!genres.includes(item.genre))
+          setGenres((genres) => [...genres, item.genre]);
+        // setGenre(
+        //   genres.filter(
+        //     (value, index, newGenres) => newGenres.indexOf(value) === index
+        //   )
+        // );
+      });
+    }
+  };
+
   useEffect(() => {
     getMovies();
     getUsers();
+    getGenres();
+    console.log(genres);
   }, []);
 
   const addMovie = async (item) => {
