@@ -84,7 +84,7 @@ const RegisterLayout = ({ onRegister }) => {
                   placeholder="Username"
                   {...register("username", { required: true })}
                 />
-                <label htmlFor="inputUsername">Username</label>
+                <label htmlFor="username">Username</label>
               </div>
             </div>
             <div className="form-group">
@@ -96,7 +96,7 @@ const RegisterLayout = ({ onRegister }) => {
                   placeholder="Email"
                   {...register("email", { required: true })}
                 />
-                <label htmlFor="inputUsername">Email</label>
+                <label htmlFor="email">Email</label>
               </div>
             </div>
             <div className="form-group">
@@ -110,7 +110,7 @@ const RegisterLayout = ({ onRegister }) => {
                       placeholder="Password"
                       {...register("password", { required: true })}
                     />
-                    <label htmlFor="inputPassword">Password</label>
+                    <label htmlFor="password">Password</label>
                   </div>
                 </div>
                 <div className="col-md-6">

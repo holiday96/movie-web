@@ -3,7 +3,8 @@ import { NavLink } from "react-router-dom";
 
 const ForgotPasswordLayout = () => {
   return (
-    <div className="container">
+    <div className="container-sign container-sign-forgot">
+    <div className="hoverr"></div>
       <div className="card card-login mx-auto mt-5">
         <div className="card-header">Reset Password</div>
         <div className="card-body">

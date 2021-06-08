@@ -54,13 +54,13 @@ const LoginLayout = (props) => {
               <div className="form-label-group">
                 <input
                   type="text"
-                  id="inputEmail"
+                  id="username"
                   className="form-control"
                   placeholder="Username"
                   autoFocus="autofocus"
                   {...register("username", { required: true })}
                 />
-                <label htmlFor="inputUsername">Username</label>
+                <label htmlFor="username">Username</label>
               </div>
             </div>
             <div className="form-group">
@@ -73,14 +73,6 @@ const LoginLayout = (props) => {
                   {...register("password", { required: true })}
                 />
                 <label htmlFor="inputPassword">Password</label>
-              </div>
-            </div>
-            <div className="form-group">
-              <div className="checkbox">
-                <label>
-                  <input type="checkbox" defaultValue="remember-me" /> Remember
-                  Password
-                </label>
               </div>
             </div>
             <button type="submit" className="btn btn-primary btn-block">

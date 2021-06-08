@@ -92,7 +92,7 @@ const UsersPage = (props) => {
         <button
           id="btnDeleteAll"
           onClick={onSubmit}
-          className="btn btn-danger"
+          className="btn btn-danger mr-2"
           type="submit"
           disabled
         >

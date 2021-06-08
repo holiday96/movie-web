@@ -89,7 +89,7 @@ const AdminHomePage = (props) => {
   });
 
   return (
-    <div style={{ height: 2050 }}>
+    <div style={{ height: "100%" }}>
       <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
         <h1 className="h2 text-primary">List of Movies</h1>
       </div>

@@ -8,10 +8,10 @@ const AdminPageLayout = ({ children }) => {
   return (
     <div>
       <AdminHeader />
-      <div className="container-fluid">
+      <div className="container-fluid admin-container">
         <div className="row">
           <AdminNav />
-          <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4 admin-content">
             {children}
           </main>
         </div>

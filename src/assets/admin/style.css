@@ -1,0 +1,72 @@
+/*admin-nav*/
+.admin-nav {
+  position: fixed;
+  padding-top: 120px;
+  background-image: linear-gradient(
+    to right,
+    #243949 0%,
+    #517fa4 100%
+  ) !important;
+}
+.admin-nav-inner {
+  margin-left: 15px;
+}
+.admin-nav-inner ul li a {
+  font-size: 22px;
+  color: #fffffe !important;
+}
+.admin-nav-inner ul li a:hover {
+  color: #ff8906 !important;
+}
+
+.admin-nav-inner ul li a:focus {
+  color: #ff8906 !important;
+}
+
+/*admin-header*/
+.admin-header {
+  background-image: linear-gradient(
+    to top,
+    #cc208e 0%,
+    #6713d2 100%
+  ) !important;
+}
+.admin-header-icon {
+  background-image: linear-gradient(to left, #434343 0%, black 100%) !important;
+}
+.admin-container {
+  background-image: linear-gradient(
+    to top,
+    lightgrey 0%,
+    lightgrey 1%,
+    #e0e0e0 26%,
+    #efefef 48%,
+    #d9d9d9 75%,
+    #bcbcbc 100%
+  );
+  height: 100%;
+}
+.admin-header-btn-signout {
+  background-color: #ff8906;
+  border: none;
+  color: #fff !important;
+}
+.admin-header-btn-signout:hover {
+  border: none;
+  color: black !important;
+  transition: 0.3s;
+  background: #fffffe;
+}
+.admin-info {
+  margin-right: 20px;
+  margin-top: 6px;
+  font-size: 20px;
+  color: #fffffe;
+}
+
+.admin-content {
+  height: 100%;
+}
+.admin-content h1{
+    font-weight: bold;
+}

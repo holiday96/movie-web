@@ -3,15 +3,21 @@ import Routers from "./Routers";
 import { useState, useEffect } from "react";
 import { axios } from "./axios";
 import Swal from "sweetalert2";
+import "./assets/admin/style.css";
 
 function App() {
   const [movies, setMovies] = useState([]);
   const [users, setUsers] = useState([]);
+  const [genres, setGenres] = useState([]);
 
   const getMovies = async () => {
     const response = await axios.get("/movies").catch((e) => console.log(e));
     if (response && response.data) {
       setMovies(response.data);
+      response.data.map((item) => {
+        setGenres(...genres, item.genre);
+      });
+      console.log(genres);
     }
   };
   const getUsers = async () => {
@@ -22,7 +28,7 @@ function App() {
   useEffect(() => {
     getMovies();
     getUsers();
-  },[]);
+  }, []);
 
   const addMovie = async (item) => {
     const response = await axios
