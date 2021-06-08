@@ -40,7 +40,8 @@ const RegisterLayout = ({ onRegister }) => {
   };
 
   return (
-    <div className="container container-sign">
+    <div className="container-sign container-sign-up">
+      <div className="hoverr"></div>
       <div className="card card-register mx-auto mt-5">
         <div className="card-header">Register an Account</div>
         <div className="card-body">
