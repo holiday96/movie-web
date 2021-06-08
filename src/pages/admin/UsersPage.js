@@ -1,10 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
-import filterFactory, {
-  textFilter,
-} from "react-bootstrap-table2-filter";
+import filterFactory, { textFilter } from "react-bootstrap-table2-filter";
 
 const UsersPage = (props) => {
   let history = useHistory();
@@ -32,7 +30,7 @@ const UsersPage = (props) => {
     { dataField: "password", text: "Password" },
     { dataField: "firstName", text: "Firstname", filter: textFilter() },
     { dataField: "lastName", text: "Lastname", filter: textFilter() },
-    {formatter: functionDelete},
+    { formatter: functionDelete },
   ];
 
   const rowEvents = {
@@ -75,6 +73,10 @@ const UsersPage = (props) => {
   };
 
   const onSubmit = (data) => {};
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   return (
     <div>

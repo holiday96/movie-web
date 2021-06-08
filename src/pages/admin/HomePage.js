@@ -7,7 +7,6 @@ import filterFactory, {
   numberFilter,
 } from "react-bootstrap-table2-filter";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
-import jwt from "jsonwebtoken";
 
 const AdminHomePage = (props) => {
   let history = useHistory();
@@ -85,8 +84,12 @@ const AdminHomePage = (props) => {
 
   const onSubmit = (data) => {};
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
-    <div>
+    <div style={{ height: 2050 }}>
       <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
         <h1 className="h2 text-primary">List of Movies</h1>
       </div>
@@ -105,7 +108,11 @@ const AdminHomePage = (props) => {
         >
           Delete
         </button>
-        <Link to={"/admin/movie/add"} className="btn btn-primary" type="submit">
+        <Link
+          to={"/admin/movie/add"}
+          className="btn btn-primary ml-2"
+          type="submit"
+        >
           Add
         </Link>
       </div>

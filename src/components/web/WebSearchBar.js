@@ -237,6 +237,7 @@ const WebSearchBar = (props) => {
               {tvShows.map((show) => (
                 <TvShow
                   key={show.id}
+                  id={show.id}
                   thumbnailSrc={show.poster}
                   name={show.title}
                   rating={show.rating && show.rating.average}

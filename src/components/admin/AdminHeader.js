@@ -42,7 +42,7 @@ const AdminHeader = () => {
       </NavLink>
       <ul className="navbar-nav px-3">
         <li className="nav-item text-nowrap">
-          <button className="nav-link" onClick={signout}>
+          <button className="nav-link btn btn-info p-2" onClick={signout}>
             Sign out
           </button>
         </li>

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const WebNav = () => {
   return (
-    <ul className="nav justify-content-center">
+    <ul className="nav justify-content-center navbar" style={{marginTop: 75}} >
       <li>
         <NavLink to="#" className="nav-link px-2 text-white">
           Trang chủ

@@ -26,7 +26,6 @@ const WebHeader = () => {
     const token = localStorage.getItem("token");
     const auth = jwt.decode(token);
     if (auth) {
-      console.log(true);
       return true;
     }
     return false;
@@ -34,41 +33,39 @@ const WebHeader = () => {
 
   return (
     <WebHeaderContainer>
-      <header className="d-relative p-3 bg-gradient text-white">
-        <div className="">
-          <div className="d-flex position-relative mb-3 align-items-center justify-content-end">
-            <NavLink to="/" className="mr-5">
-              <img
-                id="imagee"
-                src="../../logo.png"
-                width={57}
-                height={50}
-                alt=""
-              />
-              <TitleHeader>WaMo</TitleHeader>
-            </NavLink>
-            {!checkAuth() && (
-              <div className="ms-auto">
-                <Link
-                  type="button"
-                  to="/login"
-                  className="btn btn-outline-light mr-2"
-                >
-                  Login
-                </Link>
-                <Link
-                  type="button"
-                  to="/register"
-                  className="btn btn-outline-light"
-                >
-                  Sign-up
-                </Link>
-              </div>
-            )}
-            {checkAuth() && <UserAccountMenu />}
-          </div>
-          <WebNav />
+      <header className="position-reletive p-3 bg-gradient text-white">
+        <div className="d-flex position-fixed mb-3 align-items-center justify-content-end">
+          <NavLink to="/" className="mr-5">
+            <img
+              id="imagee"
+              src="../../logo.png"
+              width={57}
+              height={50}
+              alt=""
+            />
+            <TitleHeader>WaMo</TitleHeader>
+          </NavLink>
+          {!checkAuth() && (
+            <div className="position-fixed" style={{right:20}}>
+              <Link
+                type="button"
+                to="/login"
+                className="btn btn-outline-light mr-2"
+              >
+                Login
+              </Link>
+              <Link
+                type="button"
+                to="/register"
+                className="btn btn-outline-light"
+              >
+                Sign-up
+              </Link>
+            </div>
+          )}
+          {checkAuth() && <UserAccountMenu />}
         </div>
+        <WebNav />
         <WebSearchBar />
       </header>
     </WebHeaderContainer>

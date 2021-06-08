@@ -24,25 +24,21 @@ const EditMovie = ({ onEditMovie }) => {
       }
     };
     getMovies();
-  },[]);
+  }, []);
 
   const onSubmit = (data) => {
     const newData = {
       id: id,
-      ...data
+      ...data,
     };
-    Swal.fire(
-      "Good job!",
-      "Movie was updated!",
-      "success"
-    ).then(() => {
+    Swal.fire("Good job!", "Movie was updated!", "success").then(() => {
       onEditMovie(newData);
       history.push("/admin/movie");
     });
   };
 
   return (
-    <div>
+    <div style={{ height: 1300 }}>
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2 text-primary">Edit movie</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
@@ -50,7 +46,7 @@ const EditMovie = ({ onEditMovie }) => {
             <Link
               to={"/admin/movie"}
               type="button"
-              class="btn btn-sm btn-warning"
+              class="btn btn-sm btn-warning px-3 py-2"
             >
               Back
             </Link>
@@ -182,7 +178,7 @@ const EditMovie = ({ onEditMovie }) => {
         </div>
         <div className="form-floating input-movie">
           <input
-            type="number"
+            type="text"
             className="form-control"
             id="release"
             placeholder="Releases"
@@ -241,13 +237,8 @@ const EditMovie = ({ onEditMovie }) => {
             id="movie"
             placeholder="Link of Movie"
             defaultValue={movies.movie}
-            {...register("movie", { required: true })}
+            {...register("movie")}
           />
-          {errors.movie && (
-            <div id="errorPoster" className="form-text text-danger">
-              Chưa nhập link phim.
-            </div>
-          )}
           <label htmlFor="movie" className="form-label">
             Link of Movie (URL)
           </label>

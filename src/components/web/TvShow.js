@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import { Link, useHistory } from "react-router-dom";
 
 const TvShowContainer = styled.div`
   width: 100%;
@@ -38,15 +39,23 @@ const Rating = styled.span`
 `;
 
 export function TvShow(props) {
-  const { thumbnailSrc, name, rating } = props;
+  const { thumbnailSrc, name, rating, id } = props;
+
+  let history = useHistory();
+  const onMove = () => {
+    history.push(`/${id}`);
+    window.location.reload();
+  }
 
   return (
-    <TvShowContainer>
-      <Thumbnail>
-        <img src={thumbnailSrc} alt="" />
-      </Thumbnail>
-      <Name>{name}</Name>
-      <Rating>{rating||"N/A"}</Rating>
-    </TvShowContainer>
+    <Link to={'#'} onClick={onMove}>
+      <TvShowContainer>
+        <Thumbnail>
+          <img src={thumbnailSrc} alt="" />
+        </Thumbnail>
+        <Name>{name}</Name>
+        <Rating>{rating || "N/A"}</Rating>
+      </TvShowContainer>
+    </Link>
   );
 }

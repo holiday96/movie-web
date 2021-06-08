@@ -5,10 +5,10 @@ import { axios } from "../../axios";
 
 const DetailContainer = styled.div`
   margin-top: 147px;
-  padding-top: 20px;
+  padding-top: 40px;
   background-color: #111;
   color: white;
-  height: 1800px;
+  padding-bottom: 50px;
 `;
 
 const Detail = (props) => {
@@ -22,6 +22,7 @@ const Detail = (props) => {
         setMovie(res.data);
       })
       .catch((err) => console.log(err));
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -38,7 +39,7 @@ const Detail = (props) => {
           ></iframe>
         </div>
         <div className="d-flex bottom-content mt-5">
-          <div className="d-flex left-info col s12 xl8">
+          <div className="d-flex left-info col">
             <div className="poster mr-3">
               <img src={movie.poster} alt="" />
             </div>
@@ -48,7 +49,7 @@ const Detail = (props) => {
               <p>{movie.content}</p>
             </div>
           </div>
-          <div className="right-info">
+          <div className="right-info col-3">
             <table>
               <tbody>
                 <tr>

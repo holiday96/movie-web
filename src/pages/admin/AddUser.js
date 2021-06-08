@@ -34,7 +34,7 @@ const AddUser = ({ onAddUser }) => {
             <Link
               to={"/admin/users"}
               type="button"
-              class="btn btn-sm btn-warning"
+              class="btn btn-sm btn-warning px-3 py-2"
             >
               Back
             </Link>

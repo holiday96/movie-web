@@ -30,7 +30,7 @@ const AddMovie = ({ onAddMovie }) => {
   };
 
   return (
-    <div>
+    <div style={{ height: 1300 }}>
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2 text-primary">Add new movie</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
@@ -38,7 +38,7 @@ const AddMovie = ({ onAddMovie }) => {
             <Link
               to={"/admin/movie"}
               type="button"
-              class="btn btn-sm btn-warning"
+              class="btn btn-sm btn-warning px-3 py-2"
             >
               Back
             </Link>
@@ -163,7 +163,7 @@ const AddMovie = ({ onAddMovie }) => {
         </div>
         <div className="form-floating input-movie">
           <input
-            type="number"
+            type="text"
             className="form-control"
             id="release"
             placeholder="Releases"
@@ -218,13 +218,8 @@ const AddMovie = ({ onAddMovie }) => {
             className="form-control"
             id="movie"
             placeholder="Link of Movie"
-            {...register("movie", { required: true })}
+            {...register("movie")}
           />
-          {errors.movie && (
-            <div id="errorPoster" className="form-text text-danger">
-              Chưa nhập link phim.
-            </div>
-          )}
           <label htmlFor="movie" className="form-label">
             Link of Movie (URL)
           </label>

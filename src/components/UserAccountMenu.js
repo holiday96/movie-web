@@ -1,13 +1,52 @@
-import React from 'react'
+import React from "react";
+import { Link, useHistory } from "react-router-dom";
+import jwt from "jsonwebtoken";
 
 const UserAccountMenu = () => {
-    return (
-        <div className="action">
-            <div className="profile">
-                <img src="../avatar.jpg" alt="" />
-            </div>
-        </div>
-    )
-}
+  const token = localStorage.getItem("token");
+  const auth = jwt.decode(token);
+  let history = useHistory();
 
-export default UserAccountMenu
+  const signout = () => {
+    localStorage.removeItem("token");
+    history.push("/");
+    window.location.reload();
+  };
+
+  const menuToggle = () => {
+    const toggleMenu = document.querySelector(".menu");
+    toggleMenu.classList.toggle("active");
+  };
+
+  return (
+    <div className="action">
+      <span>Hi, {auth.firstName}</span>
+      <div className="profile" onClick={menuToggle}>
+        <img src="../avatar.jpg" alt="" />
+      </div>
+      <div className="menu">
+        <h3>
+          {auth.lastName + " " + auth.firstName}
+          <br />
+          <span>{auth.role}</span>
+        </h3>
+        <ul>
+          <li>
+            <img src="../user.png" alt="" />
+            <Link to="#">My Profile</Link>
+          </li>
+          <li>
+            <img src="../edit.png" alt="" />
+            <Link to="#">Edit Profile</Link>
+          </li>
+          <li>
+            <img src="../log-out.png" alt="" />
+            <Link to="#" onClick={signout}>Logout</Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default UserAccountMenu;
