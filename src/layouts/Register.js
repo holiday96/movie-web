@@ -13,7 +13,7 @@ const RegisterLayout = ({ onRegister }) => {
     if (data !== null) {
       const newData = {
         id: uuidv4(),
-        role: "user",
+        role: "User",
         ...data,
       };
       if (error) {

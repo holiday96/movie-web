@@ -784,6 +784,15 @@
       "username": "c",
       "email": "ducbvph12717@fpt.edu.vn",
       "password": "c"
+    },
+    {
+      "id": "71e7a24c-cd2b-4409-b641-b758eb23b2e0",
+      "role": "Admin",
+      "firstName": "Admin",
+      "lastName": "Admin",
+      "username": "admin",
+      "email": "admin@admin",
+      "password": "admin"
     }
   ]
 }
