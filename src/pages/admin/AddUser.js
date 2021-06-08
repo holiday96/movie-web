@@ -18,11 +18,7 @@ const AddUser = ({ onAddUser }) => {
         id: uuidv4(),
         ...data,
       };
-      Swal.fire(
-        "Good job!",
-        "Welcome new member!",
-        "success"
-      ).then(() => {
+      Swal.fire("Good job!", "Welcome new member!", "success").then(() => {
         onAddUser(newData);
         history.push("/admin/user");
       });
@@ -67,13 +63,8 @@ const AddUser = ({ onAddUser }) => {
             className="form-control"
             placeholder="Leave a firstName here"
             id="firstName"
-            {...register("firstName", { required: true })}
+            {...register("firstName")}
           ></input>
-          {errors.firstName && (
-            <div id="errorFirstname" className="form-text text-danger">
-              Chưa nhập Tên.
-            </div>
-          )}
           <label htmlFor="firstName">Firstname</label>
         </div>
         <div className="form-floating input-movie">
@@ -82,13 +73,8 @@ const AddUser = ({ onAddUser }) => {
             className="form-control"
             id="lastName"
             placeholder="lastName"
-            {...register("lastName", { required: true })}
+            {...register("lastName")}
           />
-          {errors.lastName && (
-            <div id="errorLastname" className="form-text text-danger">
-              Chưa nhập Họ.
-            </div>
-          )}
           <label htmlFor="lastName" className="form-label">
             Lastname
           </label>
@@ -124,7 +110,7 @@ const AddUser = ({ onAddUser }) => {
             </div>
           )}
           <label htmlFor="email" className="form-label">
-            Actors
+            Email
           </label>
         </div>
         <div className="form-floating input-movie">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 const WebPageContainer = styled(motion.div)`
   background-color: #111;
   margin-top: 147px;
+  height: 1800px;
 `;
 
 const container = {

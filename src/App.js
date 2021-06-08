@@ -3,11 +3,14 @@ import Routers from "./Routers";
 import { useState, useEffect } from "react";
 import { axios } from "./axios";
 import Swal from "sweetalert2";
+import jwt from "jsonwebtoken";
+import { useHistory } from "react-router-dom";
 
 function App() {
   const [movies, setMovies] = useState([]);
   const [users, setUsers] = useState([]);
-  const [auth, setAuth] = useState([]);
+
+  let history = useHistory();
 
   const getMovies = async () => {
     const response = await axios.get("/movies").catch((e) => console.log(e));
@@ -139,17 +142,20 @@ function App() {
     if (response) getMovies();
   };
 
+  const checkAuth = () => {
+  };
+
   return (
     <Routers
       movies={movies}
       users={users}
-      auth={auth}
       onAddMovie={addMovie}
       onEditMovie={editMovie}
       onRemoveMovie={removeMovie}
       onEditUser={editUser}
       onRemoveUser={removeUser}
       onRegister={register}
+      checkAuth={checkAuth}
     />
   );
 }

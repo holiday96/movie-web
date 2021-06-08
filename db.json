@@ -98,20 +98,20 @@
     {
       "id": "3a0f3a4f-a43a-4b88-8226-430ac1566267",
       "role": "User",
-      "firstName": "a",
-      "lastName": "a",
+      "firstName": "",
+      "lastName": "",
       "username": "b",
       "email": "a@a.acdc",
-      "password": "a"
+      "password": "b"
     },
     {
       "id": "821ece9b-7a98-47fc-8db7-d0420536ef46",
       "role": "User",
-      "firstName": "a",
-      "lastName": "a",
+      "firstName": "",
+      "lastName": "",
       "username": "c",
       "email": "ducbvph12717@fpt.edu.vn",
-      "password": "edfdfdfdf"
+      "password": "c"
     }
   ]
 }

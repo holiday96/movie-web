@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import WebSearchBar from "./WebSearchBar";
 import WebNav from "./WebNav";
 import styled from "styled-components";
+import jwt from "jsonwebtoken";
+import UserAccountMenu from "../UserAccountMenu";
 
 const WebHeaderContainer = styled.div`
   background-color: black;
@@ -20,6 +22,16 @@ const TitleHeader = styled.span`
 `;
 
 const WebHeader = () => {
+  const checkAuth = () => {
+    const token = localStorage.getItem("token");
+    const auth = jwt.decode(token);
+    if (auth) {
+      console.log(true);
+      return true;
+    }
+    return false;
+  };
+
   return (
     <WebHeaderContainer>
       <header className="d-relative p-3 bg-gradient text-white">
@@ -35,22 +47,25 @@ const WebHeader = () => {
               />
               <TitleHeader>WaMo</TitleHeader>
             </NavLink>
-            <div className="ms-auto">
-              <Link
-                type="button"
-                to="/login"
-                className="btn btn-outline-light me-2"
-              >
-                Login
-              </Link>
-              <Link
-                type="button"
-                to="/register"
-                className="btn btn-outline-light me-warning"
-              >
-                Sign-up
-              </Link>
-            </div>
+            {!checkAuth() && (
+              <div className="ms-auto">
+                <Link
+                  type="button"
+                  to="/login"
+                  className="btn btn-outline-light mr-2"
+                >
+                  Login
+                </Link>
+                <Link
+                  type="button"
+                  to="/register"
+                  className="btn btn-outline-light"
+                >
+                  Sign-up
+                </Link>
+              </div>
+            )}
+            {checkAuth() && <UserAccountMenu />}
           </div>
           <WebNav />
         </div>

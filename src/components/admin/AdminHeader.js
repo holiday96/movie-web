@@ -1,6 +1,7 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect } from "react";
+import { NavLink, useHistory } from "react-router-dom";
 import styled from "styled-components";
+import jwt from "jsonwebtoken";
 
 const TitleHeader = styled.span`
   font-size: 35px;
@@ -10,6 +11,26 @@ const TitleHeader = styled.span`
 `;
 
 const AdminHeader = () => {
+  let history = useHistory();
+  const signout = () => {
+    localStorage.removeItem("token");
+    history.push("/login");
+  };
+
+  const checkAuth = () => {
+    const token = localStorage.getItem("token");
+    const auth = jwt.decode(token);
+    if (!auth) {
+      history.push("/login");
+    } else if (auth.role !== "Admin") {
+      history.push("/");
+    }
+  };
+
+  useEffect(() => {
+    checkAuth();
+  });
+
   return (
     <header className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
       <NavLink
@@ -21,9 +42,9 @@ const AdminHeader = () => {
       </NavLink>
       <ul className="navbar-nav px-3">
         <li className="nav-item text-nowrap">
-          <NavLink className="nav-link" to="#">
+          <button className="nav-link" onClick={signout}>
             Sign out
-          </NavLink>
+          </button>
         </li>
       </ul>
     </header>

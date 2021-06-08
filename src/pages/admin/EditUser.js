@@ -14,6 +14,8 @@ const EditUser = ({ onEditUser }) => {
   let history = useHistory();
 
   const [user, setUser] = useState([]);
+  const [error, setError] = useState("");
+  const [valid, setValid] = useState([]);
   useEffect(() => {
     axios
       .get(`users/${id}`)
@@ -21,9 +23,19 @@ const EditUser = ({ onEditUser }) => {
         setUser(res.data);
       })
       .catch((e) => console.log(e));
-  }, []);
+  }, [id]);
 
   const onSubmit = (data) => {
+    // axios.get(`users?email=${data.email}`).then((res) => {
+    //   if (res.data.length!==0) {
+    //     setError("Email already exists!");
+    //   } else {
+    //     setError("");
+    //   }
+    //   // console.log(res.data.length===0);
+    // });
+    // console.log(error);
+
     const newData = {
       id: id,
       ...data,
@@ -51,7 +63,10 @@ const EditUser = ({ onEditUser }) => {
         </div>
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <select defaultValue={{label: user.role, value: user.role}} className="form-select col-2 me-auto">
+        <select
+          defaultValue={{ label: user.role, value: user.role }}
+          className="form-select col-2 mb-3"
+        >
           <option value={"User"}>User</option>
           <option value={"Admin"}>Admin</option>
         </select>
@@ -78,13 +93,8 @@ const EditUser = ({ onEditUser }) => {
             placeholder="Leave a firstName here"
             id="firstName"
             defaultValue={user.firstName}
-            {...register("firstName", { required: true })}
+            {...register("firstName")}
           ></input>
-          {errors.firstName && (
-            <div id="errorFirstname" className="form-text text-danger">
-              Chưa nhập Tên.
-            </div>
-          )}
           <label htmlFor="firstName">Firstname</label>
         </div>
         <div className="form-floating input-movie">
@@ -94,13 +104,8 @@ const EditUser = ({ onEditUser }) => {
             id="lastName"
             placeholder="lastName"
             defaultValue={user.lastName}
-            {...register("lastName", { required: true })}
+            {...register("lastName")}
           />
-          {errors.lastName && (
-            <div id="errorLastname" className="form-text text-danger">
-              Chưa nhập Họ.
-            </div>
-          )}
           <label htmlFor="lastName" className="form-label">
             Lastname
           </label>
@@ -138,7 +143,7 @@ const EditUser = ({ onEditUser }) => {
             </div>
           )}
           <label htmlFor="email" className="form-label">
-            Actors
+            Email
           </label>
         </div>
         <div className="form-floating input-movie">

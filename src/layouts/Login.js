@@ -1,28 +1,47 @@
-// import React, { useState } from "react";
-import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
+import { NavLink, useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import "../assets/login/sb-admin.css";
 import { axios } from "../axios";
+import jwt from "jsonwebtoken";
 
 const LoginLayout = (props) => {
-  const {
-    register,
-    handleSubmit,
-  } = useForm();
-  const [user, setUser] = useState([]);
+  const { register, handleSubmit } = useForm();
 
-  const getUser = async (data) => {
-    const response = await axios
-      .get(`/users?username=${data.username}`)
-      .catch((e) => console.log(e));
-    if (response && response.data) setUser(response.data);
+  let history= useHistory();
+
+  const getUser = (data) => {
+    axios
+      .get(`/users?username=${data.username}&password=${data.password}`)
+      .then((res) => {
+        if (res.data) {
+          const token = jwt.sign(res.data[0], "secret", { expiresIn: 3600 });
+          localStorage.setItem("token", token);
+          checkAuth();
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   const onSubmit = (data) => {
-    console.log(user);
     getUser(data);
   };
+
+  const checkAuth = () => {
+    const token = localStorage.getItem("token");
+    const auth = jwt.decode(token);
+    if (auth) {
+      if (auth.role === "Admin") history.push("/admin");
+      else if (auth.role === "User") history.push("/");
+      console.log("user");
+    }
+  }
+
+  useEffect(() => {
+    checkAuth();
+  }, []);
 
   return (
     <div className="container">

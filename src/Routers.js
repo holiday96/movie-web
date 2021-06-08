@@ -13,7 +13,6 @@ import UsersPage from "./pages/admin/UsersPage";
 import Detail from "./pages/web/Detail";
 import EditUser from "./pages/admin/EditUser";
 import AddUser from "./pages/admin/AddUser";
-// import AccountContainer from "./components/login/accountBox/AccountContainer";
 
 
 const Routers = (props) => {
@@ -23,12 +22,14 @@ const Routers = (props) => {
         <Route path="/admin">
           <AdminPageLayout>
             <Switch>
+              {/* movies */}
               <Route path="/admin/movie/add">
                 <AddMovie {...props} />
               </Route>
               <Route path="/admin/movie/:id">
                 <EditMovie {...props} />
               </Route>
+              {/* users */}
               <Route path="/admin/users/add">
                 <AddUser {...props} />
               </Route>
@@ -38,6 +39,7 @@ const Routers = (props) => {
               <Route path={["/admin/users"]}>
                 <UsersPage {...props} />
               </Route>
+              {/* admin home */}
               <Route path={["/admin", "/admin/movie"]}>
                 <AdminHomePage {...props} />
               </Route>
