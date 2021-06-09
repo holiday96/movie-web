@@ -42,8 +42,11 @@ const AdminHeader = () => {
       </NavLink>
       <ul className="navbar-nav px-3">
         <li className="d-flex nav-item text-nowrap">
-          <span className="admin-info">Hi, {auth.firstName}</span>
-          <button className="nav-link admin-header-btn-signout btn btn-info p-2" onClick={signout}>
+          {auth && <span className="admin-info">Hi, {auth.firstName}</span>}
+          <button
+            className="nav-link admin-header-btn-signout btn btn-info p-2"
+            onClick={signout}
+          >
             Sign out
           </button>
         </li>
