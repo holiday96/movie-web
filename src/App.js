@@ -135,13 +135,10 @@ function App() {
   };
 
   const register = async (item) => {
-    const response = await axios
+    axios
       .post("/users", item)
       .catch((e) => console.log(e));
-    if (response) getMovies();
   };
-
-  const checkAuth = () => {};
 
   return (
     <Routers
@@ -153,7 +150,6 @@ function App() {
       onEditUser={editUser}
       onRemoveUser={removeUser}
       onRegister={register}
-      checkAuth={checkAuth}
     />
   );
 }

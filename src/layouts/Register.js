@@ -44,12 +44,33 @@ const RegisterLayout = ({ onRegister }) => {
           () => {
             onRegister(newData);
             getUser(newData);
-            history.push("/");
+            axios
+              .get(`/users?username=${newData.username}`)
+              .then((res) => {
+                if (res.data) {
+                  const token = jwt.sign(res.data[0], "secret", { expiresIn: 3600 });
+                  localStorage.setItem("token", token);
+                  checkAuth();
+                }
+              })
+              .catch((err) => {
+                console.log(err);
+              });
           }
         );
       }
     }
   };
+
+  const checkAuth = () => {
+    const token = localStorage.getItem("token");
+    const auth = jwt.decode(token);
+    if (auth) {
+      if (auth.role === "Admin") history.push("/admin");
+      else if (auth.role === "User") history.push("/");
+      console.log("user");
+    }
+  }
 
   const checkPassword = (e) => {
     let password = document.getElementById("password").value;
