@@ -13,6 +13,8 @@ import UsersPage from "./pages/admin/UsersPage";
 import Detail from "./pages/web/Detail";
 import EditUser from "./pages/admin/EditUser";
 import AddUser from "./pages/admin/AddUser";
+import FilterGenre from "./pages/web/FilterGenre";
+import FilterCountry from "./pages/web/FilterCountry";
 
 
 const Routers = (props) => {
@@ -59,6 +61,12 @@ const Routers = (props) => {
         <Route path="/">
           <WebPageLayout {...props}>
             <Switch>
+              <Route path="/genre/:key">
+                <FilterGenre {...props} />
+              </Route>
+              <Route path="/country/:key">
+                <FilterCountry {...props} />
+              </Route>
               <Route path="/:id">
                 <Detail {...props} />
               </Route>

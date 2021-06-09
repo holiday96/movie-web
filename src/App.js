@@ -8,6 +8,8 @@ import "./assets/admin/style.css";
 function App() {
   const [movies, setMovies] = useState([]);
   const [users, setUsers] = useState([]);
+  const [genres, setGenres] = useState([]);
+  const [countries, setCountries] = useState([]);
 
   const getMovies = async () => {
     const response = await axios.get("/movies").catch((e) => console.log(e));
@@ -19,11 +21,31 @@ function App() {
     const response = await axios.get("/users").catch((e) => console.log(e));
     if (response && response.data) setUsers(response.data);
   };
+  const getGenres = (movies) => {
+    movies.map((item) => setGenres((genres) => [...genres, item.genre]));
+  };
+  const getCountries = (movies) => {
+    movies.map((item) => setCountries((countries) => [...countries, item.country]));
+  };
 
   useEffect(() => {
     getMovies();
     getUsers();
   }, []);
+  useEffect(() => {
+    getGenres(movies);
+    getCountries(movies);
+  }, [movies]);
+  useEffect(() => {
+      setGenres(
+        genres.filter((value, index, self) => self.indexOf(value) === index)
+      );
+  }, [genres.length!==0]);
+  useEffect(() => {
+      setCountries(
+        countries.filter((value, index, self) => self.indexOf(value) === index)
+      );
+  }, [countries.length!==0]);
 
   const addMovie = async (item) => {
     const response = await axios
@@ -135,15 +157,15 @@ function App() {
   };
 
   const register = async (item) => {
-    axios
-      .post("/users", item)
-      .catch((e) => console.log(e));
+    axios.post("/users", item).catch((e) => console.log(e));
   };
 
   return (
     <Routers
       movies={movies}
       users={users}
+      genres={genres}
+      countries={countries}
       onAddMovie={addMovie}
       onEditMovie={editMovie}
       onRemoveMovie={removeMovie}

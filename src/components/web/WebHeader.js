@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import WebSearchBar from "./WebSearchBar";
 import WebNav from "./WebNav";
@@ -59,7 +59,7 @@ const WebHeader = (props) => {
                 to="/register"
                 className="btn btn-outline-light"
               >
-                Sign-up
+                Register
               </Link>
             </div>
           )}

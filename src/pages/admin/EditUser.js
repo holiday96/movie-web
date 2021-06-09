@@ -14,8 +14,6 @@ const EditUser = ({ onEditUser }) => {
   let history = useHistory();
 
   const [user, setUser] = useState([]);
-  const [error, setError] = useState("");
-  const [valid, setValid] = useState([]);
   useEffect(() => {
     axios
       .get(`users/${id}`)
@@ -26,16 +24,6 @@ const EditUser = ({ onEditUser }) => {
   }, [id]);
 
   const onSubmit = (data) => {
-    // axios.get(`users?email=${data.email}`).then((res) => {
-    //   if (res.data.length!==0) {
-    //     setError("Email already exists!");
-    //   } else {
-    //     setError("");
-    //   }
-    //   // console.log(res.data.length===0);
-    // });
-    // console.log(error);
-
     const newData = {
       id: id,
       ...data,
