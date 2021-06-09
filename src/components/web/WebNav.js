@@ -14,6 +14,9 @@ const WebNav = (props) => {
           setGenres((genres) => [...genres, item.genre]);
         }
       });
+      // setGenres(
+      //   genres.filter((value, index, self) => self.indexOf(value) === index)
+      // );
     }
   };
   const menuToggleGenre = () => {
@@ -34,19 +37,16 @@ const WebNav = (props) => {
   };
 
   const click = () => {
-    setGenres(
-      genres.filter((value, index, self) => self.indexOf(value) === index)
-    );
+    console.log(genres);
   };
   useEffect(() => {
     getGenres();
-    click();
-  }, []);
+  }, [genres]);
 
   return (
     <ul className="nav justify-content-center navbar" style={{ marginTop: 75 }}>
       <li>
-        <NavLink to="#" onClick={click} className="nav-link px-2 text-white">
+        <NavLink to="#" onClick={click} className="nav-link px-2 mx-3 text-white">
           Trang chủ
         </NavLink>
       </li>
@@ -54,7 +54,7 @@ const WebNav = (props) => {
         <NavLink
           to="#"
           onMouseOver={menuToggleGenre}
-          className="nav-link px-2 text-white"
+          className="nav-link px-2 mx-3 text-white"
         >
           Thể loại
         </NavLink>
@@ -72,7 +72,7 @@ const WebNav = (props) => {
         <NavLink
           to="#"
           onMouseOver={menuToggleCountry}
-          className="nav-link px-2 text-white"
+          className="nav-link px-2 mx-3 text-white"
         >
           Quốc gia
         </NavLink>
@@ -85,12 +85,12 @@ const WebNav = (props) => {
         </div>
       </li>
       <li>
-        <NavLink to="#" className="nav-link px-2 text-white">
+        <NavLink to="#" className="nav-link px-2 mx-3 text-white">
           Phim lẻ
         </NavLink>
       </li>
       <li>
-        <NavLink to="#" className="nav-link px-2 text-white">
+        <NavLink to="#" className="nav-link px-2 mx-3 text-white">
           Phim bộ
         </NavLink>
       </li>
