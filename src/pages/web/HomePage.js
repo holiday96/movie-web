@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -31,19 +31,58 @@ const item = {
 };
 
 const WebHomePage = (props) => {
-  // let slides = [];
   // const [postArray, setPostArray] = useState([]);
-  // if (props.movies.length!==0) {
-  //   console.log(props.movies);
-  //   let postIndex = Math.floor(Math.random() * props.movies.length);
-  //   while (postIndex > props.movies.length - 2) {
-  //     postIndex = Math.floor(Math.random() * props.movies.length);
+  // const [slides, setSlides] = useState([]);
+
+  // const getPostArray = (movies) => {
+  //   if (movies.length !== 0) {
+  //     let i = Math.floor(Math.random() * movies.length);
+  //     while (i > movies.length - 4) {
+  //       i = Math.floor(Math.random() * movies.length);
+  //     }
+  //     setPostArray([
+  //       movies[i],
+  //       movies[i + 1],
+  //       movies[i + 2],
+  //       movies[i + 3],
+  //       movies[i + 4],
+  //     ]);
   //   }
-  //   setPostArray([
-  //     props.movies[Math.random() * props.movies.length],
-  //     props.movies[Math.random() * props.movies.length],
-  //     props.movies[Math.random() * props.movies.length],
-  //   ]);
+  // };
+
+  // const getSlides = (postArray) => {
+  //   if (postArray.length !== 0)
+  //     setSlides([
+  //       <Link to={`/${postArray[0].id}`}>
+  //         <img src={postArray[0].poster} width="470" height="730" alt="3" />
+  //       </Link>,
+  //       <Link to={`/${postArray[1].id}`}>
+  //         <img src={postArray[1].poster} width="470" height="730" alt="2" />
+  //       </Link>,
+  //       <Link to={`/${postArray[2].id}`}>
+  //         <img src={postArray[2].poster} width="470" height="730" alt="3" />
+  //       </Link>,
+  //       <Link to={`/${postArray[3].id}`}>
+  //         <img src={postArray[3].poster} width="470" height="730" alt="3" />
+  //       </Link>,
+  //       <Link to={`/${postArray[4].id}`}>
+  //         <img src={postArray[4].poster} width="470" height="730" alt="3" />
+  //       </Link>,
+  //     ]);
+  // };
+
+  // useEffect(() => {
+  //   getSlides(postArray);
+  //   setReady(true);
+  // }, [postArray]);
+
+  // useEffect(() => {
+  //   getSlides(postArray);
+  // }, [ready]);
+
+  // useEffect(() => {
+  //   getPostArray(props.movies);
+  // }, [props.movies]);
   let slides = [
     <Link to={`/7629fb68-0677-4bda-89ae-9a548adc3b57`}>
       <img
@@ -86,17 +125,6 @@ const WebHomePage = (props) => {
       />
     </Link>,
   ];
-
-  // let slides = [
-  //   <img src={props.movies[Math.floor(Math.random() * props.movies.length)].poster} alt="1" />,
-  //   <img src={props.movies[Math.floor(Math.random() * props.movies.length)].poster} alt="1" />,
-  //   <img src={props.movies[Math.floor(Math.random() * props.movies.length)].poster} alt="1" />,
-  //   <img src={props.movies[Math.floor(Math.random() * props.movies.length)].poster} alt="1" />,
-  //   <img src={props.movies[Math.floor(Math.random() * props.movies.length)].poster} alt="1" />,
-  // ];
-
-  // let slides = postArray.map((i)=>[<img src={i.poster} alt="1" width="470" height="730"/>])
-  // }
 
   useEffect(() => {
     window.scrollTo(0, 0);

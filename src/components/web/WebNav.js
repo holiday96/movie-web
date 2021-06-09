@@ -25,9 +25,9 @@ const WebNav = (props) => {
     console.log(props.genres);
   };
 
-  useEffect(() => {
-    console.log(props.countries);
-  }, [props.countries]);
+  // useEffect(() => {
+  //   console.log(props.countries);
+  // }, [props.countries]);
 
   const onMoveGenre = (item) => {
     history.push(`/genre/${item}`);
