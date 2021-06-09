@@ -1,27 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { axios } from "../../axios";
 
 const WebNav = (props) => {
+  const [genres, setGenres] = useState([]);
+
+  const getGenres = async () => {
+    const response = await axios.get("/movies").catch((e) => console.log(e));
+    if (response && response.data) {
+      const gen = response.data;
+      gen.map((item, index) => {
+        if (!genres.includes(item.genre)) {
+          setGenres((genres) => [...genres, item.genre]);
+        }
+      });
+    }
+  };
   const menuToggleGenre = () => {
     const toggleMenu = document.querySelector(".model-menu-genre");
-    toggleMenu.classList.toggle("active");
+    toggleMenu.classList.add("active");
   };
   const menuToggleGenreOut = () => {
     const toggleMenu = document.querySelector(".model-menu-genre");
-    toggleMenu.classList.toggle("active");
+    toggleMenu.classList.remove("active");
   };
   const menuToggleCountry = () => {
     const toggleMenu = document.querySelector(".model-menu-country");
-    toggleMenu.classList.toggle("active");
+    toggleMenu.classList.add("active");
   };
   const menuToggleCountryOut = () => {
     const toggleMenu = document.querySelector(".model-menu-country");
-    toggleMenu.classList.toggle("active");
+    toggleMenu.classList.remove("active");
   };
 
   const click = () => {
-    console.log(props.genre);
-  }
+    setGenres(
+      genres.filter((value, index, self) => self.indexOf(value) === index)
+    );
+  };
+  useEffect(() => {
+    getGenres();
+    click();
+  }, []);
 
   return (
     <ul className="nav justify-content-center navbar" style={{ marginTop: 75 }}>
@@ -34,16 +54,17 @@ const WebNav = (props) => {
         <NavLink
           to="#"
           onMouseOver={menuToggleGenre}
-          onMouseOut={menuToggleGenreOut}
           className="nav-link px-2 text-white"
         >
           Thể loại
         </NavLink>
-        <div className="model-menu-genre">
+        <div className="model-menu-genre" onMouseLeave={menuToggleGenreOut}>
           <ul>
-            <li>
-              <Link to="#">My Profile</Link>
-            </li>
+            {genres.map((item) => (
+              <li>
+                <Link to={`/${item}`}>{item}</Link>
+              </li>
+            ))}
           </ul>
         </div>
       </li>
@@ -51,12 +72,11 @@ const WebNav = (props) => {
         <NavLink
           to="#"
           onMouseOver={menuToggleCountry}
-          onMouseOut={menuToggleCountryOut}
           className="nav-link px-2 text-white"
         >
           Quốc gia
         </NavLink>
-        <div className="model-menu-country">
+        <div className="model-menu-country" onMouseLeave={menuToggleCountryOut}>
           <ul>
             <li>
               <Link to="#">My Profile</Link>

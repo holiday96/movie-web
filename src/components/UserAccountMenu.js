@@ -15,16 +15,21 @@ const UserAccountMenu = () => {
 
   const menuToggle = () => {
     const toggleMenu = document.querySelector(".menu");
-    toggleMenu.classList.toggle("active");
+    toggleMenu.classList.add("active");
+  };
+
+  const menuToggleLeave = () => {
+    const toggleMenu = document.querySelector(".menu");
+    toggleMenu.classList.remove("active");
   };
 
   return (
     <div className="action">
       <span>Hi, {auth.firstName}</span>
-      <div className="profile" onClick={menuToggle}>
+      <div className="profile" onMouseOver={menuToggle}>
         <img src="../avatar.jpg" alt="" />
       </div>
-      <div className="menu">
+      <div className="menu" onMouseLeave={menuToggleLeave}>
         <h3>
           {auth.lastName + " " + auth.firstName}
           <br />
@@ -41,7 +46,9 @@ const UserAccountMenu = () => {
           </li>
           <li>
             <img src="../log-out.png" alt="" />
-            <Link to="#" onClick={signout}>Logout</Link>
+            <Link to="#" onClick={signout}>
+              Logout
+            </Link>
           </li>
         </ul>
       </div>
