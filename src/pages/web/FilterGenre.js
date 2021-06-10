@@ -113,7 +113,9 @@ const FilterGenre = () => {
           </div>
         )}
         <div className="container-filter mt-5">
-          <p className="suggest-text">Danh sách phim {movie.genre}</p>
+          {filter[0] && (
+            <p className="suggest-text">Danh sách phim {filter[0].genre}</p>
+          )}
           <motion.ul
             variants={container}
             initial="hidden"
