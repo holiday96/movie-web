@@ -717,18 +717,22 @@
   ],
   "users": [
     {
+      "favor": [
+        "13c97510-0d6d-4b85-bdb6-817fceebc1f4",
+        "3cfc0ab7-24fa-4ab5-be90-dbd269e6e826",
+        "7629fb68-0677-4bda-89ae-9a548adc3b57",
+        "ddf40954-5ad9-4ae9-9e40-e74802d2aabb",
+        "f80edb80-ba60-469e-8013-a8308160e39a",
+        "dd3362eb-560c-4aa7-8b75-ea49d23b15e6",
+        "5e6b6af8-73d6-4992-ba00-6fbf40105d0d"
+      ],
       "id": "1",
       "role": "Admin",
       "firstName": "Boss",
       "lastName": "Boss",
       "username": "a",
       "email": "a@sfsf",
-      "password": "a",
-      "favor": [
-        "13c97510-0d6d-4b85-bdb6-817fceebc1f4",
-        "3cfc0ab7-24fa-4ab5-be90-dbd269e6e826",
-        "7629fb68-0677-4bda-89ae-9a548adc3b57"
-      ]
+      "password": "a"
     },
     {
       "id": "3a0f3a4f-a43a-4b88-8226-430ac1566267",

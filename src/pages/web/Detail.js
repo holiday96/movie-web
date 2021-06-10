@@ -101,6 +101,22 @@ const Detail = (props) => {
         };
         axios.put(`/users/${auth.id}`, newData);
       }
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      
+      Toast.fire({
+        icon: 'success',
+        title: 'Added to your library successfully'
+      })
       resignin();
     }
   };

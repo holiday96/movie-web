@@ -31,58 +31,6 @@ const item = {
 };
 
 const WebHomePage = (props) => {
-  // const [postArray, setPostArray] = useState([]);
-  // const [slides, setSlides] = useState([]);
-
-  // const getPostArray = (movies) => {
-  //   if (movies.length !== 0) {
-  //     let i = Math.floor(Math.random() * movies.length);
-  //     while (i > movies.length - 4) {
-  //       i = Math.floor(Math.random() * movies.length);
-  //     }
-  //     setPostArray([
-  //       movies[i],
-  //       movies[i + 1],
-  //       movies[i + 2],
-  //       movies[i + 3],
-  //       movies[i + 4],
-  //     ]);
-  //   }
-  // };
-
-  // const getSlides = (postArray) => {
-  //   if (postArray.length !== 0)
-  //     setSlides([
-  //       <Link to={`/${postArray[0].id}`}>
-  //         <img src={postArray[0].poster} width="470" height="730" alt="3" />
-  //       </Link>,
-  //       <Link to={`/${postArray[1].id}`}>
-  //         <img src={postArray[1].poster} width="470" height="730" alt="2" />
-  //       </Link>,
-  //       <Link to={`/${postArray[2].id}`}>
-  //         <img src={postArray[2].poster} width="470" height="730" alt="3" />
-  //       </Link>,
-  //       <Link to={`/${postArray[3].id}`}>
-  //         <img src={postArray[3].poster} width="470" height="730" alt="3" />
-  //       </Link>,
-  //       <Link to={`/${postArray[4].id}`}>
-  //         <img src={postArray[4].poster} width="470" height="730" alt="3" />
-  //       </Link>,
-  //     ]);
-  // };
-
-  // useEffect(() => {
-  //   getSlides(postArray);
-  //   setReady(true);
-  // }, [postArray]);
-
-  // useEffect(() => {
-  //   getSlides(postArray);
-  // }, [ready]);
-
-  // useEffect(() => {
-  //   getPostArray(props.movies);
-  // }, [props.movies]);
   let slides = [
     <Link to={`/7629fb68-0677-4bda-89ae-9a548adc3b57`}>
       <img
