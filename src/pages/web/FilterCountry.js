@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Link, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import { axios } from "../../axios";
 import { motion } from "framer-motion";
+import { ImHeart, ImHeartBroken } from "react-icons/im";
+import { RiHeartAddFill } from "react-icons/ri";
+import jwt from "jsonwebtoken";
+import Swal from "sweetalert2";
 
 const FilterContainer = styled.div`
   margin-top: 147px;
@@ -35,7 +39,115 @@ const item = {
 const FilterCountry = () => {
   const [filter, setFilter] = useState([]);
   const [movie, setMovie] = useState([]);
+  const [like, setLike] = useState(false);
   let { key } = useParams();
+  const [token, setToken] = useState(localStorage.getItem("token"));
+  const [auth, setAuth] = useState(jwt.decode(token));
+  let history = useHistory();
+
+  const checkFavor = () => {
+    if (auth) {
+      if (auth.favor !== undefined)
+        if (auth.favor.includes(movie.id)) {
+          return setLike(true);
+        }
+    }
+    return setLike(false);
+  };
+
+  const dislikeAction = () => {
+    const tagLike = document.querySelector(".movie-liked");
+    tagLike.style.visibility = "hidden";
+    const tagDislike = document.querySelector(".movie-liked.dislike");
+    tagDislike.style.visibility = "visible";
+  };
+
+  const dislikeActionOut = () => {
+    const tagLike = document.querySelector(".movie-liked");
+    tagLike.style.visibility = "visible";
+    const tagDislike = document.querySelector(".movie-liked.dislike");
+    tagDislike.style.visibility = "hidden";
+  };
+
+  const resignin = () => {
+    localStorage.removeItem("token");
+    axios
+      .get(`/users?id=${auth.id}`)
+      .then((res) => {
+        if (res.data) {
+          const newToken = jwt.sign(res.data[0], "secret", { expiresIn: 3600 });
+          setToken(localStorage.setItem("token", newToken));
+          setAuth(jwt.decode(token));
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const addFavor = () => {
+    if (!token) {
+      Swal.fire({
+        title: "Login to use the service!",
+        showCancelButton: true,
+        confirmButtonText: `Login`,
+        confirmButtonColor: "#ff6500",
+      }).then((result) => {
+        if (result.isConfirmed) history.push("/login");
+      });
+    } else {
+      if (auth.favor === undefined) {
+        const newList = [movie.id];
+        const newData = {
+          favor: newList,
+          id: auth.id,
+          role: auth.role,
+          firstName: auth.firstName,
+          lastName: auth.lastName,
+          username: auth.username,
+          email: auth.email,
+          password: auth.password,
+        };
+        axios.put(`/users/${auth.id}`, newData);
+      } else {
+        auth.favor.push(movie.id);
+        const newData = {
+          favor: auth.favor,
+          id: auth.id,
+          role: auth.role,
+          firstName: auth.firstName,
+          lastName: auth.lastName,
+          username: auth.username,
+          email: auth.email,
+          password: auth.password,
+        };
+        axios.put(`/users/${auth.id}`, newData);
+      }
+      resignin();
+    }
+  };
+
+  const removeFavor = () => {
+    const newFavor = auth.favor.filter((value) => value !== movie.id);
+    const newData = {
+      favor: newFavor,
+      id: auth.id,
+      role: auth.role,
+      firstName: auth.firstName,
+      lastName: auth.lastName,
+      username: auth.username,
+      email: auth.email,
+      password: auth.password,
+    };
+    axios.put(`/users/${auth.id}`, newData);
+    resignin();
+    setLike(false);
+  };
+
+  useEffect(() => {
+    checkFavor();
+    setAuth(jwt.decode(token));
+  }, [token]);
 
   useEffect(() => {
     axios
@@ -70,8 +182,36 @@ const FilterCountry = () => {
             </div>
             <div className="d-flex bottom-content mt-5">
               <div className="d-flex left-info col">
-                <div className="poster mr-3">
+                <div className="poster position-relative mr-3">
                   <img src={movie.poster} alt="" />
+                  {!like && (
+                    <>
+                      <div onClick={addFavor} className="movie-liked">
+                        <RiHeartAddFill
+                          style={{ color: "red", fontSize: "25px" }}
+                        />{" "}
+                        Add Favorite
+                      </div>
+                    </>
+                  )}
+                  {like && (
+                    <>
+                      <div onMouseOver={dislikeAction} className="movie-liked">
+                        <ImHeart style={{ color: "red", fontSize: "20px" }} />{" "}
+                        In Favorites
+                      </div>
+                      <div
+                        onMouseOut={dislikeActionOut}
+                        onClick={removeFavor}
+                        className="movie-liked dislike"
+                      >
+                        <ImHeartBroken
+                          style={{ color: "red", fontSize: "20px" }}
+                        />{" "}
+                        Remove Movie
+                      </div>
+                    </>
+                  )}
                 </div>
                 <div className="info">
                   <h4>{movie.title}</h4>

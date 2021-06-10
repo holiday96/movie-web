@@ -43,8 +43,7 @@ const FavorUser = () => {
     axios
       .get(`/users?id=${auth.id}`)
       .then((res) => {
-        setFavors(res.data[0].favor);
-        console.log(favors);
+        setFavors(res.data[0].favor.reverse());
       })
       .catch((err) => console.log(err));
   };
@@ -54,7 +53,6 @@ const FavorUser = () => {
       axios
         .get(`/movies?id=${item}`)
         .then((res) => {
-          console.log(res.data);
           setList((list) => [...list, res.data[0]]);
         })
         .catch((err) => console.log(err));
