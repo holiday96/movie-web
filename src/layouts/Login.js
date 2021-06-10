@@ -4,24 +4,38 @@ import { useForm } from "react-hook-form";
 import "../assets/login/sb-admin.css";
 import { axios } from "../axios";
 import jwt from "jsonwebtoken";
+import Swal from "sweetalert2";
 
 const LoginLayout = (props) => {
   const { register, handleSubmit } = useForm();
 
-  let history= useHistory();
+  let history = useHistory();
 
   const getUser = (data) => {
     axios
       .get(`/users?username=${data.username}&password=${data.password}`)
       .then((res) => {
         if (res.data) {
-          const token = jwt.sign(res.data[0], "secret", { expiresIn: 3600 });
-          localStorage.setItem("token", token);
-          checkAuth();
+          Swal.fire({
+            title: `Hi ${res.data[0].firstName}!`,
+            text: "Let's checkout some movie 😉",
+            icon: "success",
+            timer: 2000,
+            timerProgressBar: true,
+          }).then(() => {
+            const token = jwt.sign(res.data[0], "secret", { expiresIn: 3600 });
+            localStorage.setItem("token", token);
+            checkAuth();
+          });
         }
       })
       .catch((err) => {
         console.log(err);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Hmmm..., something went wrong!",
+        });
       });
   };
 
@@ -35,9 +49,8 @@ const LoginLayout = (props) => {
     if (auth) {
       if (auth.role === "Admin") history.push("/admin");
       else if (auth.role === "User") history.push("/");
-      console.log("user");
     }
-  }
+  };
 
   useEffect(() => {
     checkAuth();
@@ -45,7 +58,7 @@ const LoginLayout = (props) => {
 
   return (
     <div className="container-sign container-sign-in">
-    <div className="hoverr"></div>
+      <div className="hoverr"></div>
       <div className="card card-login mx-auto mt-5">
         <div className="card-header">Login</div>
         <div className="card-body">

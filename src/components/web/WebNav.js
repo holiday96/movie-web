@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link, NavLink, useHistory } from "react-router-dom";
 
 const WebNav = (props) => {
@@ -21,14 +21,6 @@ const WebNav = (props) => {
     toggleMenu.classList.remove("active");
   };
 
-  const click = () => {
-    console.log(props.genres);
-  };
-
-  // useEffect(() => {
-  //   console.log(props.countries);
-  // }, [props.countries]);
-
   const onMoveGenre = (item) => {
     history.push(`/genre/${item}`);
     window.location.reload();
@@ -42,8 +34,7 @@ const WebNav = (props) => {
     <ul className="nav justify-content-center" style={{ marginTop: 75 }}>
       <li>
         <NavLink
-          to="#"
-          onClick={click}
+          to={`/`}
           className="nav-link nav-web px-2 mx-3 text-white"
         >
           Trang chủ

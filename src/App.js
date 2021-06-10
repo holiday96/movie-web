@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import "./App.css";
 import Routers from "./Routers";
 import { useState, useEffect } from "react";
@@ -14,7 +15,7 @@ function App() {
   const getMovies = async () => {
     const response = await axios.get("/movies").catch((e) => console.log(e));
     if (response && response.data) {
-      setMovies(response.data);
+      setMovies(response.data.reverse());
     }
   };
   const getUsers = async () => {
@@ -25,7 +26,9 @@ function App() {
     movies.map((item) => setGenres((genres) => [...genres, item.genre]));
   };
   const getCountries = (movies) => {
-    movies.map((item) => setCountries((countries) => [...countries, item.country]));
+    movies.map((item) =>
+      setCountries((countries) => [...countries, item.country])
+    );
   };
 
   useEffect(() => {
@@ -37,15 +40,17 @@ function App() {
     getCountries(movies);
   }, [movies]);
   useEffect(() => {
-      setGenres(
-        genres.filter((value, index, self) => self.indexOf(value) === index)
-      );
-  }, [genres.length!==0]);
+    setGenres(genres.sort());
+    setGenres(
+      genres.filter((value, index, self) => self.indexOf(value) === index)
+    );
+  }, [genres.length]);
   useEffect(() => {
-      setCountries(
-        countries.filter((value, index, self) => self.indexOf(value) === index)
-      );
-  }, [countries.length!==0]);
+    setCountries(countries.sort());
+    setCountries(
+      countries.filter((value, index, self) => self.indexOf(value) === index)
+    );
+  }, [countries.length]);
 
   const addMovie = async (item) => {
     const response = await axios

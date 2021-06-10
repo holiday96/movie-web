@@ -40,24 +40,30 @@ const RegisterLayout = ({ onRegister }) => {
           text: error,
         });
       } else {
-        Swal.fire("Welcome to WaMo!", "Register successfully!", "success").then(
-          () => {
-            onRegister(newData);
-            getUser(newData);
-            axios
-              .get(`/users?username=${newData.username}`)
-              .then((res) => {
-                if (res.data) {
-                  const token = jwt.sign(res.data[0], "secret", { expiresIn: 3600 });
-                  localStorage.setItem("token", token);
-                  checkAuth();
-                }
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          }
-        );
+        Swal.fire({
+          title: "Welcome to WaMo!",
+          text: "Register successfully!",
+          icon: "success",
+          timer: 5000,
+          timerProgressBar: true,
+        }).then(() => {
+          onRegister(newData);
+          getUser(newData);
+          axios
+            .get(`/users?username=${newData.username}`)
+            .then((res) => {
+              if (res.data) {
+                const token = jwt.sign(res.data[0], "secret", {
+                  expiresIn: 3600,
+                });
+                localStorage.setItem("token", token);
+                checkAuth();
+              }
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        });
       }
     }
   };
@@ -70,7 +76,7 @@ const RegisterLayout = ({ onRegister }) => {
       else if (auth.role === "User") history.push("/");
       console.log("user");
     }
-  }
+  };
 
   const checkPassword = (e) => {
     let password = document.getElementById("password").value;

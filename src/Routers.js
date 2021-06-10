@@ -15,7 +15,7 @@ import EditUser from "./pages/admin/EditUser";
 import AddUser from "./pages/admin/AddUser";
 import FilterGenre from "./pages/web/FilterGenre";
 import FilterCountry from "./pages/web/FilterCountry";
-
+import FavorUser from "./pages/web/FavorUser";
 
 const Routers = (props) => {
   return (
@@ -66,6 +66,9 @@ const Routers = (props) => {
               </Route>
               <Route path="/country/:key">
                 <FilterCountry {...props} />
+              </Route>
+              <Route path="/favorites">
+                <FavorUser {...props} />
               </Route>
               <Route path="/:id">
                 <Detail {...props} />

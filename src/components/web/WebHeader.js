@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import WebSearchBar from "./WebSearchBar";
 import WebNav from "./WebNav";

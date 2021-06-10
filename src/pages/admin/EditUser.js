@@ -81,7 +81,7 @@ const EditUser = ({ onEditUser }) => {
             placeholder="Leave a firstName here"
             id="firstName"
             defaultValue={user.firstName}
-            {...register("firstName")}
+            {...register("firstName", {required: false})}
           ></input>
           <label htmlFor="firstName">Firstname</label>
         </div>

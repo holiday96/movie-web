@@ -25,7 +25,9 @@ const UserAccountMenu = () => {
 
   return (
     <div className="action">
-      <span>Hi, {auth.firstName}</span>
+      <span>
+        Hi, {auth.lastName} {auth.firstName}
+      </span>
       <div className="profile" onMouseOver={menuToggle}>
         <img src="../avatar.jpg" alt="" />
       </div>
@@ -42,7 +44,7 @@ const UserAccountMenu = () => {
           </li>
           <li>
             <img src="../edit.png" alt="" />
-            <Link to="#">Edit Profile</Link>
+            <Link to={"/favorites"}>My Favorites</Link>
           </li>
           <li>
             <img src="../log-out.png" alt="" />

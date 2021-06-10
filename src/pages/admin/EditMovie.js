@@ -28,7 +28,7 @@ const EditMovie = ({ onEditMovie }) => {
 
   const onSubmit = (data) => {
     const newData = {
-      id: id,
+      // id: id,
       ...data,
     };
     Swal.fire("Good job!", "Movie was updated!", "success").then(() => {
