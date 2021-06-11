@@ -33,15 +33,13 @@ const item = {
   },
 };
 
-const FavorUser = () => {
+const FavorUser = (props) => {
   const [favors, setFavors] = useState([]);
   const [list, setList] = useState([]);
-  const token = localStorage.getItem("token");
-  const auth = jwt.decode(token);
 
   const getFavors = () => {
     axios
-      .get(`/users?id=${auth.id}`)
+      .get(`/users?id=${props.user.id}`)
       .then((res) => {
         setFavors(res.data[0].favor.reverse());
       })
@@ -57,7 +55,6 @@ const FavorUser = () => {
         })
         .catch((err) => console.log(err));
     });
-    console.log(list);
   };
 
   useEffect(() => {
@@ -68,7 +65,7 @@ const FavorUser = () => {
   useEffect(() => {
     getFavors();
     window.scrollTo(0, 0);
-  }, []);
+  }, [props.user]);
 
   return (
     <FavorContainer>

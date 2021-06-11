@@ -22,7 +22,7 @@ const Routers = (props) => {
     <BrowserRouter>
       <Switch>
         <Route path="/admin">
-          <AdminPageLayout>
+          <AdminPageLayout {...props}>
             <Switch>
               {/* movies */}
               <Route path="/admin/movie/add">

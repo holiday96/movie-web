@@ -23,7 +23,7 @@ const LoginLayout = (props) => {
             timer: 2000,
             timerProgressBar: true,
           }).then(() => {
-            const token = jwt.sign(res.data[0], "secret");
+            const token = jwt.sign(res.data[0].id, "secret");
             localStorage.setItem("token", token);
             checkAuth();
           });
@@ -44,17 +44,18 @@ const LoginLayout = (props) => {
   };
 
   const checkAuth = () => {
-    const token = localStorage.getItem("token");
-    const auth = jwt.decode(token);
-    if (auth) {
-      if (auth.role === "Admin") history.push("/admin");
-      else if (auth.role === "User") history.push("/");
+    props.getUser();
+    if (props.user) {
+      if (props.user.role === "Admin") {
+        history.push("/admin");
+        localStorage.setItem("admin", props.user);
+      } else if (props.user.role === "User") history.push("/");
     }
   };
 
   useEffect(() => {
     checkAuth();
-  }, []);
+  }, [props.user]);
 
   return (
     <div className="container-sign container-sign-in">

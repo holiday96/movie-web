@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import styled from "styled-components";
-import jwt from "jsonwebtoken";
 
 const TitleHeader = styled.span`
   font-size: 35px;
@@ -10,26 +9,27 @@ const TitleHeader = styled.span`
   margin-left: 20px;
 `;
 
-const AdminHeader = () => {
+const AdminHeader = (props) => {
   let history = useHistory();
   const signout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("admin");
+    props.setUser([]);
     history.push("/login");
   };
 
-  const token = localStorage.getItem("token");
-  const auth = jwt.decode(token);
   const checkAuth = () => {
-    if (!auth) {
+    const admin = localStorage.getItem("admin");
+    if (admin) {
+      if (admin.role === "User") history.push("/");
+    } else {
       history.push("/login");
-    } else if (auth.role !== "Admin") {
-      history.push("/");
     }
   };
 
   useEffect(() => {
     checkAuth();
-  });
+  }, []);
 
   return (
     <header className="admin-header navbar navbar-dark sticky-top bg-dark bg-gradient flex-md-nowrap p-0 shadow">
@@ -42,7 +42,9 @@ const AdminHeader = () => {
       </NavLink>
       <ul className="navbar-nav px-3">
         <li className="d-flex nav-item text-nowrap">
-          {auth && <span className="admin-info">Hi, {auth.firstName}</span>}
+          {props.user && (
+            <span className="admin-info">Hi, {props.user.firstName}</span>
+          )}
           <button
             className="nav-link admin-header-btn-signout btn btn-info p-2"
             onClick={signout}

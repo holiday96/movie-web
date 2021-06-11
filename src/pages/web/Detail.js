@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import { axios } from "../../axios";
 import { ImHeart, ImHeartBroken } from "react-icons/im";
 import { RiHeartAddFill } from "react-icons/ri";
-import jwt from "jsonwebtoken";
 import Swal from "sweetalert2";
 
 const DetailContainer = styled.div`
@@ -19,14 +18,12 @@ const Detail = (props) => {
   const [movie, setMovie] = useState([]);
   const [like, setLike] = useState(false);
   let { id } = useParams();
-  const [token, setToken] = useState(localStorage.getItem("token"));
-  const [auth, setAuth] = useState(jwt.decode(token));
   let history = useHistory();
 
   const checkFavor = () => {
-    if (auth) {
-      if (auth.favor !== undefined)
-        if (auth.favor.includes(id)) {
+    if (props.user) {
+      if (props.user.favor !== undefined)
+        if (props.user.favor.includes(id)) {
           return setLike(true);
         }
     }
@@ -47,24 +44,8 @@ const Detail = (props) => {
     tagDislike.style.visibility = "hidden";
   };
 
-  const resignin = () => {
-    localStorage.removeItem("token");
-    axios
-      .get(`/users?id=${auth.id}`)
-      .then((res) => {
-        if (res.data) {
-          const newToken = jwt.sign(res.data[0], "secret");
-          setToken(localStorage.setItem("token", newToken));
-          setAuth(jwt.decode(token));
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
   const addFavor = () => {
-    if (!token) {
+    if (props.user.length === 0) {
       Swal.fire({
         title: "Login to use the service!",
         showCancelButton: true,
@@ -74,74 +55,71 @@ const Detail = (props) => {
         if (result.isConfirmed) history.push("/login");
       });
     } else {
-      if (auth.favor === undefined) {
+      if (props.user.favor === undefined) {
         const newList = [id];
         const newData = {
           favor: newList,
-          id: auth.id,
-          role: auth.role,
-          firstName: auth.firstName,
-          lastName: auth.lastName,
-          username: auth.username,
-          email: auth.email,
-          password: auth.password,
+          id: props.user.id,
+          role: props.user.role,
+          firstName: props.user.firstName,
+          lastName: props.user.lastName,
+          username: props.user.username,
+          email: props.user.email,
+          password: props.user.password,
         };
-        axios.put(`/users/${auth.id}`, newData);
+        axios.put(`/users/${props.user.id}`, newData);
       } else {
-        auth.favor.push(id);
+        props.user.favor.push(id);
         const newData = {
-          favor: auth.favor,
-          id: auth.id,
-          role: auth.role,
-          firstName: auth.firstName,
-          lastName: auth.lastName,
-          username: auth.username,
-          email: auth.email,
-          password: auth.password,
+          favor: props.user.favor,
+          id: props.user.id,
+          role: props.user.role,
+          firstName: props.user.firstName,
+          lastName: props.user.lastName,
+          username: props.user.username,
+          email: props.user.email,
+          password: props.user.password,
         };
-        axios.put(`/users/${auth.id}`, newData);
+        axios.put(`/users/${props.user.id}`, newData);
       }
       const Toast = Swal.mixin({
         toast: true,
-        position: 'top-end',
+        position: "top-end",
         showConfirmButton: false,
         timer: 2000,
         timerProgressBar: true,
         didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-      })
-      
+          toast.addEventListener("mouseenter", Swal.stopTimer);
+          toast.addEventListener("mouseleave", Swal.resumeTimer);
+        },
+      });
       Toast.fire({
-        icon: 'success',
-        title: 'Added to your library successfully'
-      })
-      resignin();
+        icon: "success",
+        title: "Added to your library successfully",
+      });
+      props.getUser();
     }
   };
 
   const removeFavor = () => {
-      const newFavor = auth.favor.filter((value) => value !== id);
-      const newData = {
-        favor: newFavor,
-        id: auth.id,
-        role: auth.role,
-        firstName: auth.firstName,
-        lastName: auth.lastName,
-        username: auth.username,
-        email: auth.email,
-        password: auth.password,
-      };
-      axios.put(`/users/${auth.id}`, newData);
-      resignin();
-      setLike(false);
+    const newFavor = props.user.favor.filter((value) => value !== id);
+    const newData = {
+      favor: newFavor,
+      id: props.user.id,
+      role: props.user.role,
+      firstName: props.user.firstName,
+      lastName: props.user.lastName,
+      username: props.user.username,
+      email: props.user.email,
+      password: props.user.password,
+    };
+    axios.put(`/users/${props.user.id}`, newData);
+    props.getUser();
   };
 
   useEffect(() => {
     checkFavor();
-    setAuth(jwt.decode(token));
-  }, [token]);
+  }, [props.user]);
 
   useEffect(() => {
     axios
@@ -172,7 +150,10 @@ const Detail = (props) => {
               <img src={movie.poster} alt="" />
               {!like && (
                 <>
-                  <div onClick={addFavor} className="movie-liked">
+                  <div
+                    onClick={addFavor}
+                    className="movie-liked"
+                  >
                     <RiHeartAddFill
                       style={{ color: "red", fontSize: "25px" }}
                     />{" "}

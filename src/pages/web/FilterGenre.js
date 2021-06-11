@@ -36,19 +36,17 @@ const item = {
   },
 };
 
-const FilterGenre = () => {
+const FilterGenre = (props) => {
   const [filter, setFilter] = useState([]);
   const [movie, setMovie] = useState([]);
-  let { key } = useParams();
   const [like, setLike] = useState(false);
-  const [token, setToken] = useState(localStorage.getItem("token"));
-  const [auth, setAuth] = useState(jwt.decode(token));
+  let { key } = useParams();
   let history = useHistory();
 
   const checkFavor = () => {
-    if (auth) {
-      if (auth.favor !== undefined)
-        if (auth.favor.includes(movie.id)) {
+    if (props.user) {
+      if (props.user.favor !== undefined)
+        if (props.user.favor.includes(movie.id)) {
           return setLike(true);
         }
     }
@@ -69,24 +67,8 @@ const FilterGenre = () => {
     tagDislike.style.visibility = "hidden";
   };
 
-  const resignin = () => {
-    localStorage.removeItem("token");
-    axios
-      .get(`/users?id=${auth.id}`)
-      .then((res) => {
-        if (res.data) {
-          const newToken = jwt.sign(res.data[0], "secret");
-          setToken(localStorage.setItem("token", newToken));
-          setAuth(jwt.decode(token));
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
   const addFavor = () => {
-    if (!token) {
+    if (props.user.length === 0) {
       Swal.fire({
         title: "Login to use the service!",
         showCancelButton: true,
@@ -96,58 +78,71 @@ const FilterGenre = () => {
         if (result.isConfirmed) history.push("/login");
       });
     } else {
-      if (auth.favor === undefined) {
+      if (props.user.favor === undefined) {
         const newList = [movie.id];
         const newData = {
           favor: newList,
-          id: auth.id,
-          role: auth.role,
-          firstName: auth.firstName,
-          lastName: auth.lastName,
-          username: auth.username,
-          email: auth.email,
-          password: auth.password,
+          id: props.user.id,
+          role: props.user.role,
+          firstName: props.user.firstName,
+          lastName: props.user.lastName,
+          username: props.user.username,
+          email: props.user.email,
+          password: props.user.password,
         };
-        axios.put(`/users/${auth.id}`, newData);
+        axios.put(`/users/${props.user.id}`, newData);
       } else {
-        auth.favor.push(movie.id);
+        props.user.favor.push(movie.id);
         const newData = {
-          favor: auth.favor,
-          id: auth.id,
-          role: auth.role,
-          firstName: auth.firstName,
-          lastName: auth.lastName,
-          username: auth.username,
-          email: auth.email,
-          password: auth.password,
+          favor: props.user.favor,
+          id: props.user.id,
+          role: props.user.role,
+          firstName: props.user.firstName,
+          lastName: props.user.lastName,
+          username: props.user.username,
+          email: props.user.email,
+          password: props.user.password,
         };
-        axios.put(`/users/${auth.id}`, newData);
+        axios.put(`/users/${props.user.id}`, newData);
       }
-      resignin();
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener("mouseenter", Swal.stopTimer);
+          toast.addEventListener("mouseleave", Swal.resumeTimer);
+        },
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Added to your library successfully",
+      });
+      props.getUser();
     }
   };
 
   const removeFavor = () => {
-    const newFavor = auth.favor.filter((value) => value !== movie.id);
+    const newFavor = props.user.favor.filter((value) => value !== movie.id);
     const newData = {
       favor: newFavor,
-      id: auth.id,
-      role: auth.role,
-      firstName: auth.firstName,
-      lastName: auth.lastName,
-      username: auth.username,
-      email: auth.email,
-      password: auth.password,
+      id: props.user.id,
+      role: props.user.role,
+      firstName: props.user.firstName,
+      lastName: props.user.lastName,
+      username: props.user.username,
+      email: props.user.email,
+      password: props.user.password,
     };
-    axios.put(`/users/${auth.id}`, newData);
-    resignin();
-    setLike(false);
+    axios.put(`/users/${props.user.id}`, newData);
+    props.getUser();
   };
 
   useEffect(() => {
     checkFavor();
-    setAuth(jwt.decode(token));
-  }, [token]);
+  }, [props.user]);
 
   useEffect(() => {
     axios

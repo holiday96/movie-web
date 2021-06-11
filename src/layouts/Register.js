@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { v4 as uuidv4 } from "uuid";
@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 import jwt from "jsonwebtoken";
 import { axios } from "../axios";
 
-const RegisterLayout = ({ onRegister }) => {
+const RegisterLayout = (props) => {
   const { register, handleSubmit } = useForm();
   const [error, setError] = useState("");
 
@@ -17,8 +17,9 @@ const RegisterLayout = ({ onRegister }) => {
       .get(`/users?username=${data.username}&password=${data.password}`)
       .then((res) => {
         if (res.data) {
-          const token = jwt.sign(res.data[0], "secret", { expiresIn: 3600 });
+          const token = jwt.sign(res.data[0].id, "secret");
           localStorage.setItem("token", token);
+          checkAuth();
         }
       })
       .catch((err) => {
@@ -46,35 +47,29 @@ const RegisterLayout = ({ onRegister }) => {
           icon: "success",
           timer: 5000,
           timerProgressBar: true,
+          backdrop: `
+          rgba(0,0,123,0.4)
+          url("https://i.gifer.com/origin/fd/fdf70f5f4989f9c08f033da50c38170e.gif")
+          left top
+          no-repeat
+        `,
         }).then(() => {
-          onRegister(newData);
+          props.onRegister(newData);
+          axios.get(`/users?id=${newData.id}`).then((res) => {
+            const token = jwt.sign(res.data[0].id, "secret");
+            localStorage.setItem("token", token);
+          });
           getUser(newData);
-          axios
-            .get(`/users?username=${newData.username}`)
-            .then((res) => {
-              if (res.data) {
-                const token = jwt.sign(res.data[0], "secret", {
-                  expiresIn: 3600,
-                });
-                localStorage.setItem("token", token);
-                checkAuth();
-              }
-            })
-            .catch((err) => {
-              console.log(err);
-            });
         });
       }
     }
   };
 
   const checkAuth = () => {
-    const token = localStorage.getItem("token");
-    const auth = jwt.decode(token);
-    if (auth) {
-      if (auth.role === "Admin") history.push("/admin");
-      else if (auth.role === "User") history.push("/");
-      console.log("user");
+    props.getUser();
+    if (props.user) {
+      if (props.user.role === "Admin") history.push("/admin");
+      else if (props.user.role === "User") history.push("/");
     }
   };
 
@@ -83,6 +78,10 @@ const RegisterLayout = ({ onRegister }) => {
     if (e.target.value !== password) setError("Confirm password is not valid!");
     else setError("");
   };
+
+  useEffect(() => {
+    checkAuth();
+  },[props.user])
 
   return (
     <div className="container-sign container-sign-up">

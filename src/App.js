@@ -5,18 +5,24 @@ import { useState, useEffect } from "react";
 import { axios } from "./axios";
 import Swal from "sweetalert2";
 import "./assets/admin/style.css";
+import jwt from "jsonwebtoken";
 
 function App() {
   const [movies, setMovies] = useState([]);
   const [users, setUsers] = useState([]);
   const [genres, setGenres] = useState([]);
   const [countries, setCountries] = useState([]);
-  // const [user, setUser] = useState([]);
+  const [user, setUser] = useState([]);
 
-  // const getUsers = () => {
-  //   const token = localStorage.getItem("token");
-  //   setUser(jwt.decode(token));
-  // }
+  const getUser = async () => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      const id = jwt.decode(token);
+      await axios.get(`/users?id=${id}`).then((res) => {
+        setUser(res.data[0]);
+      });
+    }
+  };
 
   const getMovies = async () => {
     const response = await axios.get("/movies").catch((e) => console.log(e));
@@ -40,6 +46,7 @@ function App() {
   useEffect(() => {
     getMovies();
     getUsers();
+    getUser();
   }, []);
   useEffect(() => {
     getGenres(movies);
@@ -177,6 +184,9 @@ function App() {
       users={users}
       genres={genres}
       countries={countries}
+      user={user}
+      getUser={getUser}
+      setUser={setUser}
       onAddMovie={addMovie}
       onEditMovie={editMovie}
       onRemoveMovie={removeMovie}

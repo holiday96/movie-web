@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import WebSearchBar from "./WebSearchBar";
 import WebNav from "./WebNav";
 import styled from "styled-components";
-import jwt from "jsonwebtoken";
 import UserAccountMenu from "../UserAccountMenu";
 
 const WebHeaderContainer = styled.div`
@@ -22,14 +21,12 @@ const TitleHeader = styled.span`
 `;
 
 const WebHeader = (props) => {
-  const checkAuth = () => {
-    const token = localStorage.getItem("token");
-    const auth = jwt.decode(token);
-    if (auth) {
-      return true;
-    }
-    return false;
-  };
+  const [status, setStatus] = useState(false);
+
+  useEffect(() => {
+    if(props.user.length!==0) setStatus(true);
+    else setStatus(false);
+  }, [props.user]);
 
   return (
     <WebHeaderContainer>
@@ -45,8 +42,8 @@ const WebHeader = (props) => {
             />
             <TitleHeader>WaMo</TitleHeader>
           </NavLink>
-          {!checkAuth() && (
-            <div className="position-fixed" style={{right:20}}>
+          {!status && (
+            <div className="position-fixed" style={{ right: 20 }}>
               <Link
                 type="button"
                 to="/login"
@@ -63,7 +60,7 @@ const WebHeader = (props) => {
               </Link>
             </div>
           )}
-          {checkAuth() && <UserAccountMenu />}
+          {status && <UserAccountMenu {...props} />}
         </div>
         <WebNav {...props} />
         <WebSearchBar />
