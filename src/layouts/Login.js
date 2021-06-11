@@ -20,8 +20,14 @@ const LoginLayout = (props) => {
             title: `Hi ${res.data[0].firstName}!`,
             text: "Let's checkout some movie 😉",
             icon: "success",
-            timer: 2000,
+            // timer: 3000,
             timerProgressBar: true,
+            backdrop: `
+            rgba(3, 86, 252,0.2)
+            url("../peachcat-go.gif")
+            center top
+            no-repeat
+          `,
           }).then(() => {
             const token = jwt.sign(res.data[0].id, "secret");
             localStorage.setItem("token", token);

@@ -110,6 +110,11 @@ const FilterCountry = (props) => {
         showConfirmButton: false,
         timer: 2000,
         timerProgressBar: true,
+        backdrop: `
+        url("../../peachcat-love.gif")
+        right center
+        no-repeat
+      `,
         didOpen: (toast) => {
           toast.addEventListener("mouseenter", Swal.stopTimer);
           toast.addEventListener("mouseleave", Swal.resumeTimer);
@@ -117,7 +122,7 @@ const FilterCountry = (props) => {
       });
       Toast.fire({
         icon: "success",
-        title: "Added to your library successfully",
+        title: "Added to library successfully",
       });
       props.getUser();
     }
@@ -136,6 +141,26 @@ const FilterCountry = (props) => {
       password: props.user.password,
     };
     axios.put(`/users/${props.user.id}`, newData);
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      backdrop: `
+      url("../../peachcat-cry.gif")
+      right center
+      no-repeat
+    `,
+      didOpen: (toast) => {
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+      },
+    });
+    Toast.fire({
+      icon: "info",
+      title: "Removed from library successfully",
+    });
     props.getUser();
   };
 

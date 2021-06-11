@@ -5,7 +5,6 @@ import { axios } from "../../axios";
 import { motion } from "framer-motion";
 import { ImHeart, ImHeartBroken } from "react-icons/im";
 import { RiHeartAddFill } from "react-icons/ri";
-import jwt from "jsonwebtoken";
 import Swal from "sweetalert2";
 
 const FilterContainer = styled.div`
@@ -111,6 +110,11 @@ const FilterGenre = (props) => {
         showConfirmButton: false,
         timer: 2000,
         timerProgressBar: true,
+        backdrop: `
+        url("../../peachcat-love.gif")
+        right center
+        no-repeat
+      `,
         didOpen: (toast) => {
           toast.addEventListener("mouseenter", Swal.stopTimer);
           toast.addEventListener("mouseleave", Swal.resumeTimer);
@@ -137,6 +141,26 @@ const FilterGenre = (props) => {
       password: props.user.password,
     };
     axios.put(`/users/${props.user.id}`, newData);
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      backdrop: `
+      url("../../peachcat-cry.gif")
+      right center
+      no-repeat
+    `,
+      didOpen: (toast) => {
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+      },
+    });
+    Toast.fire({
+      icon: "info",
+      title: "Removed from library successfully",
+    });
     props.getUser();
   };
 
