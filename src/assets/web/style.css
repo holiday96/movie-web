@@ -425,6 +425,7 @@ a:hover {
 }
 .movie-liked:hover{
   cursor: pointer;
+  background: rgba(0, 0, 0, 0.8);
 }
 .movie-liked.dislike{
   visibility: hidden;
