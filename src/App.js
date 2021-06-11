@@ -11,6 +11,12 @@ function App() {
   const [users, setUsers] = useState([]);
   const [genres, setGenres] = useState([]);
   const [countries, setCountries] = useState([]);
+  // const [user, setUser] = useState([]);
+
+  // const getUsers = () => {
+  //   const token = localStorage.getItem("token");
+  //   setUser(jwt.decode(token));
+  // }
 
   const getMovies = async () => {
     const response = await axios.get("/movies").catch((e) => console.log(e));

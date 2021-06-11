@@ -23,7 +23,7 @@ const LoginLayout = (props) => {
             timer: 2000,
             timerProgressBar: true,
           }).then(() => {
-            const token = jwt.sign(res.data[0], "secret", { expiresIn: 3600 });
+            const token = jwt.sign(res.data[0], "secret");
             localStorage.setItem("token", token);
             checkAuth();
           });

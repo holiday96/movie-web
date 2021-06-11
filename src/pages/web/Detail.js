@@ -53,7 +53,7 @@ const Detail = (props) => {
       .get(`/users?id=${auth.id}`)
       .then((res) => {
         if (res.data) {
-          const newToken = jwt.sign(res.data[0], "secret", { expiresIn: 3600 });
+          const newToken = jwt.sign(res.data[0], "secret");
           setToken(localStorage.setItem("token", newToken));
           setAuth(jwt.decode(token));
         }
