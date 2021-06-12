@@ -28,11 +28,12 @@ const EditMovie = ({ onEditMovie }) => {
 
   const onSubmit = (data) => {
     const newData = {
-      // id: id,
+      id: id,
       ...data,
     };
     Swal.fire("Good job!", "Movie was updated!", "success").then(() => {
       onEditMovie(newData);
+      console.log(newData);
       history.push("/admin/movie");
     });
   };

@@ -172,7 +172,7 @@ const FilterCountry = (props) => {
     axios
       .get(`/movies?country=${key}`)
       .then((res) => {
-        setFilter(res.data);
+        setFilter(res.data.reverse());
       })
       .catch((err) => console.log(err));
     window.scrollTo(0, 0);
@@ -241,13 +241,21 @@ const FilterCountry = (props) => {
               <div className="right-info col-3">
                 <table>
                   <tbody>
-                    <tr>
-                      <td className="table-head">Episodes</td>
-                      <td className="table-value">{movie.episodes} ep</td>
-                    </tr>
+                    {movie.episodes > 1 && (
+                      <tr>
+                        <td className="table-head">Episodes</td>
+                        <td className="table-value">
+                          {movie.episodes + " eps"}
+                        </td>
+                      </tr>
+                    )}
                     <tr>
                       <td className="table-head">Runtime</td>
-                      <td className="table-value">{movie.runtime} min</td>
+                      <td className="table-value">
+                        {movie.runtime > 0
+                          ? movie.runtime + " min"
+                          : "Updating"}
+                      </td>
                     </tr>
                     <tr>
                       <td className="table-head">Actors</td>
@@ -302,7 +310,7 @@ const FilterCountry = (props) => {
                   to={`/${movie.id}`}
                   className="d-flex text-warning justify-content-center p-2 fs-5"
                 >
-                  {movie.title}
+                  <h3 className="movie-title">{movie.title}</h3>
                 </Link>
               </motion.li>
             ))}

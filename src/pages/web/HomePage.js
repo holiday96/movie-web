@@ -110,7 +110,7 @@ const WebHomePage = (props) => {
                   to={`/${movie.id}`}
                   className="d-flex text-warning justify-content-center p-2 fs-5"
                 >
-                  {movie.title}
+                  <h3 className="movie-title">{movie.title}</h3>
                 </Link>
               </motion.li>
             ))}

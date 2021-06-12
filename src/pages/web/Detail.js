@@ -213,13 +213,17 @@ const Detail = (props) => {
           <div className="right-info col-3">
             <table>
               <tbody>
-                <tr>
-                  <td className="table-head">Episodes</td>
-                  <td className="table-value">{movie.episodes} ep</td>
-                </tr>
+                {movie.episodes > 1 && (
+                  <tr>
+                    <td className="table-head">Episodes</td>
+                    <td className="table-value">{movie.episodes + " eps"}</td>
+                  </tr>
+                )}
                 <tr>
                   <td className="table-head">Runtime</td>
-                  <td className="table-value">{movie.runtime} min</td>
+                  <td className="table-value">
+                    {movie.runtime > 0 ? movie.runtime + " min" : "Updating"}
+                  </td>
                 </tr>
                 <tr>
                   <td className="table-head">Actors</td>

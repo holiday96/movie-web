@@ -414,19 +414,27 @@ a:hover {
 }
 
 /* Detail movie-liked */
-.movie-liked{
+.movie-liked {
   position: absolute;
   top: 5px;
   left: 5px;
   padding: 3px 8px;
   border-radius: 8px;
-  color: #ff6500 ;
+  color: #ff6500;
   background: rgba(0, 0, 0, 0.6);
 }
-.movie-liked:hover{
+.movie-liked:hover {
   cursor: pointer;
   background: rgba(0, 0, 0, 0.8);
 }
-.movie-liked.dislike{
+.movie-liked.dislike {
   visibility: hidden;
+}
+
+.movie-title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: normal !important;
+  font-size: 15px;
 }
