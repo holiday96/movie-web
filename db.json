@@ -1269,17 +1269,6 @@
       "verify": ""
     },
     {
-      "id": "3a0f3a4f-a43a-4b88-8226-430ac1566267",
-      "role": "User",
-      "firstName": "Việt Đức",
-      "lastName": "Bùi",
-      "username": "b",
-      "email": "namlun96@gmail.com",
-      "password": "b",
-      "active": true,
-      "verify": ""
-    },
-    {
       "id": "71e7a24c-cd2b-4409-b641-b758eb23b2e0",
       "role": "Admin",
       "firstName": "Boss",
@@ -1289,17 +1278,6 @@
       "password": "admin",
       "active": true,
       "verify": ""
-    },
-    {
-      "id": "57c47108-8597-4c45-9d86-de82de268c2a",
-      "role": "User",
-      "firstName": "Huệ",
-      "lastName": "Nguyễn",
-      "username": "huenguyen",
-      "email": "namlun96@gmail.com",
-      "password": "h",
-      "active": false,
-      "verify": "f2037f3f-3b57-4e04-8785-b80d262557b9"
     }
   ]
 }
