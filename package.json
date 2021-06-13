@@ -1,6 +1,7 @@
 {
   "name": "movie-web",
   "version": "0.1.0",
+  "proxy": "https://d1d4p.sse.codesandbox.io",
   "private": true,
   "dependencies": {
     "3d-react-carousal": "^3.1.0",
@@ -38,7 +39,6 @@
   },
   "scripts": {
     "start:server": "json-server --watch db.json --port 3001",
-    "start:server:remote": "json-server http://jsonplaceholder.typicode.com/db --port 3001",
     "start": "react-dotenv && react-scripts start",
     "build": "react-dotenv && react-scripts build",
     "test": "react-scripts test",
