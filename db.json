@@ -1289,6 +1289,17 @@
       "password": "admin",
       "active": true,
       "verify": ""
+    },
+    {
+      "id": "57c47108-8597-4c45-9d86-de82de268c2a",
+      "role": "User",
+      "firstName": "Huệ",
+      "lastName": "Nguyễn",
+      "username": "huenguyen",
+      "email": "namlun96@gmail.com",
+      "password": "h",
+      "active": false,
+      "verify": "f2037f3f-3b57-4e04-8785-b80d262557b9"
     }
   ]
 }
