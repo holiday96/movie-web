@@ -34,9 +34,9 @@ const RegisterLayout = (props) => {
         axios.get(`/users?id=${newData.id}`).then((res) => {
           const userRegisted = res.data[0];
           sendEmailActive(
-            userRegisted.email,
-            userRegisted.firstName + " " + userRegisted.lastName,
-            `${env.LOCAL_HOST_WEB}/verify/${userRegisted.verify}`
+            newData.email,
+            newData.firstName + " " + newData.lastName,
+            `${env.LOCAL_HOST_WEB}/verify/${newData.verify}`
           );
         });
         Swal.fire({
