@@ -140,7 +140,7 @@ const FilterCountry = (props) => {
       email: props.user.email,
       password: props.user.password,
     };
-    axios.put(`/users/${props.user.id}`, newData);
+    axios.put(`/users/${props.user.id}`, newData).catch((e) => console.log(e));
     const Toast = Swal.mixin({
       toast: true,
       position: "top-end",

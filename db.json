@@ -1264,31 +1264,20 @@
       "lastName": "Boss",
       "username": "a",
       "email": "a@sfsf",
-      "password": "a"
+      "password": "a",
+      "active": true,
+      "verify": ""
     },
     {
-      "favor": [
-        "13c97510-0d6d-4b85-bdb6-817fceebc1f4"
-      ],
       "id": "3a0f3a4f-a43a-4b88-8226-430ac1566267",
       "role": "User",
-      "firstName": "",
-      "lastName": "",
+      "firstName": "Việt Đức",
+      "lastName": "Bùi",
       "username": "b",
-      "email": "a@a.acdc",
-      "password": "b"
-    },
-    {
-      "favor": [
-        "6f3616b1-01a0-43ff-9c14-4760571e9d71"
-      ],
-      "id": "821ece9b-7a98-47fc-8db7-d0420536ef46",
-      "role": "User",
-      "firstName": "",
-      "lastName": "",
-      "username": "c",
-      "email": "ducbvph12717@fpt.edu.vn",
-      "password": "c"
+      "email": "namlun96@gmail.com",
+      "password": "b",
+      "active": true,
+      "verify": ""
     },
     {
       "id": "71e7a24c-cd2b-4409-b641-b758eb23b2e0",
@@ -1297,78 +1286,9 @@
       "lastName": "Boss",
       "username": "admin",
       "email": "admin@admin",
-      "password": "admin"
-    },
-    {
-      "id": "0c4c5ace-afd3-4661-8d9c-e135cf1bb447",
-      "role": "User",
-      "firstName": " Bách",
-      "lastName": "Nguyễn",
-      "username": "de",
-      "email": "de@de",
-      "password": "de"
-    },
-    {
-      "id": "30bfb004-96ea-467a-a00d-896d750b22b0",
-      "role": "User",
-      "firstName": "Lý",
-      "lastName": "Lê",
-      "username": "ab",
-      "email": "ab@ab",
-      "password": "ab"
-    },
-    {
-      "favor": [
-        "df1b2249-39af-46b3-aba6-37d61e7025bb",
-        "fef8f985-ca66-4145-8e7b-85bd540330a6",
-        "a049a6d2-f898-455e-94ff-ac0aed14f51e",
-        "6f3616b1-01a0-43ff-9c14-4760571e9d71",
-        "6db4b857-c0ab-4787-9e98-9a69f128cf65",
-        "1",
-        "d22a5032-170c-40b3-9a61-28a54e456f1e",
-        "aa8bdd4b-e7df-4ea2-8c40-d9825d118f8a"
-      ],
-      "id": "eaa9e44a-b984-4d33-b8f3-ee69fe505e5d",
-      "role": "User",
-      "firstName": "f",
-      "lastName": "f",
-      "username": "f",
-      "email": "f@f",
-      "password": "f"
-    },
-    {
-      "favor": [
-        "f80edb80-ba60-469e-8013-a8308160e39a"
-      ],
-      "id": "b3cdcecc-25b9-4759-83a1-070de17bc87f",
-      "role": "User",
-      "firstName": "e",
-      "lastName": "e",
-      "username": "e",
-      "email": "e@e",
-      "password": "e"
-    },
-    {
-      "id": "a4fb5d81-67c7-42f5-b87c-9ab92e45233a",
-      "role": "User",
-      "firstName": "e",
-      "lastName": "ef",
-      "username": "e",
-      "email": "ef@ef",
-      "password": "e"
-    },
-    {
-      "favor": [
-        "783907f9-6852-43fe-b0a6-dc06d6fcf2e9",
-        "0aafdc52-b7ce-45f3-8365-d848d8e39ba2"
-      ],
-      "id": "823c733c-2089-43f5-a800-e3e233f59ac0",
-      "role": "User",
-      "firstName": "f",
-      "lastName": "f",
-      "username": "f",
-      "email": "f@f",
-      "password": "f"
+      "password": "admin",
+      "active": true,
+      "verify": ""
     }
   ]
 }

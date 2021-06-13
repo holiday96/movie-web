@@ -16,23 +16,37 @@ const LoginLayout = (props) => {
       .get(`/users?username=${data.username}&password=${data.password}`)
       .then((res) => {
         if (res.data) {
-          Swal.fire({
-            title: `Hi ${res.data[0].firstName}!`,
-            text: "Let's checkout some movie 😉",
-            icon: "success",
-            timer: 3000,
-            timerProgressBar: true,
-            backdrop: `
-            rgba(3, 86, 252,0.2)
-            url("../peachcat-go.gif")
-            center top
-            no-repeat
-          `,
-          }).then(() => {
-            const token = jwt.sign(res.data[0].id, "secret");
-            localStorage.setItem("token", token);
-            checkAuth();
-          });
+          if (res.data[0].active) {
+            Swal.fire({
+              title: `Hi ${res.data[0].firstName}!`,
+              text: "Let's checkout some movie 😉",
+              icon: "success",
+              timer: 3000,
+              timerProgressBar: true,
+              backdrop: `
+              rgba(3, 86, 252,0.2)
+              url("../peachcat-go.gif")
+              center top
+              no-repeat
+              `,
+            }).then(() => {
+              const token = jwt.sign(res.data[0].id, "secret");
+              localStorage.setItem("token", token);
+              checkAuth();
+            });
+          } else {
+            Swal.fire({
+              title: `Hi ${res.data[0].firstName}!`,
+              text: "Please verify your email to activate this account!",
+              icon: "warning",
+              backdrop: `
+              rgba(3, 86, 252,0.2)
+              url("../peachcat-wait.gif")
+              center top
+              no-repeat
+              `,
+            });
+          }
         }
       })
       .catch((err) => {

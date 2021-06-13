@@ -16,6 +16,8 @@ import AddUser from "./pages/admin/AddUser";
 import FilterGenre from "./pages/web/FilterGenre";
 import FilterCountry from "./pages/web/FilterCountry";
 import FavorUser from "./pages/web/FavorUser";
+import ActiveAccount from "./layouts/ActiveAccount";
+import ResetAccount from "./layouts/ResetAccount";
 
 const Routers = (props) => {
   return (
@@ -61,6 +63,12 @@ const Routers = (props) => {
         <Route path="/">
           <WebPageLayout {...props}>
             <Switch>
+              <Route path="/reset/:id">
+                <ResetAccount {...props} />
+              </Route>
+              <Route path="/verify/:id">
+                <ActiveAccount {...props} />
+              </Route>
               <Route path="/genre/:key">
                 <FilterGenre {...props} />
               </Route>

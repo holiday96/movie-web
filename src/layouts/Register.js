@@ -1,68 +1,56 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { v4 as uuidv4 } from "uuid";
 import Swal from "sweetalert2";
-import jwt from "jsonwebtoken";
 import { axios } from "../axios";
+import { sendEmailActive } from "../utils/email";
+import env from "react-dotenv";
 
 const RegisterLayout = (props) => {
   const { register, handleSubmit } = useForm();
-  const [error, setError] = useState("");
-
   let history = useHistory();
 
-  const getUser = (data) => {
-    axios
-      .get(`/users?username=${data.username}&password=${data.password}`)
-      .then((res) => {
-        if (res.data) {
-          const token = jwt.sign(res.data[0].id, "secret");
-          localStorage.setItem("token", token);
-          checkAuth();
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
   const onSubmit = (data) => {
-    if (data !== null) {
-      const newData = {
-        id: uuidv4(),
-        role: "User",
-        ...data,
-      };
-      if (error) {
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: error,
+    if (data.password !== data.confirmPassword) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Confirm password is not valid!",
+      });
+    } else {
+        const newData = {
+          id: uuidv4(),
+          role: "User",
+          firstName: data.firstName,
+          lastName: data.lastName,
+          username: data.username,
+          email: data.email,
+          password: data.password,
+          active: false,
+          verify: uuidv4(),
+        };
+        props.onRegister(newData);
+        axios.get(`/users?id=${newData.id}`).then((res) => {
+          const userRegisted = res.data[0];
+          sendEmailActive(
+            userRegisted.email,
+            userRegisted.firstName + " " + userRegisted.lastName,
+            `${env.LOCAL_HOST_WEB}/verify/${userRegisted.verify}`
+          );
         });
-      } else {
         Swal.fire({
           title: "Welcome to WaMo!",
-          text: "Register successfully!",
+          text: "A verification email has been sent. Please verify your email to complete the registration process. Pay attention to check your spam folder if you don't see our email in the main mailbox.",
           icon: "success",
-          timer: 5000,
-          timerProgressBar: true,
           backdrop: `
           rgba(0,0,123,0.4)
           url("https://i.gifer.com/origin/fd/fdf70f5f4989f9c08f033da50c38170e.gif")
           left top
           no-repeat
         `,
-        }).then(() => {
-          props.onRegister(newData);
-          axios.get(`/users?id=${newData.id}`).then((res) => {
-            const token = jwt.sign(res.data[0].id, "secret");
-            localStorage.setItem("token", token);
-          });
-          getUser(newData);
-        });
+        }).then(() => history.push("/login"));
       }
-    }
   };
 
   const checkAuth = () => {
@@ -73,15 +61,9 @@ const RegisterLayout = (props) => {
     }
   };
 
-  const checkPassword = (e) => {
-    let password = document.getElementById("password").value;
-    if (e.target.value !== password) setError("Confirm password is not valid!");
-    else setError("");
-  };
-
   useEffect(() => {
     checkAuth();
-  },[props.user])
+  }, [props.user]);
 
   return (
     <div className="container-sign container-sign-up">
@@ -165,7 +147,7 @@ const RegisterLayout = (props) => {
                       className="form-control"
                       placeholder="Confirm password"
                       required={true}
-                      onChange={checkPassword}
+                      {...register("confirmPassword")}
                     />
                     <label htmlFor="confirmPassword">Confirm password</label>
                   </div>

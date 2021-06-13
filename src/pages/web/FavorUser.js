@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { axios } from "../../axios";
-import jwt from "jsonwebtoken";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 

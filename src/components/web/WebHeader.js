@@ -24,8 +24,10 @@ const WebHeader = (props) => {
   const [status, setStatus] = useState(false);
 
   useEffect(() => {
-    if(props.user.length!==0) setStatus(true);
-    else setStatus(false);
+    if (props.user) {
+      if (props.user.length !== 0) setStatus(true);
+      else setStatus(false);
+    }
   }, [props.user]);
 
   return (
