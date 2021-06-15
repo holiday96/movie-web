@@ -38,11 +38,17 @@ const UserAccountMenu = (props) => {
         <ul>
           <li>
             <img src="../user.png" alt="" />
-            <Link to="#">My Profile</Link>
+            <Link onClick={props.openProfile} to="#">
+              My Profile
+            </Link>
           </li>
           <li>
             <img src="../edit.png" alt="" />
             <Link to={"/favorites"}>My Favorites</Link>
+          </li>
+          <li>
+            <img src="../key.png" alt="" />
+            <Link onClick={props.openChangePassword} to={"#"}>Change Password</Link>
           </li>
           <li>
             <img src="../log-out.png" alt="" />

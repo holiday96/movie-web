@@ -4,7 +4,6 @@ import Routers from "./Routers";
 import { useState, useEffect } from "react";
 import { axios } from "./axios";
 import Swal from "sweetalert2";
-import "./assets/admin/style.css";
 import jwt from "jsonwebtoken";
 
 function App() {
@@ -185,6 +184,7 @@ function App() {
       genres={genres}
       countries={countries}
       user={user}
+      getMovies={getMovies}
       getUser={getUser}
       setUser={setUser}
       onAddMovie={addMovie}

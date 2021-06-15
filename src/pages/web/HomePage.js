@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -31,50 +31,56 @@ const item = {
 };
 
 const WebHomePage = (props) => {
-  let slides = [
-    <Link to={`/7629fb68-0677-4bda-89ae-9a548adc3b57`}>
-      <img
-        src="https://www.themoviedb.org/t/p/original/5A79GeOb3uChQ0l0ZDjDyODKQp3.jpg"
-        width="470"
-        height="730"
-        alt="3"
-      />
-    </Link>,
-    <Link to={`/6f3616b1-01a0-43ff-9c14-4760571e9d71`}>
-      <img
-        src="https://images-na.ssl-images-amazon.com/images/I/91OxromzoSL._AC_SL1500_.jpg"
-        width="470"
-        height="730"
-        alt="2"
-      />
-    </Link>,
-    <Link to={`/13c97510-0d6d-4b85-bdb6-817fceebc1f4`}>
-      <img
-        src="https://www.joblo.com/assets/images/oldsite/posters/images/full/2007-hitman-3.jpg"
-        width="470"
-        height="730"
-        alt="3"
-      />
-    </Link>,
-    <Link to={`/94c5df25-6d63-4e08-83b6-f6af4104a051`}>
-      <img
-        src="https://images-na.ssl-images-amazon.com/images/I/A1KMUIdd3XL._AC_SL1500_.jpg"
-        width="470"
-        height="730"
-        alt="4"
-      />
-    </Link>,
-    <Link to={`/26f9398d-2d33-4863-bfbb-eec647e5312b`}>
-      <img
-        src="https://images-na.ssl-images-amazon.com/images/I/71sgsn-zXPL._AC_SL1394_.jpg"
-        width="470"
-        height="730"
-        alt="5"
-      />
-    </Link>,
-  ];
+  const [postArray, setPostArray] = useState([]);
+  const [slides, setSlides] = useState([]);
+
+  const getPostArray = (movies) => {
+    if (movies.length !== 0) {
+      let i = Math.floor(Math.random() * movies.length);
+      while (i > movies.length - 5) {
+        i = Math.floor(Math.random() * movies.length);
+      }
+      setPostArray([
+        movies[i],
+        movies[i + 1],
+        movies[i + 2],
+        movies[i + 3],
+        movies[i + 4],
+      ]);
+    }
+  };
+
+  const getSlides = (postArray) => {
+    if (postArray.length !== 0)
+      setSlides([
+        <Link to={`/${postArray[0].id}`}>
+          <img src={postArray[0].poster} width="470" height="730" alt="3" />
+        </Link>,
+        <Link to={`/${postArray[1].id}`}>
+          <img src={postArray[1].poster} width="470" height="730" alt="2" />
+        </Link>,
+        <Link to={`/${postArray[2].id}`}>
+          <img src={postArray[2].poster} width="470" height="730" alt="3" />
+        </Link>,
+        <Link to={`/${postArray[3].id}`}>
+          <img src={postArray[3].poster} width="470" height="730" alt="3" />
+        </Link>,
+        <Link to={`/${postArray[4].id}`}>
+          <img src={postArray[4].poster} width="470" height="730" alt="3" />
+        </Link>,
+      ]);
+  };
 
   useEffect(() => {
+    getSlides(postArray);
+  }, [postArray]);
+
+  useEffect(() => {
+    getPostArray(props.movies);
+  }, [props.movies]);
+
+  useEffect(() => {
+    props.getMovies();
     window.scrollTo(0, 0);
   }, []);
 
@@ -82,7 +88,7 @@ const WebHomePage = (props) => {
     <WebPageContainer>
       <div className="album py-5 bg-gradient">
         <Carousel slides={slides} autoplay={true} interval={3000} />
-        <div className="container-xl mt-5">
+        <div className="container mt-5">
           <motion.ul
             variants={container}
             initial="hidden"

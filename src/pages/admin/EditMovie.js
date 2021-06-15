@@ -4,6 +4,8 @@ import { Link, useParams, useHistory } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const EditMovie = ({ onEditMovie }) => {
+  const [movies, setMovies] = useState([]);
+
   const {
     register,
     handleSubmit,
@@ -12,7 +14,6 @@ const EditMovie = ({ onEditMovie }) => {
   let { id } = useParams();
   let history = useHistory();
 
-  const [movies, setMovies] = useState([]);
   useEffect(() => {
     const getMovies = async () => {
       try {

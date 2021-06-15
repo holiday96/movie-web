@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { ImHeart, ImHeartBroken } from "react-icons/im";
 import { RiHeartAddFill } from "react-icons/ri";
 import Swal from "sweetalert2";
+import PropagateLoader from "react-spinners/PropagateLoader";
 
 const FilterContainer = styled.div`
   margin-top: 147px;
@@ -43,7 +44,7 @@ const FilterCountry = (props) => {
   let history = useHistory();
 
   const checkFavor = () => {
-    if (props.user) {
+    if (props.user && movie) {
       if (props.user.favor !== undefined)
         if (props.user.favor.includes(movie.id)) {
           return setLike(true);
@@ -66,7 +67,7 @@ const FilterCountry = (props) => {
     tagDislike.style.visibility = "hidden";
   };
 
-  const addFavor = () => {
+  const addFavor = async () => {
     if (props.user.length === 0) {
       Swal.fire({
         title: "Login to use the service!",
@@ -89,7 +90,7 @@ const FilterCountry = (props) => {
           email: props.user.email,
           password: props.user.password,
         };
-        axios.put(`/users/${props.user.id}`, newData);
+        await axios.put(`/users/${props.user.id}`, newData);
       } else {
         props.user.favor.push(movie.id);
         const newData = {
@@ -102,7 +103,7 @@ const FilterCountry = (props) => {
           email: props.user.email,
           password: props.user.password,
         };
-        axios.put(`/users/${props.user.id}`, newData);
+        await axios.put(`/users/${props.user.id}`, newData);
       }
       const Toast = Swal.mixin({
         toast: true,
@@ -128,7 +129,7 @@ const FilterCountry = (props) => {
     }
   };
 
-  const removeFavor = () => {
+  const removeFavor = async () => {
     const newFavor = props.user.favor.filter((value) => value !== movie.id);
     const newData = {
       favor: newFavor,
@@ -140,7 +141,9 @@ const FilterCountry = (props) => {
       email: props.user.email,
       password: props.user.password,
     };
-    axios.put(`/users/${props.user.id}`, newData).catch((e) => console.log(e));
+    await axios
+      .put(`/users/${props.user.id}`, newData)
+      .catch((e) => console.log(e));
     const Toast = Swal.mixin({
       toast: true,
       position: "top-end",
@@ -169,12 +172,14 @@ const FilterCountry = (props) => {
   }, [props.user]);
 
   useEffect(() => {
-    axios
-      .get(`/movies?country=${key}`)
-      .then((res) => {
-        setFilter(res.data.reverse());
-      })
-      .catch((err) => console.log(err));
+    const getFilter = async () =>
+      await axios
+        .get(`/movies?country=${key}`)
+        .then((res) => {
+          setFilter(res.data.reverse());
+        })
+        .catch((err) => console.log(err));
+    getFilter();
     window.scrollTo(0, 0);
   }, []);
 
@@ -185,138 +190,153 @@ const FilterCountry = (props) => {
 
   return (
     <FilterContainer>
-      <div className="container">
-        {movie && (
-          <div className="container-suggest">
-            <p className="recommend-text">Recommend Film</p>
-            <div className="top-content iframe-container">
-              <iframe
-                width="100%"
-                height="100%"
-                src={movie.trailer}
-                title="YouTube video player"
-                frameborder="0"
-                allow="fullscreen;"
-              ></iframe>
-            </div>
-            <div className="d-flex bottom-content mt-5">
-              <div className="d-flex left-info col">
-                <div className="poster position-relative mr-3">
-                  <img src={movie.poster} alt="" />
-                  {!like && (
-                    <>
-                      <div onClick={addFavor} className="movie-liked">
-                        <RiHeartAddFill
-                          style={{ color: "red", fontSize: "25px" }}
-                        />{" "}
-                        Add Favorite
-                      </div>
-                    </>
-                  )}
-                  {like && (
-                    <>
-                      <div onMouseOver={dislikeAction} className="movie-liked">
-                        <ImHeart style={{ color: "red", fontSize: "20px" }} />{" "}
-                        In Favorites
-                      </div>
-                      <div
-                        onMouseOut={dislikeActionOut}
-                        onClick={removeFavor}
-                        className="movie-liked dislike"
-                      >
-                        <ImHeartBroken
-                          style={{ color: "red", fontSize: "20px" }}
-                        />{" "}
-                        Remove Movie
-                      </div>
-                    </>
-                  )}
-                </div>
-                <div className="info">
-                  <h4>{movie.title}</h4>
-                  <span>Content</span>
-                  <p>{movie.content}</p>
-                </div>
+      {!movie && (
+        <div className="container text-center">
+          <div className="py-5">
+            <PropagateLoader loading color="#7ED321" size={20} />
+          </div>
+          <div>
+            <img src="../peachcat-hope.gif" alt="" />
+          </div>
+        </div>
+      )}
+      {movie && (
+        <div className="container">
+          {movie && (
+            <div className="container-suggest">
+              <p className="recommend-text">Recommend Film</p>
+              <div className="top-content iframe-container">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={movie.trailer}
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="fullscreen;"
+                ></iframe>
               </div>
-              <div className="right-info col-3">
-                <table>
-                  <tbody>
-                    {movie.episodes > 1 && (
+              <div className="d-flex bottom-content mt-5">
+                <div className="d-flex left-info col">
+                  <div className="poster position-relative mr-3">
+                    <img src={movie.poster} alt="" />
+                    {!like && (
+                      <>
+                        <div onClick={addFavor} className="movie-liked">
+                          <RiHeartAddFill
+                            style={{ color: "red", fontSize: "25px" }}
+                          />{" "}
+                          Add Favorite
+                        </div>
+                      </>
+                    )}
+                    {like && (
+                      <>
+                        <div
+                          onMouseOver={dislikeAction}
+                          className="movie-liked"
+                        >
+                          <ImHeart style={{ color: "red", fontSize: "20px" }} />{" "}
+                          In Favorites
+                        </div>
+                        <div
+                          onMouseOut={dislikeActionOut}
+                          onClick={removeFavor}
+                          className="movie-liked dislike"
+                        >
+                          <ImHeartBroken
+                            style={{ color: "red", fontSize: "20px" }}
+                          />{" "}
+                          Remove Movie
+                        </div>
+                      </>
+                    )}
+                  </div>
+                  <div className="info">
+                    <h4>{movie.title}</h4>
+                    <span>Content</span>
+                    <p>{movie.content}</p>
+                  </div>
+                </div>
+                <div className="right-info col-3">
+                  <table>
+                    <tbody>
+                      {movie.episodes > 1 && (
+                        <tr>
+                          <td className="table-head">Episodes</td>
+                          <td className="table-value">
+                            {movie.episodes + " eps"}
+                          </td>
+                        </tr>
+                      )}
                       <tr>
-                        <td className="table-head">Episodes</td>
+                        <td className="table-head">Runtime</td>
                         <td className="table-value">
-                          {movie.episodes + " eps"}
+                          {movie.runtime > 0
+                            ? movie.runtime + " min"
+                            : "Updating"}
                         </td>
                       </tr>
-                    )}
-                    <tr>
-                      <td className="table-head">Runtime</td>
-                      <td className="table-value">
-                        {movie.runtime > 0
-                          ? movie.runtime + " min"
-                          : "Updating"}
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="table-head">Actors</td>
-                      <td className="table-value">{movie.actor}</td>
-                    </tr>
-                    <tr>
-                      <td className="table-head">Country</td>
-                      <td className="table-value">{movie.country}</td>
-                    </tr>
-                    <tr>
-                      <td className="table-head">Genre</td>
-                      <td className="table-value">{movie.genre}</td>
-                    </tr>
-                    <tr>
-                      <td className="table-head">Releases</td>
-                      <td className="table-value">{movie.releases}</td>
-                    </tr>
-                  </tbody>
-                </table>
+                      <tr>
+                        <td className="table-head">Actors</td>
+                        <td className="table-value">{movie.actor}</td>
+                      </tr>
+                      <tr>
+                        <td className="table-head">Country</td>
+                        <td className="table-value">{movie.country}</td>
+                      </tr>
+                      <tr>
+                        <td className="table-head">Genre</td>
+                        <td className="table-value">{movie.genre}</td>
+                      </tr>
+                      <tr>
+                        <td className="table-head">Releases</td>
+                        <td className="table-value">{movie.releases}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
-          </div>
-        )}
-        <div className="container-filter mt-5">
-          {filter[0] && (
-            <p className="suggest-text">Danh sách phim {filter[0].country}</p>
           )}
-          <motion.ul
-            variants={container}
-            initial="hidden"
-            animate="visible"
-            className="d-flex flex-wrap justify-content-center"
-          >
-            {filter.map((movie, index) => (
-              <motion.li
-                variants={item}
-                key={index}
-                className="film-item item mx-3"
-                style={{ width: 180 }}
-              >
-                <Link to={`/${movie.id}`} className="rounded">
-                  <img
-                    src={movie.poster}
-                    className="rounded"
-                    width="180"
-                    height="276"
-                    alt=""
-                  />
-                </Link>
-                <Link
+          <div className="container-filter mt-5">
+            {filter[0] && (
+              <p className="suggest-text">Danh sách phim {filter[0].country}</p>
+            )}
+            <motion.ul
+              variants={container}
+              initial="hidden"
+              animate="visible"
+              className="d-flex flex-wrap justify-content-center"
+            >
+              {filter.map((movie, index) => (
+                <motion.li
+                  variants={item}
                   key={index}
-                  to={`/${movie.id}`}
-                  className="d-flex text-warning justify-content-center p-2 fs-5"
+                  className="film-item item mx-3"
+                  style={{ width: 180 }}
                 >
-                  <h3 className="movie-title">{movie.title}</h3>
-                </Link>
-              </motion.li>
-            ))}
-          </motion.ul>
+                  <Link to={`/${movie.id}`} className="rounded">
+                    <img
+                      src={movie.poster}
+                      className="rounded"
+                      width="180"
+                      height="276"
+                      alt=""
+                    />
+                  </Link>
+                  <Link
+                    key={index}
+                    to={`/${movie.id}`}
+                    className="d-flex text-warning justify-content-center p-2 fs-5"
+                  >
+                    <h3 className="movie-title">{movie.title}</h3>
+                  </Link>
+                </motion.li>
+              ))}
+            </motion.ul>
+          </div>
         </div>
-      </div>
+      )}
     </FilterContainer>
   );
 };

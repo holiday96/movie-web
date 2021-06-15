@@ -36,8 +36,8 @@ const FavorUser = (props) => {
   const [favors, setFavors] = useState([]);
   const [list, setList] = useState([]);
 
-  const getFavors = () => {
-    axios
+  const getFavors = async () => {
+    await axios
       .get(`/users?id=${props.user.id}`)
       .then((res) => {
         setFavors(res.data[0].favor.reverse());
@@ -45,8 +45,8 @@ const FavorUser = (props) => {
       .catch((err) => console.log(err));
   };
 
-  const getList = () => {
-    favors.map((item) => {
+  const getList = async () => {
+    await favors.map((item) => {
       axios
         .get(`/movies?id=${item}`)
         .then((res) => {

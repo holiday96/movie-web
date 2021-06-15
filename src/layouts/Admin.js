@@ -1,8 +1,7 @@
 import React from "react";
-import "../assets/admin/dashboard.css";
-import "../assets/admin/bootstrap.min.css";
 import AdminHeader from "../components/admin/AdminHeader.js";
 import AdminNav from "../components/admin/AdminNav.js";
+import "../assets/admin/style.css"
 
 const AdminPageLayout = (props) => {
   return (

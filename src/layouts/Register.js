@@ -31,14 +31,11 @@ const RegisterLayout = (props) => {
           verify: uuidv4(),
         };
         props.onRegister(newData);
-        axios.get(`/users?id=${newData.id}`).then((res) => {
-          const userRegisted = res.data[0];
           sendEmailActive(
             newData.email,
             newData.firstName + " " + newData.lastName,
             `${env.LOCAL_HOST_WEB}/verify/${newData.verify}`
           );
-        });
         Swal.fire({
           title: "Welcome to WaMo!",
           text: "A verification email has been sent. Please verify your email to complete the registration process. Pay attention to check your spam folder if you don't see our email in the main mailbox.",

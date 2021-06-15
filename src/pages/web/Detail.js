@@ -44,7 +44,7 @@ const Detail = (props) => {
     tagDislike.style.visibility = "hidden";
   };
 
-  const addFavor = () => {
+  const addFavor = async () => {
     if (props.user.length === 0) {
       Swal.fire({
         title: "Login to use the service!",
@@ -67,7 +67,7 @@ const Detail = (props) => {
           email: props.user.email,
           password: props.user.password,
         };
-        axios.put(`/users/${props.user.id}`, newData);
+        await axios.put(`/users/${props.user.id}`, newData);
       } else {
         props.user.favor.push(id);
         const newData = {
@@ -80,7 +80,7 @@ const Detail = (props) => {
           email: props.user.email,
           password: props.user.password,
         };
-        axios.put(`/users/${props.user.id}`, newData);
+        await axios.put(`/users/${props.user.id}`, newData);
       }
       const Toast = Swal.mixin({
         toast: true,
@@ -106,7 +106,7 @@ const Detail = (props) => {
     }
   };
 
-  const removeFavor = () => {
+  const removeFavor = async () => {
     const newFavor = props.user.favor.filter((value) => value !== id);
     const newData = {
       favor: newFavor,
@@ -118,7 +118,7 @@ const Detail = (props) => {
       email: props.user.email,
       password: props.user.password,
     };
-    axios.put(`/users/${props.user.id}`, newData);
+    await axios.put(`/users/${props.user.id}`, newData);
     const Toast = Swal.mixin({
       toast: true,
       position: "top-end",
@@ -151,12 +151,14 @@ const Detail = (props) => {
   }, [props.user]);
 
   useEffect(() => {
-    axios
-      .get(`/movies/${id}`)
-      .then((res) => {
-        setMovie(res.data);
-      })
-      .catch((err) => console.log(err));
+    const getMovie = async () =>
+      await axios
+        .get(`/movies/${id}`)
+        .then((res) => {
+          setMovie(res.data);
+        })
+        .catch((err) => console.log(err));
+    getMovie();
     window.scrollTo(0, 0);
   }, []);
 
