@@ -43,10 +43,11 @@ const AddUser = ({ onAddUser }) => {
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-floating input-movie">
+          <label htmlFor="role">Role</label>
           <input
             type="text"
             className="form-control"
-            placeholder="Leave a role here"
+            placeholder="User as default"
             id="role"
             {...register("role", { required: true })}
           />
@@ -55,36 +56,38 @@ const AddUser = ({ onAddUser }) => {
               Chưa nhập vai trò.
             </div>
           )}
-          <label htmlFor="role">Role</label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="firstName">Firstname</label>
           <input
             type="text"
             className="form-control"
-            placeholder="Leave a firstName here"
+            placeholder="Ex: Johny"
             id="firstName"
             {...register("firstName")}
           ></input>
-          <label htmlFor="firstName">Firstname</label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="lastName" className="form-label">
+            Lastname
+          </label>
           <input
             type="text"
             className="form-control"
             id="lastName"
-            placeholder="lastName"
+            placeholder="Ex: Cage"
             {...register("lastName")}
           />
-          <label htmlFor="lastName" className="form-label">
-            Lastname
-          </label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="username" className="form-label">
+            Username
+          </label>
           <input
             type="text"
             className="form-control"
             id="username"
-            placeholder="username"
+            placeholder="Ex: johnycage01"
             {...register("username", { required: true })}
           />
           {errors.username && (
@@ -92,16 +95,16 @@ const AddUser = ({ onAddUser }) => {
               Chưa nhập tên đăng nhập.
             </div>
           )}
-          <label htmlFor="username" className="form-label">
-            Username
-          </label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="email" className="form-label">
+            Email
+          </label>
           <input
             type="email"
             className="form-control"
             id="email"
-            placeholder="email"
+            placeholder="johnycage01@gmail.com"
             {...register("email", { required: true })}
           />
           {errors.email && (
@@ -109,16 +112,16 @@ const AddUser = ({ onAddUser }) => {
               Chưa nhập Email.
             </div>
           )}
-          <label htmlFor="email" className="form-label">
-            Email
-          </label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="password" className="form-label">
+            Password
+          </label>
           <input
             type="password"
             className="form-control"
             id="password"
-            placeholder="password"
+            placeholder="Enter password"
             {...register("password", { required: true })}
           />
           {errors.password && (
@@ -126,11 +129,8 @@ const AddUser = ({ onAddUser }) => {
               Chưa nhập mật khẩu.
             </div>
           )}
-          <label htmlFor="password" className="form-label">
-            Password
-          </label>
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary mt-3">
           Confirm
         </button>
       </form>

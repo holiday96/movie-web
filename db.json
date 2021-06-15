@@ -1,6 +1,8 @@
 {
   "movies": [
     {
+      "view": 286,
+      "like": 0,
       "id": "1",
       "title": "New Horizon",
       "content": "Chí Khí Bay Cao là câu chuyện về những nhân viên hàng không thế hệ mới, bằng những nỗ lực cá nhân, vượt qua thử thách của bản thân để dần trưởng thành. Trong phim, Kiều Ân diễn vai Ngô Địch, ban đầu là tiếp viên hàng không, sau đó chuyển sang học để trở thành phi công. Trong quá trình học, Ngô Địch được hai chàng trai Tiêu Mặc và Hạ Vũ cùng theo đuổi. Tiêu Mặc từng là phi công, vì gián tiếp gây ra cái chết của mẹ Hạ Vũ trong một chuyến bay nên bị bóng đen tâm lý, chuyển sang làm kỹ thuật viên bảo trì máy bay một thời gian. Hạ Vũ là “thái tử gia” – người thừa kế của hãng hàng không Trọng Hạ.",
@@ -15,6 +17,8 @@
       "movie": ""
     },
     {
+      "view": 24456,
+      "like": 0,
       "id": "f80edb80-ba60-469e-8013-a8308160e39a",
       "title": "Sell Your Haunted House",
       "content": "Xem Phim Miễn Phí: Bộ phim Bất Động Sản Trừ Tà - Sell Your Haunted House với chủ đề siêu nhiên này kể về câu chuyện của Hong Ji-a (Jang Na-ra đóng), một thầy trừ tà nhưng lại điều hành một công ty bất động sản. Không phải là người môi giới thông thường, nhân vật này chuyên giải bùa ếm, giúp các khu đất trở nên \"an toàn\" để tiện buôn bán.",
@@ -29,6 +33,8 @@
       "movie": ""
     },
     {
+      "view": 15213,
+      "like": 0,
       "id": "71652592-bdf5-4bfb-9364-1ffdc82c33d9",
       "title": "The Tree of Life",
       "content": "Bộ phim xoay quanh hành trình cuộc đời của người con cả trong gia đình, Jack, qua những năm tháng ngây thơ của tuổi nhỏ cho đến những năm trưởng thành đau khổ và vỡ mộng khi phải cố gắng hoà thuận với người cha kỹ tính và trầm cảm (Brad Pitt). Jack lớn lên trong sự giằng xé giữa hai tính cách trái lập, một bên là người cha đại diện cho những tình cảm ức chế của con người; bên kia là người mẹ dịu dàng, mềm mỏng đầy tình thương. Điều làm thay đổi cuộc sống của anh chính là cái chết của người em ở tuổi 19, anh luôn lạc lõng giữa thế giới, luôn tìm kiếm nguồn cội thực sự của sự sống nhưng có lẽ sự tự nhiên đã từng có sẽ không thể trở về.",
@@ -43,6 +49,8 @@
       "movie": ""
     },
     {
+      "view": 36901,
+      "like": 0,
       "id": "15a7ab9a-ff0a-492b-8236-8be9ccbf1095",
       "title": "Fifty Shades of Grey",
       "content": "Câu chuyện bắt đầu khi cô sinh viên Anastasia Steele (Dakota Johnson thủ vai) tới phỏng vấn triệu phú trẻ tuổi Christian Grey (Jamie Dornan) cho tờ tạp chí của trường. Ana đơn giản, trong sáng đã lọt vào mắt xanh của kẻ luôn thích kiểm soát mọi việc là Christian. Anh bắt đầu tiếp cận Ana và cuốn cô vào vòng xoáy của tình ái và nhục cảm.\n\nNhưng đây không phải câu chuyện tình đơn thuần giữa chàng hoàng tử giàu sang lịch lãm và cô gái ngây thơ chân chất. Điều khiến 'Fifty Shades of Grey' trở nên đặc biệt chính là những đam mê bạo liệt về thể xác, những thú vui ái tình diễn ra trong \"Căn Phòng Đỏ” bí mật của Christian Grey.",
@@ -57,6 +65,8 @@
       "movie": "a"
     },
     {
+      "view": 26119,
+      "like": 0,
       "id": "b108aafc-7aea-4776-9426-0d87d6c1c449",
       "title": "The Croods: A New Age",
       "content": "Từ một gia đình tiền sử sống trong hang với nỗi lo sợ thường trực về thế giới nguy hiểm bên ngoài, nhà Croods đã tự tin bước khỏi vùng an toàn của mình, tiến tới việc làm chủ nhiều phát minh quan trọng.\n\nCười bể bụng cùng những câu chuyện nhân văn và thông điệp ý nghĩa.",
@@ -71,6 +81,8 @@
       "movie": ""
     },
     {
+      "view": 54634,
+      "like": 0,
       "id": "0776dde3-e956-464a-a691-643b5ceafe34",
       "title": "Elektra",
       "content": "Elektra, một nữ chiến binh đến từ cõi chết. Cô luôn bị ám ảnh về cái chết đầy bi kịch của cha, mẹ và của chính mình để rồi ý chí báo thù cho những người mình thương yêu luôn dằn vặt và dẫn dắt cô trở thành một nữ sát thủ chuyên nghiệp. Một ngày kia, cô được thuê giết chết hai cha con Mark và Abby. Sự hồn nhiên trong sáng của Abby đã làm chùn lòng nàng sát thủ máu lạnh, cô giúp đỡ hai cha con trốn thoát. Nhưng cuộc chiến thực sự bắt đầu khi nhóm tà giáo The Hands đích thân đuổi bắt Abby.",
@@ -85,6 +97,8 @@
       "movie": ""
     },
     {
+      "view": 95919,
+      "like": 0,
       "id": "8915efc7-0a07-46e0-98c4-fa81e3c234e5",
       "title": "Freaky",
       "content": "Bộ phim có nội dung nói về một nữ sinh trung học đã hoán đổi thân xác với một tên giết người hàng loạt. Trong vòng 24 giờ, sự thay đổi này sẽ trở thành vĩnh viễn, liệu cô gái phải làm thế nào?",
@@ -99,6 +113,8 @@
       "movie": ""
     },
     {
+      "view": 67171,
+      "like": 0,
       "id": "7edb7359-753d-4f8c-be5b-f268a7d9d2a5",
       "title": "Mulan",
       "content": "Mộc Lan sẽ đưa người xem trở về Trung Hoa thời nhà Đường, theo chân cô nàng Mộc Lan giả dạng nam nhân thay cha nhập ngũ. Với tinh thần quả cảm và nghị lực phi thường, cô đã dẫn dắt binh lính đánh bại quân xâm lược phương Bắc và trở thành một trong những chiến binh vĩ đại nhất lịch sử. “Thần tiên tỉ tỉ” Lưu Diệc Phi đảm nhận vai nữ anh hùng của bộ phim.\n\nMộc Lan là con gái trưởng của chiến binh kì cựu Hoa Hồ. Sau khi bị các thế lực phương Bắc tấn công, Hoàng đế Trung Hoa ban lệnh truyền xuống yêu cầu mỗi gia đình phải có một người đàn ông đi lính. Do nhà họ Hoa không có con trai, Mộc Lan đã lén thế chỗ cho người cha già của mình.",
@@ -113,6 +129,8 @@
       "movie": ""
     },
     {
+      "view": 43671,
+      "like": 0,
       "id": "c07d6c0e-4756-416c-bb9c-7983cca43748",
       "title": "Kingsman: Golden Circle",
       "content": "Sau sự kiện ở phần một, Eggsy giờ đây đã trở thành điệp viên chính thức của tổ chức Kingsman. Eggsy cùng chuyên gia công nghệ Merlin và các đồng đội cũ buộc phải chạy sang Mỹ sau khi căn cứ của Kingsman bị phá hủy. Tại đây, họ phải phối hợp cùng các đồng minh thuộc Statesmen, tổ chức điệp viên tại Mỹ, để triệt phá mưu của ác nữ Poppy, vốn là thành viên của The Golden Circle - một hội kín mang mục đích lập lại trật tự thế giới mới.\n\nSự trở lại của những điệp viên lịch lãm.",
@@ -127,6 +145,8 @@
       "movie": ""
     },
     {
+      "view": 81487,
+      "like": 0,
       "id": "86427ceb-d86d-4ad7-9c91-ebbedbea8e87",
       "title": "Anna",
       "content": "Ẩn sau vẻ đẹp thần bí của Anna là những kỹ năng chiến đấu vô cùng ấn tượng. Điều này biến cô trở thành một trong những sát thủ nguy hiểm nhất thế giới...",
@@ -141,6 +161,8 @@
       "movie": ""
     },
     {
+      "view": 54415,
+      "like": 0,
       "id": "2e38ca53-07fb-4c65-be96-b444db20f2fe",
       "title": "Soul",
       "content": "2 giải Oscar năm 2021 dành cho 'Phim hoạt hình xuất sắc nhất' và 'Nhạc phim xuất sắc nhất'.\n\nBộ phim kể về Joe - một giáo viên thanh nhạc đã ở tuổi xế chiều mà vẫn chưa đạt được thành tựu nào trong cuộc sống. Ngày ông gần chạm tay được tới ước mơ, ông lại bất ngờ... ngã xuống cống và chết. Linh hồn của Joe lưu lạc đến một thế giới khác của những linh hồn, và trong lúc tìm cách quay trở về với cơ thể của mình, Joe phải kèm cặp một linh hồn không-muốn-sống là 22. Qua cuộc đời của Joe, 22 cũng bắt đầu nhìn thấy những vẻ đẹp của cuộc sống còn Joe lại tìm được lý tưởng mới cho chính mình.\n\nPhim chỉ ra lối đi tích cực cho câu hỏi hóc búa mà chúng ta đôi khi phải dành cả đời để giải đáp: “Cuối cùng, chúng ta sống vì điều gì?”.",
@@ -155,6 +177,8 @@
       "movie": ""
     },
     {
+      "view": 66629,
+      "like": 0,
       "id": "77a295d6-6418-47e2-b3c9-d6a28a52c21d",
       "title": "P Storm",
       "content": "Sau thành công của bộ ba \"Z Storm\", \"S Storm\" và \"L Storm\", phần tiếp theo \"P Storm\" kể về một gã cảnh sát đã nhận hối lộ 30 triệu đô la Hong Kong để giúp một kẻ giết người trong nhà tù sớm được trả tự do. Một cuộc điều tra đã được bắt đầu để tìm ra danh tính gã cảnh sát. Lục Chí Liêm (Cổ Thiên Lạc) vào tù giả làm phạm nhân để tiếp cận và tìm chứng cứ từ Tào Nguyên Nguyên (Lâm Phong) – thiếu gia ăn chơi khét tiếng đang bị giam giữ, còn đồng nghiệp Trình Đức Minh (Trịnh Gia Dĩnh) thì ở bên ngoài để tìm kiếm bằng chứng. Trong khoảng thời gian này, Lục Chí Liêm còn phải đối mặt với những kẻ từng bị anh vạch tội bỏ tù trước đây.",
@@ -169,6 +193,8 @@
       "movie": ""
     },
     {
+      "view": 31096,
+      "like": 0,
       "id": "7fc4fba7-d46d-4357-9471-7450e12de56d",
       "title": "Điên Tối",
       "content": "Chuyện phim về anh chàng đạo diễn thực tập (Liên Bỉnh Phát đóng) phải tìm mọi cách thuyết phục cô nhà văn trẻ nhưng ghét điện ảnh (Yu Dương đóng) đảm nhận vai trò biên kịch cho bộ phim đầu tay của mình. Vào một đêm tối trời, 2 người trẻ tuổi nhanh chóng phát hiện những điều mờ ám và kỳ quái tại ngôi nhà với \"căn phòng khoá trái\" do 1 nhạc công piano làm chủ (Phan Anh đóng). Họ quyết định đột nhập vào nhà để điều tra nhưng lại khám phá ra những bí ẩn kinh hoàng không ai ngờ tới.",
@@ -183,6 +209,8 @@
       "movie": ""
     },
     {
+      "view": 63520,
+      "like": 0,
       "id": "f024ed0d-8b15-45d2-9a65-feed060b8686",
       "title": "Trolls World Tour",
       "content": "Nối tiếp thành công của phần phim đầu tiên Trolls (2016), hãng Dreamworks mở rộng câu chuyện về những chú quỷ lùn tinh nghịch. Thế giới loài troll từ thuở hồng hoang chia thành sáu vương quốc, đại diện cho sáu thể loại âm nhạc gồm: pop, nhạc đồng quê, funk, techno, nhạc cổ điển và rock. Cho đến khi Nữ hoàng nhạc Rock Barb (Rachel Bloom lồng tiếng) tiến hành xâm lược các vương quốc còn lại nhằm thống nhất loài troll. Đối mặt với hiểm họa chung, Nữ hoàng nhạc Pop Poppy (Anna Kendrick) cùng Branch (Justin Timberlake) và nhóm bạn quyết định lên đường giải cứu âm nhạc. Hành trình giúp các troll trưởng thành, học cách lắng nghe nhau và thấu hiểu thế giới.\n\nChuyến lưu diễn tinh nghịch và đầy sắc màu vui tươi.",
@@ -197,6 +225,8 @@
       "movie": ""
     },
     {
+      "view": 12023,
+      "like": 0,
       "id": "6cbed5a8-6852-46c8-87e3-cebb3f3fddcc",
       "title": "Bigfoot Family",
       "content": "'Gia Đình Chân To Phiêu Lưu Ký' tiếp nối phần phim 'Bố Tớ Là Chân To' kể về cuộc phiêu lưu thú vị đến vùng đất Alaska với mong muốn truyền tải thông điệp ý nghĩa về môi trường sau khi Adam và Bố trở thành những gương mặt được truyền thông săn đón. Trong lúc đang dốc sức để mang lại những điều tuyệt vời cho Alaska, họ đã phát hiện một âm mưu tàn phá môi trường. Liệu gia đình Chân To có ngăn chặn được âm mưu độc ác này và bảo vệ vùng đất?",
@@ -211,6 +241,8 @@
       "movie": ""
     },
     {
+      "view": 41812,
+      "like": 0,
       "id": "de000e3b-f29c-4aa4-81ee-9f85d83a39b1",
       "title": "Naughty Brothers",
       "content": "Ton là con trai một trong gia đình và được ba mẹ thương yêu hết mực. Cậu bé không thiếu thốn thứ gì và luôn được chiều chuộng từ miếng ăn đến giấc ngủ. Thế nhưng, tất cả đã thay đổi từ khi có sự xuất hiện của cậu em trai thất lạc bấy lâu – Tin. Ba mẹ lẫn cô giúp việc nhí nhảnh đều chuyển dần sự quan tâm sang cho Tin khiến Ton cảm thấy hụt hẫng và chán ghét em trai ruột của mình. Vì thế, thay vì vui mừng hội ngộ với em trai sau bao năm xa cách, thì Ton lại luôn tỏ ra lạnh lùng cũng như nghĩ đủ trò để hành hạ Tin cho bõ tức.\n\nDù bị Ton đối xử không tốt, Tin vẫn luôn tin tưởng và nghe lời anh trai. Cậu không ngại làm nhiều việc để anh vui mặc cho bản thân có chịu chút thiệt thòi.\n\nThế rồi trong một lần trải qua một vụ thất lạc nguy hiểm, Ton nhận ra tình cảm của mình dành cho Tin. Hai anh em từ đó trở nên thân thiết và gắn bó không rời…\n\nBộ phim ý nghĩa về tình cảm gia đình.",
@@ -225,6 +257,8 @@
       "movie": ""
     },
     {
+      "view": 3308,
+      "like": 0,
       "id": "f56b0d4e-729f-4718-86dd-7afe4fd1945e",
       "title": "Yesterday",
       "content": "Ngày Hôm Qua lấy bối cảnh một thế giới nơi nhóm The Beatles bỗng nhiên bị “tan biến” khỏi nền văn hóa âm nhạc đương đại, và nhân vật chính Jack Malik (Himesh Patel) là người duy nhất còn nhớ đến họ.",
@@ -239,6 +273,8 @@
       "movie": ""
     },
     {
+      "view": 29198,
+      "like": 0,
       "id": "80696be8-e5b7-4ae8-8618-e6389eb0215e",
       "title": "Ride Your Wave",
       "content": "Lướt Sóng Cùng Em kể về mối tình bi kịch của Hinako và chàng lính cứu hỏa Minato. Khi tình yêu vừa chớm thì Minato gặp tai nạn lướt sóng và vĩnh viễn ra đi",
@@ -253,6 +289,8 @@
       "movie": ""
     },
     {
+      "view": 48232,
+      "like": 0,
       "id": "3e7c6cd0-5910-423e-b7ea-51d043d80512",
       "title": "Knives Out",
       "content": "Nhân dịp sinh nhật lần thứ 85 của mình, tiểu thuyết gia trinh thám nổi tiếng Harlan Thombrey đã tổ chức một buổi tiệc với đông đủ các thành viên trong gia đình. Tuy nhiên, ông Harlan bất ngờ qua đời ngay trong ngày hôm đấy. Thám tử Benoit Blanc được cử đến để điều tra vụ án và tất cả mọi người trong gia đình đều trở thành nghi phạm. Vậy trong ngôi nhà nhiều thế hệ này, ai mới chính là ‘Kẻ Đâm Lén’?",
@@ -267,6 +305,8 @@
       "movie": ""
     },
     {
+      "view": 15640,
+      "like": 0,
       "id": "d6ae49c8-be2e-4d58-810c-47480919407b",
       "title": "The King of Staten Island",
       "content": "Ông Vua Đảo Staten kể về một chàng trai có tên Scott, anh mắc chứng chậm phát triển kể từ khi cha anh - một người lính cứu hỏa đã qua đời. Anh dành cả ngày để hút cỏ và mơ ước trở thành một nghệ sĩ xăm hình cho đến khi những biến cố buộc anh phải vật lộn với nỗi đau và thực hiện những bước ngoặt đầu tiên trong đời.",
@@ -281,6 +321,8 @@
       "movie": ""
     },
     {
+      "view": 41989,
+      "like": 0,
       "id": "65ab44ee-d71f-4f40-89c3-0a9bcd6211a8",
       "title": "Hot Boy Nổi Loạn 2",
       "content": "Năm 2011, Hot boy nổi loạn gây sốt trong làng điện ảnh Việt nhờ nội dung khắc họa trực diện cuộc sống của những người thuộc tầng lớp đáy xã hội: gái mại dâm, trai đứng đường và kẻ tật nguyền. Và năm nay - 2017, sự lãng mạn, tính nhân văn cùng những khung hình đẹp nên thơ của đất Sài Gòn khiến đây trở thành một trong những tác phẩm điện ảnh đáng nhớ nhất đến từ đạo diễn Vũ Ngọc Đãng : Hot Boy Nổi Loạn - Phần 2.",
@@ -295,6 +337,8 @@
       "movie": ""
     },
     {
+      "view": 5295,
+      "like": 0,
       "id": "783907f9-6852-43fe-b0a6-dc06d6fcf2e9",
       "title": "Walk with Me",
       "content": "Bước Chân An Lạc là bộ phim thiền định về một cộng đồng các nhà sư và chư Ni Phật giáo đã cống hiến đời mình để làm chủ được nghệ thuật chánh niệm với vị thầy nổi tiếng thế giới Thích Nhất Hạnh.",
@@ -309,6 +353,8 @@
       "movie": ""
     },
     {
+      "view": 19507,
+      "like": 0,
       "id": "0aafdc52-b7ce-45f3-8365-d848d8e39ba2",
       "title": "Farewell, Berlin Wall",
       "content": "Quyên là bộ phim được chuyển thể từ cuốn tiểu thuyết cùng tên của nhà văn Nguyễn Văn Thọ. Chuyện phim kể về cuộc đời của cô gái Hà Nội tên Quyên trong thời kỳ hỗn mang khi bức tường Berlin sụp đổ. Trong hành trình tìm sự sống nơi xứ người, Quyên đã gặp và trải qua những khoảnh khắc khó quên bên cạnh những người đàn ông yêu thương cô. Phim Quyên có sự tham gia của diễn viên Trần Bảo Sơn, sao hành động Gary Daniels, người đẹp Vũ Ngọc Anh và diễn viên David Trần.",
@@ -323,6 +369,8 @@
       "movie": ""
     },
     {
+      "view": 15664,
+      "like": 0,
       "id": "26f9398d-2d33-4863-bfbb-eec647e5312b",
       "title": "Ma",
       "content": "Phim Ma do đạo diễn Tate Taylor đảm nhận vai trò chỉ đạo nội dung, cái tên lừng danh với 2 tác phẩm The Help và Get On Up, được sản xuất bởi Blum cùng hãng phim Blumhouse Productions.\n\nSue Ann là người phụ nữ độc thân sống tại một thị trấn nhỏ ở ban Ohio, cô độc và ít không giao tiếp với nhiều người. Một ngày, cô gái trẻ tên Maggie nhờ Ann mua rượu giúp cô và đám bạn để tổ chức một bữa tiệc nhớ đời. Ann muốn bọn trẻ gọi mình là Ma và cho chúng ở lại tầng hầm nhà mình với điều kiện không được đặt chân lên tầng. Và rồi điều gì đến cũng đã đến, lần lượt từng thành viên trong nhóm gặp phải nguy hiểm, nỗi kinh hoàng mang tên Ma chính thức bắt đầu.",
@@ -337,6 +385,8 @@
       "movie": ""
     },
     {
+      "view": 83016,
+      "like": 0,
       "id": "4cb31caa-8127-4cfa-bb35-ab26d0269474",
       "title": "Gretel & Hansel",
       "content": "Gretel & Hansel: Truyện cổ kỳ dị theo chân 2 chị em ruột Gretel (Sophia Lillis, sao nhí từng thủ vai trong phim IT) và Hansel (Samuel Leakey đảm nhận) trong hành trình sinh tồn giữa thời điểm đói kém sau khi bị người mẹ điên dại đuổi khỏi nhà. Trên đường băng qua rừng sâu, 2 chị em gặp loạt rắc rối và được một người lạ mặt chỉ đường đến nơi có thể làm việc và tá túc.\n\nTuy nhiên, chính những đứa trẻ này cũng không ngờ, họ phải đối mặt với nỗi sợ hãi lớn nhất của người dân: phù thủy. Từ đây, Gretel và Hansel đã được một phụ nữ lạ mặt cưu mang, nhưng kéo theo lòng tốt của mụ ta là loạt sự thật kinh tởm được phơi bày giữa rừng sâu.",
@@ -351,6 +401,8 @@
       "movie": ""
     },
     {
+      "view": 44877,
+      "like": 0,
       "id": "2cecc645-a787-425e-85be-36df73c23f24",
       "title": "Journey to China: The Mystery of Iron Mask",
       "content": "Nhà thám hiểm Jonathan Green nhận lệnh từ Peter Đại Đế phải hoàn thành bản đồ miền Đông nước Nga. Trong cuộc hành trình ẩn chứa nhiều điều bất ngờ, anh đã đặt chân đến Trung Quốc và đối mặt với nhiều sinh vật kỳ quái.",
@@ -365,6 +417,8 @@
       "movie": ""
     },
     {
+      "view": 6397,
+      "like": 0,
       "id": "c45ea290-7faa-417e-8014-ef64d10affca",
       "title": "Life of Pi",
       "content": "Nội dung chính của Life of Pi bắt đầu khi cha của Pi quyết định đưa cả gia đình cùng những con vật trong sở thú của ông vượt biển sang Canada. Thật không may, con tàu bị nhấn chìm bởi một cơn bão lớn. Pi là người sống sót duy nhất trên con thuyền cứu hộ cùng với linh cẩu, ngựa vằn, chuột, đười ươi một con hổ Bengal tên Richard Parker. Cuối cùng chỉ còn lại Pie và Richard, một mình giữa đại dương, Pi phải tìm cách để làm bạn và sống sót cùng người bạn hoang dã này. Life of Pie là khúc ca ca ngợi niềm tin vào cuộc sống dù có muôn vàn khó khăn. Những thử thách mà Pi phải trải qua chính là thử thách mà mỗi chúng ta phải trải qua trong đời.\n\nTin vào những điều không tưởng.",
@@ -379,6 +433,8 @@
       "movie": ""
     },
     {
+      "view": 63563,
+      "like": 0,
       "id": "dfda6322-41ce-4056-bc60-4b79ade0e7f3",
       "title": "Titanic",
       "content": "\"Titanic\" là một bộ phim thảm họa lãng mạn có yếu tố lịch sử của Mỹ, phát hành năm 1997, do James Cameron làm đạo diễn. Phim lấy ý tưởng dựa trên vụ đắm tàu RMS Titanic nổi tiếng vào năm 1912. Diễn viên chính Leonardo DiCaprio và Kate Winslet trong vai hai con người đến từ hai tầng lớp khác nhau trong xã hội, họ đem lòng yêu nhau trên chuyến ra khơi đầu tiên của con tàu xấu số. Công chiếu lần đầu tiên ngày 1 tháng 11 năm 1997 tại Liên hoan phim quốc tế Tokyo và phát hành chính thức từ ngày 19 tháng 12 năm 1997, bộ phim đã giành được thành công vang dội thu về hơn 2 tỷ USD.\n\nCảm xúc mãnh liệt từ con tàu huyền thoại.",
@@ -393,6 +449,8 @@
       "movie": ""
     },
     {
+      "view": 32667,
+      "like": 0,
       "id": "94c5df25-6d63-4e08-83b6-f6af4104a051",
       "title": "Maze Runner: The Scorch Trials",
       "content": "Thomas và các bạn chưa bao giờ hình dung điều gì ghê gớm hơn các thách thức đã gặp phải trong Mê cung. Nhưng họ đã lầm. Trí nhớ khiếm khuyết của họ khiến họ không biết đến những gì đã và đang diễn ra ở thế giới bên ngoài. Những thứ còn khủng khiếp hơn bầy Nhím Sầu, lắt léo hơn các ngóc ngách Mê Cung và tàn nhẫn hơn cả sự Biến Đổi. Liệu vai trò thật sự của nhóm Thomas trong toàn bộ chuyện này là gì? Sẽ thế nào nếu họ biết rằng còn có những Mê Cung khác ngoài nơi mà họ vừa thoát ra?\n\nLời giải đáp cho những bí mật còn ẩn giấu.",
@@ -407,6 +465,8 @@
       "movie": ""
     },
     {
+      "view": 32868,
+      "like": 0,
       "id": "d22a5032-170c-40b3-9a61-28a54e456f1e",
       "title": "The A-Team",
       "content": "Bộ phim kể về biệt đội đặc biệt gồm bốn người lính siêu hạng: thủ lĩnh Hannibal, trung úy Baracus, Quinton Jackson và viên phi công Murdock. Sau 8 năm sát cánh bên nhau với hơn 80 nhiệm vụ lớn nhỏ tại nhiều chiến trường trên thế giới, biệt đội bất ngờ bị CIA bắt giữ về những tội lỗi mà họ không hề phạm phải. Giờ đây, bốn người chỉ còn cách thoát thân để chứng minh sự trong sạch của mình và tìm ra kẻ thù đứng đằng sau âm mưu thâm độc này...\n\nMột bộ phim hành động liên hoàn đậm chất giải trí!",
@@ -421,6 +481,8 @@
       "movie": ""
     },
     {
+      "view": 53296,
+      "like": 0,
       "id": "0da46eee-8bb6-414d-bd53-29695cbe9925",
       "title": "Despicable Me 2",
       "content": "Trong Despicable Me 2, nhân vật Gru rũ bỏ quá khứ là một tên trộm tinh quái để toàn tâm nuôi dạy 3 cô con gái là Margo, Edith và Agnes. Thế nhưng ngay khi Gru quyết định lui về với gia đình và trở thành một người cha mẫu mực thì một tổ chức bí mật với quy mô toàn cầu đến gõ cửa. Gru cùng với cộng sự mới của anh -- Lucy cùng bắt tay tham gia vào cuộc truy tìm xem ai là kẻ đứng sau chuỗi những phi vụ âm mưu đình đám đang diễn ra. Và thế là, quái kiệt Gru một thời lại trở lại với thế giới để khẳng định vị trí bất khả chiến bại của mình.",
@@ -435,6 +497,8 @@
       "movie": ""
     },
     {
+      "view": 32215,
+      "like": 0,
       "id": "fef8f985-ca66-4145-8e7b-85bd540330a6",
       "title": "Eddie The Eagle",
       "content": "Bộ phim Eddie The Eagle được làm dựa nên câu chuyện đời tràn đầy cảm hứng của vận động viên trượt tuyết người Anh - Eddie Edwards. Từ năm 10 tuổi, mặc dù gặp một chấn thương đầu gối khá nghiêm trọng nhưng Eddie Edwards vẫn kiên trì theo đuổi giấc mơ được tham dự và đoạt huy chương tại thế vận hội thể thao lớn nhất hành tinh: Olympic.\n\nKhông có vinh quang cho kẻ bỏ cuộc.",
@@ -449,6 +513,8 @@
       "movie": ""
     },
     {
+      "view": 49731,
+      "like": 0,
       "id": "a1b037f1-0fe1-4a2c-ac09-2b33c00e57d4",
       "title": "As Above, So Below",
       "content": "Phim kể về một nhóm các bạn trẻ ưa mạo hiểm và khám phá quyết định thực hiện một chuyến phiêu lưu tìm hiểu hệ thống hầm mộ cổ xưa trải dài hàng dặm nằm bên dưới đường phố của thủ đô Paris, vốn là ngôi nhà chung của vô số linh hồn đã nằm lại từ hàng trăm năm trước. Khi nhóm thám hiểm xâm nhập vào hệ thống mê cung đáng sợ này, họ bất ngờ khám phá ra một bí mật tăm tối bên trong thành phố của người chết dẫn tới một cuộc trốn chạy khủng khiếp và đầy chết chóc và sợ hãi.",
@@ -463,6 +529,8 @@
       "movie": ""
     },
     {
+      "view": 2168,
+      "like": 0,
       "id": "171520ed-b5d2-45c5-86a6-41a634a1257d",
       "title": "The Maze Runner",
       "content": "The Maze Runner là bộ phim được chuyển thể từ bộ truyện cùng tên có nội dung giả tưởng về nhóm bạn trẻ bị giam giữ trong 'Trảng' với một trí nhớ không rõ ràng, và cuộc vật lộn tìm lối thoát. Làm thế nào họ sống sót được giữa một mê cung khổng lồ đầy những sinh vật nguy hiểm và thay đổi lời giải hằng đêm? Ai sẽ là người sống sót cuối cùng sau những bí mật chết người kia?\n\nÂm mưu nào đứng sau mê cung kì bí?",
@@ -477,6 +545,8 @@
       "movie": ""
     },
     {
+      "view": 98503,
+      "like": 0,
       "id": "c5b63631-26ef-43a5-aff4-cdf5396f8b57",
       "title": "Unbreakable",
       "content": "Dunn là người sống sót duy nhất sau một tai nạn xe lửa thảm khốc. Tất cả hành khách trên chuyến xe lửa đều tử nạn, riêng anh trở về không một vết xây xước. Và anh gặp một con người kỳ lạ, sự ám ảnh của con người đó khiến anh phát hiện ra một bí mật liên quan đến chính con người anh và điều đó đã khiến cuộc đời anh thay đổi mãi mãi.",
@@ -491,6 +561,8 @@
       "movie": ""
     },
     {
+      "view": 34260,
+      "like": 0,
       "id": "5b06e0b9-bfc8-47f2-a2a7-c2fdd0bb6311",
       "title": "Iron Man 3",
       "content": "Từ sau những sự kiện và những trận chiến đầy ám ảnh trong The Avengers, Tony Stark quay về ở ẩn trong căn biệt thự sang trọng của mình, tạm thời chờ đợi trong tư cách một tỷ phú giàu có được yêu mến và gác danh phận siêu anh hùng sang một bên.\n\nTuy nhiên, những hiểm họa mới lại tiếp tục xuất hiện dưới bóng ma bao trùm của một quái nhân, đồng thời cũng là một thiên tài về công nghệ - The Mandarin. Người bạn thân trong lực lượng quân đội Hoa Kỳ của Tony - James Rhodes cần tới sự giúp đỡ của anh và những bộ giáp siêu việt.\n\nMọi chuyện không hề dễ dàng như Tony và James tưởng tượng: dưới sức mạnh thần bí của mười chiếc nhẫn vũ trụ, The Mandarin đã đánh bại \"Người Sắt\", đồng thời khiến siêu anh hùng - tỷ phú trở thành kẻ mất trí nhớ...",
@@ -505,6 +577,8 @@
       "movie": ""
     },
     {
+      "view": 56610,
+      "like": 0,
       "id": "ddf40954-5ad9-4ae9-9e40-e74802d2aabb",
       "title": "The Secret Life Of Walter Mitty",
       "content": "The Secret Life of Walter Mitty là câu chuyện thú vị về cuộc đời của nhân vật chính - Walter Mitty, một chàng nhân viên văn phòng với những mơ mộng không bao giờ dứt, tự biến bản thân thành kẻ ngơ ngác trong chính cuộc đời mình và dễ dàng trở thành trò cười cho mọi người xung quanh. Một con người có những ước mơ vĩ đại, nhưng không thể hoàn thành những điều nhỏ nhặt nhất trong cuộc sống hằng ngày. Đến với The Secret Life of Walter Mitty, người xem sẽ đến với một thế giới hoàn toàn khác, với những tình tiết vượt xa khỏi trí tưởng tượng bình thường, được xây dựng bởi sự đầu tư kỹ lượng và hiệu ứng hình ảnh tuyệt vời của đạo diễn đa tài, cũng là diễn viên chính của bộ phim - Ben Stiller. Bộ phim cho chúng ta thấy cuộc đời của mỗi người là một chuyến hành trình dài đi tìm con người thật của chính mình từ đó có được hạnh phúc thật sự.\n\nNgừng mơ mộng. Hãy sống thực tế.",
@@ -519,6 +593,8 @@
       "movie": ""
     },
     {
+      "view": 5839,
+      "like": 0,
       "id": "1c3d3918-a9d3-4dcc-abaa-48ec82b3cbc2",
       "title": "Jurassic World",
       "content": "Bối cảnh của Jurassic World là hơn 20 năm sau kể từ sự kiện công viên kỷ Jura (1993). Isla Nublar - một hòn đảo ngoài khơi Thái Bình Dương thuộc khu vực Trung Mỹ - hiện là thế giới khủng long thật sự. Các nhà di truyền học tại đây vừa tạo ra loài khủng long lai mang tên Indominus Rex, nhằm thu hút khách du lịch hơn. Nhưng chính việc làm đó biến con người có nguy cơ thành món mồi cho quái thú.",
@@ -533,6 +609,8 @@
       "movie": ""
     },
     {
+      "view": 30836,
+      "like": 0,
       "id": "df1b2249-39af-46b3-aba6-37d61e7025bb",
       "title": "Pitch Black",
       "content": "Trong phim Quái Vật Trên Hành Tinh Lạ, tên tội phạm Richard nguy hiểm đến nỗi người ta phải đưa hắn tới một nhà tù bên ngoài Trái Đất để giam giữ. Trên đường đi, phi thuyền chở hắn gặp nạn và rơi xuống một hành tinh bỏ hoang. Phi thuyền vận tải Hunter Gratzner va chạm với một thiên thạch trong lúc chở 40 người tới hệ sao Tangiers. Nó rơi xuống một hành tinh bỏ hoang và rất ít ánh sáng. Trong phim hdnày, chỉ còn 11 người sống sót, trong đó có nữ phi công Carolyn Fry (Radha Mitchell), tên tội phạm Richard B. Riddick (Vin Diesel), chàng cảnh sát William J. Johns (áp tải Richard tới Tangiers để chấp hành án tù). Richard tìm cách bỏ trốn và William quyết tâm đi bắt tên tội phạm nguy hiểm. Trong lúc chôn cất các thi thể, một người trong nhóm sống sót đột ngột mất tích. Khi Richard bị bắt, người ta cho rằng gã đã bắt cóc anh chàng kia. Khi xem xét một cái hang, nữ phi công Carolyn phát hiện dấu vết của những sinh vật lạ dưới lòng đất. Trong lúc đi tìm nước, họ phát hiện một khu mỏ bỏ hoang và một phi thuyền nhỏ bị hỏng. Thêm một thành viên nữa trong nhóm thiệt mạng khi vô tình chạm trán với một lũ quái vật mới sinh.\n\n\nĐừng sợ bóng tối mà hãy sợ thứ ở trong bóng tối đó.",
@@ -547,6 +625,8 @@
       "movie": ""
     },
     {
+      "view": 86997,
+      "like": 0,
       "id": "5e6b6af8-73d6-4992-ba00-6fbf40105d0d",
       "title": "Hero",
       "content": "Bối cảnh của phim là đất nước Trung Hoa thời Chiến Quốc, bị chia cắt thành 7 nước Tần, Triệu, Hán, Ngụy, Yên, Tề và Sở. Các cuộc chiến tranh khốc liệt nổ ra liên miên giữa 7 quốc gia này nhằm tranh giành quyền bá chủ khiến muôn dân phải chịu cảnh chết chóc lầm than. Tần là nước mạnh nhất và Tần Vương luôn nung nấu tham vọng thống nhất đất nước, trở thành vị hoàng đế đầu tiên của Trung Hoa. Vì thế, từ lâu vị vua này luôn là mục tiêu ám sát của các nước khác. Tuy nhiên, có 3 thích khách khiến Tần Vương lo lắng là Tàn Kiếm, Phi Tuyết và Trường Không... Để trừ mối họa tâm phúc, Tần Vương hứa ban thưởng vàng bạc, lộc điền và cho phép người giết được 1 trong 3 cao thủ đó được diện kiến. Tuy nhiên, suốt 10 năm trời không ai có thể làm được điều này. Vì vậy, khi viên đình trưởng nhỏ, Vô Danh, tới hoàng cung với những vũ khí huyền thoại của 3 thích khách trên, Tần Vương đã không nén nổi tò mò...",
@@ -561,6 +641,8 @@
       "movie": ""
     },
     {
+      "view": 67476,
+      "like": 0,
       "id": "3cfc0ab7-24fa-4ab5-be90-dbd269e6e826",
       "title": "Dragonball: Evolution",
       "content": "Bảy Viên Ngọc Rồng là hành trình của Go Ku tìm kiếm 7 viên ngọc rồng trong truyền thuyết và ngăn chặn ma vương Piccolo thống trị trái đất. Cuộc Adventure của Go Ku và những người bạn đầy rẫy nguy hiểm, nhưng nhờ sức mạnh tình bạn, Go Ku liệu có hoàn thành sứ mệnh của mình hay không?",
@@ -575,6 +657,8 @@
       "movie": ""
     },
     {
+      "view": 28755,
+      "like": 0,
       "id": "6db4b857-c0ab-4787-9e98-9a69f128cf65",
       "title": "The Avengers",
       "content": "\"Sau hàng loạt những siêu phẩm về các siêu anh hùng chuyển thể từ truyện tranh của Marvel, giờ đây tất cả cùng tụ họp trong siêu bom tấn Marvel's The Avenger - Biệt đội siêu anh hùng, bộ phim đánh dấu kết thúc giai đoạn 1 trong đại dự án về vụ trụ điện ảnh Marvel. Biệt đội siêu anh hùng lần đầu tiên tập hợp lại dưới sự chỉ huy của Đại tá Nick Fury, giám đốc cơ quan gìn giữ hoà bình quốc tế S.H.I.E.L.D bao gồm Captain America, Iron Man, Thần Sấm Thor, Người khổng lồ xanh Hulk, cung thủ Hawkeye và nữ điệp viên Black Widow. Những anh hùng vốn mang trong mình sức mạnh và trách nhiệm bảo vệ Trái Đất giờ sát cánh bên nhau để chống lại kẻ thù tàn bạo còn đang ẩn giấu...\nSiêu phẩm Biệt đội Siêu anh hùng có sự góp mặt của những ngôi sao hàng đầu Hollywood như Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, Scarlett Johansson, Jeremy Renner, Tom Hiddleston và Samuel L. Jackson đã phá mọi kỷ lục phòng vé khi ra lần đầu ra rạp năm 2012.\"\n\nQuy tụ những người hùng đình đám của truyện tranh Marvel với kỹ xảo mãn nhãn.",
@@ -589,6 +673,8 @@
       "movie": ""
     },
     {
+      "view": 35983,
+      "like": 0,
       "id": "aa8bdd4b-e7df-4ea2-8c40-d9825d118f8a",
       "title": "Fantastic Four: Rise of the Silver Surfer",
       "content": "Sau chiến thắng từ phần 1, những anh hùng thần tượng mới của nước Mỹ tìm cách cân bằng cuộc sống riêng và trọng trách bảo vệ người vô tội, Bộ tứ phải đối mặt với kẻ thù vô cùng hùng mạnh và người sứ giả kẻ lướt sóng bạc. Liệu những anh hùng có cứu được trái đất một lần nữa hay không?",
@@ -603,6 +689,8 @@
       "movie": ""
     },
     {
+      "view": 2526,
+      "like": 0,
       "id": "06182502-a1a1-48c3-b601-b671de4bfd2d",
       "title": "Fantastic Four 2015",
       "content": "Bộ tứ siêu đẳng 2015 xoay quanh sự hình thành của Bộ tứ siêu đẳng. Tiến sỹ vật lý trẻ Reed Richards cùng phi hành gia Ben Grimm, bạn gái cũ Susan Storm và anh chàng Johnny Storm tham gia vào một cuộc thử nghiệm ngoài vũ trụ. Khi trở về, họ phát hiện ra cơ thể mình đã bị biến đổi một cách kỳ lạ: Richards có thể kéo dài người như cao su, Susan Storm có thể trở nên vô hình và tạo ra một nguồn năng lượng làm lá chắn, Johnny Storm có khả năng tự bốc cháy và bay, còn Grimm trở thành một người đá với sức mạnh khủng khiếp.\n\nBộ tứ nay đã trở lại với phần reboot mới.",
@@ -617,6 +705,8 @@
       "movie": ""
     },
     {
+      "view": 95538,
+      "like": 0,
       "id": "a29f3730-72a5-4706-ae52-b46468ed192d",
       "title": "Fantastic Four",
       "content": "4 nhà khoa học tình cờ phải gánh trên minh trách nhiệm cứu thế giới khi có được những sức mạnh siêu nhiên. 4 con người với 4 tính cách khác nhau cùng những rắc rối riêng mình sẽ phải cùng sát cánh để chống lại tên ác nhân đang đe doạ hoà bình thế giới.\n\nTự dưng thành siêu nhân, phải làm thế nào?",
@@ -631,6 +721,8 @@
       "movie": ""
     },
     {
+      "view": 86829,
+      "like": 0,
       "id": "13c97510-0d6d-4b85-bdb6-817fceebc1f4",
       "title": "Hitman",
       "content": "Bộ phim Sát thủ đánh thuê được xây dựng dựa trên tựa game trên máy tính nổi tiếng về chàng sát thủ máu lạnh không có tên ngoại trừ mã vạch bí ẩn ở sau gáy. Nhiệm vụ ám sát lần này dẫn anh vào một cuộc phiêu lưu nhiều bí ẩn, nơi anh phải lòng một cô gái Nga, điều khiến anh thay đổi hoàn toàn trước nhiệm vụ sát hại bóng hồng này...\n\nDựa trên tựa game trên máy tính nổi tiếng về chàng sát thủ máu lạnh không có tên ngoại trừ mã vạch bí ẩn ở sau gáy.",
@@ -645,6 +737,8 @@
       "movie": ""
     },
     {
+      "view": 12620,
+      "like": 0,
       "id": "6f3616b1-01a0-43ff-9c14-4760571e9d71",
       "title": "Captain America: The Winter Soldier",
       "content": "Bộ phim là câu chuyện tiếp nối bộ phim The Avengers, khi Steve Rogers phải tìm cách hòa nhập vào thế giới hiện đại và kết hợp với Natasha Romanoff/Black Widow để chiến đấu chống lại một kẻ thù nguy hiểm ở Washington, D.C. Sau cuộc chiến cùng đội The Avengers tại New York, Captain America (hay còn gọi là Steve Rogers) có một cuộc sống khá thầm lặng tại Washington và anh phải vật lộn để thích nghi với cuộc sông ở thế giới hiện đại.\n\nTuy nhiên, khi một người bạn trong SHIELD bị rơi vào vòng nguy hiểm, anh đã bị kéo vào một âm mưu đen tối có thể phá hủy cả nhân loại. Cùng với Black Widow, anh phải ngăn cản âm mưu này đồng thời chiến đấu chống lại nhừng sát thủ chuyên nghiệp được cử tới để thủ tiêu mình. Cặp đôi Captain, Black Widow còn tranh thủ sự giúp đỡ từ người bạn mới, Falcon . Tuy nhiên,một kẻ thù vô cùng nguy hiểm và bí ẩn lúc này lại xuất hiện: The Winter Soldier (Chiến binh mùa Đông)",
@@ -659,6 +753,8 @@
       "movie": ""
     },
     {
+      "view": 86379,
+      "like": 0,
       "id": "dd3362eb-560c-4aa7-8b75-ea49d23b15e6",
       "title": "Noah",
       "content": "Dựa trên mẩu chuyện trong Kinh Thánh, khi Noah đóng con tàu để đưa vạn vật vượt qua cơn Đại hồng thủy gột rửa Trái Đất của Chúa Trời. Trong hành trình đặc biệt ấy, Noah cùng gia đình mình trải qua bao sợ hãi, niềm tin, sự hủy diệt, vinh quang, khó khăn để đóng một con thuyền khổng lồ. Noah cũng phải đối mặt với những mặt xấu, mặt tốt trong con người mình để đưa ra những quyết định.\n\nCâu hỏi và lời giải đáp vĩ đại về loài người.",
@@ -673,6 +769,8 @@
       "movie": ""
     },
     {
+      "view": 45438,
+      "like": 0,
       "id": "7629fb68-0677-4bda-89ae-9a548adc3b57",
       "title": "Death Race",
       "content": "Nữ quản giáo của nhà tù đưa ra một đề nghị dành cho Jensen hoặc là trở thành tay lái cho đội đua của bà ta trong cuộc đua xe hơi của những người tù ngay trong trại giam hoặc là sẽ chết dần chết mòn sau song sắt của nhà tù. Giấu khuôn mặt sau chiếc mặt nạ của tay đua huyền thoại Frankenstein, Jensen bắt đầu tham gia cuộc thử thách điên cuồng kéo dài trong 3 ngày. Cưỡi trên chiếc xe “quái vật” được trang bị súng máy, súng phun lửa và máy phóng lựu đạn, Jensen bước vào đường đua khốc liệt với những đối thủ là những tên tội phạm xấu xa nhất, anh cần phải chiến thắng để giành lấy tự do cho chính mình…\n\nHãy sẵn sàng cho một cuộc đua giữa cái sống và cái chết!",
@@ -687,6 +785,8 @@
       "movie": ""
     },
     {
+      "like": 0,
+      "view": 55725,
       "id": "da946d12-8b16-4aba-9888-3e1c5a73c802",
       "title": "Exodus: Gods and Kings",
       "content": "Exodus: Gods and Kings lấy ý tưởng chính từ một câu chuyện khác - cuộc đại chiến giữa dân tộc Do Thái và đế chế Ai Cập hùng mạnh của các Pharaoh. Nhân vật chính của bộ phim là người anh hùng vĩ đại trong lịch sử người Do Thái - Moses. Từ một đứa trẻ sống sót sau trận đại tàn sát của Pharaoh, Moses được giao sứ mệnh dẫn dắt những nô lệ người Do Thái thoát khỏi ách thống trị của đế chế Ai Cập, tìm đến miền đất hứa tự do, nhờ sự trợ giúp từ sứ giả của Chúa.\n\nCuộc đại chiến vĩ đại giữa dân tộc Do Thái và đế chế Ai Cập hùng mạnh.",
@@ -701,6 +801,8 @@
       "movie": ""
     },
     {
+      "view": 8608,
+      "like": 0,
       "id": "a049a6d2-f898-455e-94ff-ac0aed14f51e",
       "title": "Jurassic Park III",
       "content": "Câu chuyện phim Công Viên Khủng Long 3 về hòn đảo bí ẩn với loài Khủng Long vẫn thu hút rất nhiều người muốn khám phá về nó lần này là vợ chồng Kirby. Nhà Kirby sẵn sàng bỏ tiền tài trợ cho Nhà cổ sinh vật học Alan Grant để ông này có tiền tổ chức nghiên cứu trên đảo với điều kiện họ phải được tham gia Alan đồng ý đưa họ đi tham quan hòn đảo. Thật không may chiếc máy bay chở đoàn thám hiểm gặp trục trặc khi hạ cánh và hư hỏng hoàn toàn. Giữa khu rừng hoang sơ nhiều cạm bẫy, bọn họ phải chống chọi với lũ khủng long khát máu.",
@@ -715,6 +817,8 @@
       "movie": ""
     },
     {
+      "view": 44344,
+      "like": 0,
       "id": "aea499e7-6a5d-4681-8f9d-c74d7abef328",
       "title": "Infinite",
       "content": "Infinite (2021) là một bộ phim hành động khoa học viễn tưởng của Mỹ năm 2021 do Antoine Fuqua làm đạo diễn. Ian Shorr đã chuyển thể kịch bản và Todd Stein đã viết câu chuyện trên màn ảnh từ cuốn tiểu thuyết năm 2009 The Reincaacian Papers của D. Eric Maikranz.",
@@ -729,6 +833,8 @@
       "movie": ""
     },
     {
+      "view": 61590,
+      "like": 0,
       "id": "836f39a0-cb68-4b1a-8c3e-fbadee174962",
       "title": "The Djinn",
       "content": "Thần Djinn là bộ phim kể về câu chuyện của cậu bé 12 tuổi bị câm tên Dylan Jacobs. Sau cái chết của mẹ mình, cậu trở nên nhút nhát không thích giao tiếp với ai khác ngoài ba cậu. Dylan Jacobs tự nhốt mình trong nhà không tiếp xúc với thế giới bên ngoài, mãi cho đến khi Dylan tìm thấy một quyển sách cổ trong căn hộ mới. Vì tò mò, Dylan đã làm theo một nghi thức trong sách với mong muốn có thể thực hiện điều ước. Nhưng rất nhanh sau đó cậu nhóc nhận ra việc làm sai trái của mình, Dylan đã vô tình thả con quỷ dữ tên Djinn.",
@@ -743,6 +849,8 @@
       "movie": ""
     },
     {
+      "view": 79317,
+      "like": 0,
       "id": "dfc88227-9f59-463e-a3cc-9db99dd7ec2b",
       "title": "Mortal Kombat",
       "content": "Mortal Kombat: Cuộc Chiến Sinh Tử xoay quanh võ sĩ võ thuật tổng hợp Cole Young (Lewis Tan), người mang trên mình một vết chàm rồng đen bí ẩn - biểu tượng của Mortal Kombat. Cole Young không hề biết về dòng máu bí ẩn đang chảy trong người anh, hay vì sao anh lại bị tên sát thủ Sub-Zero (Joe Taslim) săn lùng. Vì sự an nguy của gia đình, Cole cùng với một nhóm những chiến binh đã được tuyển chọn để tham gia vào một trận chiến đẫm máu nhằm chống lại những kẻ thù đến từ Outworld.",
@@ -757,6 +865,8 @@
       "movie": ""
     },
     {
+      "view": 25549,
+      "like": 0,
       "id": "3a78c495-7305-450e-ab82-617a1eec5c18",
       "title": "The Mystic Nine",
       "content": "Cửu Môn kể về viên quan Trịnh Nham chết một cách kỳ lạ, Lục Tầm phát hiện ra vũ nữ Phong Như Nguyệt và người anh trai Phong Không Không có điểm đáng ngờ, Phong Không Không lại đột ngột mất tích. Căn cứ theo đầu mối tìm được, Lục Tầm cùng Đại Sơn và Như Nguyệt đi tới thành Hắc Trạch. Bọn họ vô tình cứu được Tiểu Đường, không ngờ bị Tiểu Đường uy hiếp ngược lại. Thì ra Phong Không Không cũng là bị Tiểu Đường bắt giữ, mục đích chính là làm nổ tung kinh thành. Lục Tầm vạch trần mưu kế sát hại Trịnh Nham của Phong Như Nguyệt và Phong Không Không. Như Nguyệt thẳng thắn cho biết cha mình bị Trịnh Nham hãm hại mà chết.",
@@ -771,6 +881,8 @@
       "movie": ""
     },
     {
+      "like": 0,
+      "view": 83614,
       "id": "a3e5dd99-cfe8-4966-a67f-cee72d210f29",
       "title": "The Conjuring: The Devil Made Me Do It",
       "content": "Khác với phong cách nhà ma ám trong hai phần phim trước, The Conjuring mùa mới mang đến tính hình sự sâu sắc hơn khi khai thác một trong những vụ án kinh điển của lịch sử toà án Mỹ. Đó là Arne Johnson, một kẻ sát nhân máu lạnh tới từ Brookfield mượn có bị quỷ ám để biện hộ cho tội ác đáng kinh tởm của mình. Trên thực tế, Arne đã bị buộc tội ngộ sát trong vụ xét xử năm 1981 và bị kết án 10 năm tù giam. Hắn đã được thả khoan hồng sau 5 năm cải tạo, và đến nay vẫn gây ra nhiều tranh cãi về sự bất công.",
@@ -785,6 +897,8 @@
       "movie": ""
     },
     {
+      "view": 98139,
+      "like": 0,
       "id": "884b9ba8-164c-4d40-8c9c-5b6804979dcd",
       "title": "Spiral: From The Book Of Saw",
       "content": "Saw 9 có nội dung đáng sợ và đen tối, được pha một chút hài hước, qua trailer, chúng ta sẽ nảy ra câu hỏi: Ai đứng sau những vụ giết người này, và có vẻ thám tử Ezekiel “Zeke” Banks do Chris Rock thủ vai sắp phát hiện ra sự thật khi khán giả thấy anh bị xích lại ở cuối đoạn trailer.",
@@ -799,6 +913,8 @@
       "movie": ""
     },
     {
+      "like": 1,
+      "view": 81591,
       "id": "00cae9eb-ed3c-4c7c-b232-bd7fa26a60b5",
       "title": "Recalled",
       "content": "Recalled 2021 nói về cô gái Soo Jin bi tai nạn giao thông rất nặng và đã bị mất trí nhớ tạm thời , lúc đấy cô bỗng có 1 siêu năng lực cô có thể thấy dc tương lai mọi thứ và cô phải bị stress khi biết dc nhiều thứ về người chồng của mình.",
@@ -813,6 +929,8 @@
       "movie": ""
     },
     {
+      "view": 89540,
+      "like": 0,
       "id": "8ddfde64-1381-49e3-a749-ac43948b9469",
       "title": "The Woman In The Window",
       "content": "Nội dung phim xoay quanh nhân vật Anna Fox, một người phụ nữ mắc bệnh rối loạn lo âu và rất hiếm khi ra ngoài đường phố. Cuộc sống của cô chỉ đơn giản xung quanh 4 bức tường của căn hộ tràn ngập cô đơn tại thành phố New York. Việc xem những thước phim cổ điển và quan sát hàng xóm từ cửa sổ chính là niềm vui duy nhất của Anna. Một ngày nọ, cô cảm thấy bị cuốn hút bởi sự xuất hiện của gia đình Russells ở căn hộ đối diện. Nhưng cũng từ đây, cuộc đời của Anna thay đổi chóng mặt và khiến cô phải đối mặt với nguy hiểm",
@@ -827,6 +945,8 @@
       "movie": ""
     },
     {
+      "view": 7439,
+      "like": 0,
       "id": "b6dfe238-4c92-4dc7-b520-dd6f6cb08232",
       "title": "Wrath Of Man",
       "content": "Wrath of Man là một bộ phim kinh dị hành động năm 2021 do Guy Ritchie đạo diễn, từ kịch bản do anh đồng viết với Ivan Atkinson và Marn Davies, và dựa trên bộ phim Cash Truck năm 2004 của Pháp do Nicolas Boukhrief thực hiện.",
@@ -841,6 +961,8 @@
       "movie": ""
     },
     {
+      "view": 491,
+      "like": 0,
       "id": "e040274f-86b9-4287-8194-fd84a59ade4b",
       "title": "Crisis",
       "content": "CUỘC KHỦNG HOẢNG – Crisis nói về chủ đề mua bán ma tuý của 1 nhóm tội phạm làm việc tại khu vực biên giới mỹ và canada, Phim dài 118 phút đầy kịch tính giữa các xung đột của 3 nhân vật chính, cô kiến trúc sư, tên tội phạm ma tuý và 1 nhà giáo sư nghiên cứu.",
@@ -855,6 +977,8 @@
       "movie": ""
     },
     {
+      "view": 95,
+      "like": 0,
       "id": "7fae19ff-5322-4717-aa00-64e8173cdfa9",
       "title": "The War of Werewolf",
       "content": "Lãng Tuấn - một thanh niên bình thường, vô tình bị thương trong lúc đi giao hàng, đã trở thành vật thí nghiệm của thế lực hắc ám “Tam Vũ Liên”. Sở hữu khả năng biến thành người sói, trong lúc trốn tránh sự truy đuổi của “Tam Vũ Liên”, Lãng Tuấn đã phát hiện ra sự thật về cái chết của cha mình…Vì để bảo vệ người mình yêu, cũng như lật đổ sự thống trị của thế lực hắc ám, người sói Lãng Tuấn đã bắt đầu hành trình chống lại…",
@@ -869,6 +993,8 @@
       "movie": ""
     },
     {
+      "view": 18,
+      "like": 0,
       "id": "2fde0558-4f02-42d5-83e8-41667b00a14c",
       "title": "Loki (Season 1)",
       "content": "Trước khi tìm hiểu về nội dung phim Loki (2021), các bạn hãy nhớ lại một trong những câu thoại kinh điển của Loki trong The Avengers: “Ta là Loki và ta đang gánh vác một sứ mệnh vẻ vang” tiếp tục được nhắc lại trong loạt phim riêng về nhân vật này. Câu hỏi được đặt ra là liệu đây là phiên bản Loki của dòng thời gian khác hay là một phiên bản Loki đang thực hiện nhiệm vụ cho TVA.\n\nGiải thích về TVA: Đây là tổ chức có mặt trên truyện tranh Marvel từ năm 1986, được lập ra để ngăn chặn những xáo trộn diễn ra trên dòng thời gian. Tổ chức này đưa ra một đề nghị cho Loki: hoặc là phải sửa chữa lại dòng thời gian, hoặc là bị cho \"bay màu\" vĩnh viễn.\n\nTiếp tục về phần nội dung phim Loki 2021, khán giả có thể hiểu ngắn gọn là bối cảnh phim diễn ra ngay sau bom tấn Avengers: Endgame (2019), ở một dòng thời gian khác, Loki đã đánh cắp được khối Tesseract và biến mất. Do vậy mà nội dung của Series Loki lần này sẽ theo dấu của Thần Lừa Lọc này - kẻ đã gây xáo trộn dòng thời gian chứ không phải là Loki bị Thanos giết chết như nhiều người nghĩ.",
@@ -883,6 +1009,8 @@
       "movie": ""
     },
     {
+      "view": 958,
+      "like": 0,
       "id": "376abc8a-7624-4e29-a305-1a0cc7dec1aa",
       "title": "Zack Snyder's Justice League",
       "content": "Để cái chết của Siêu Nhân không phí hoài, Người Dơi cùng Nữ thần Chiến binh lên kế hoạch chiêu mộ một nhóm người cường hóa để bảo vệ thế giới khỏi mối đe dọa khủng khiếp sắp tới.",
@@ -897,6 +1025,8 @@
       "movie": ""
     },
     {
+      "view": 313,
+      "like": 0,
       "id": "e90f37fa-fd09-491e-9158-e4b1a7464c89",
       "title": "Demon Slayer: Mugen Train",
       "content": "Kamado Tanjiro cùng quân đoàn Diệt quỷ đi cùng với Viêm trụ Rengoku Kyōjurō để điều tra những vụ mất tích đầy bí ẩn xay ra trên một chuyến tàu. Tuy nhiên, họ không biết rằng tại đây có một cái bẫy đang chờ đón họ.  Liệu kết cục sẽ như thế nào?",
@@ -911,6 +1041,8 @@
       "movie": ""
     },
     {
+      "view": 30,
+      "like": 0,
       "id": "4902709c-d7b4-432d-bc1d-a8e95a7a589a",
       "title": "New Gods: Nezha Reborn",
       "content": "Trong cuộc sống của một người giao hàng bình thường kiêm tín đồ đua xe, Na Tra chạm trán những kẻ thù cũ và phải tìm lại năng lực của mình để bảo vệ những người thân yêu.",
@@ -925,6 +1057,8 @@
       "movie": ""
     },
     {
+      "view": 693,
+      "like": 0,
       "id": "f4526283-dfde-4ad5-9d69-63c112681b31",
       "title": "Raya And The Last Dragon",
       "content": "Từ vương quốc Kumandra, một nữ chiến binh đơn độc đã hợp tác cùng 1 nhóm lạc quẻ trong thử thách tìm kiếm con rồng cuối cùng, tạo ra sự đoàn kết và mang ánh sáng đến vương quốc của họ 1 lần nữa.",
@@ -939,6 +1073,8 @@
       "movie": ""
     },
     {
+      "view": 527,
+      "like": 0,
       "id": "3f2a0768-d95a-4af7-9854-d32befa4fa6f",
       "title": "Wonder Woman 1984",
       "content": "Lấy bối cảnh năm 1984, 66 năm sau sự kiện diễn ra Thế Chiến thứ I (1918) ở phần phim đầu tiên, Wonder Woman tái hợp với người yêu tưởng chừng đã qua đời Steve Trevor, đồng thời đương đầu với hai kẻ thù mới là Max Lord và The Cheetah.",
@@ -953,6 +1089,8 @@
       "movie": ""
     },
     {
+      "view": 387,
+      "like": 0,
       "id": "3c0df195-aaa3-4ef7-a730-09b09a4a1477",
       "title": "Detective Dee: Solitary Skies Killer",
       "content": "Những bạn bè người thân xung quanh thiếu nữ đều chết một cách bất thường, là sao chổi xui xẻo ám thân hay có uẩn khúc gì bên trong, hãy cùng đón xem Địch Nhân Kiệt thông minh tài trí phá vụ án giết người liên hoàn này.",
@@ -967,6 +1105,8 @@
       "movie": ""
     },
     {
+      "view": 59,
+      "like": 0,
       "id": "332aa5f7-290f-4fa7-afad-a6720574c770",
       "title": "Skylines",
       "content": "Một loại virus xuất hiện, xâm nhập vào những người ngoài hành tinh đang sinh sống trên Trái Đất. Loại virus này khiến những sinh vật từ thân thiện trở nên hung hãn và chống lại con người. Đội trưởng Rose Corley phải lãnh đạo một đội lính đánh thuê tinh nhuệ, tham gia nhiệm vụ đến thế giới ngoài hành tinh để cứu những gì còn lại của nhân loại.",
@@ -981,6 +1121,8 @@
       "movie": ""
     },
     {
+      "like": 0,
+      "view": 905,
       "id": "c807b209-c329-420c-92a4-898557c309b3",
       "title": "Kaiji: Final Game",
       "content": "Kaiji (do Tatsuya Fujiwara thủ vai) sắp sửa đổi đời. Cảm giác hồi hộp vượt xa bất cứ điều gì mà hầu hết mọi người đã trải qua. Cuộc phiêu lưu không phải là không có rủi ro và nguy hiểm tuy nhiên …",
@@ -995,6 +1137,8 @@
       "movie": ""
     },
     {
+      "view": 657,
+      "like": 0,
       "id": "c7664a31-a0cc-4155-837b-8916f6702f60",
       "title": "Turu, the Wacky Hen",
       "content": "Sinh ra với sự khác biệt, cô gà mái Turu không thể đẻ trứng như các bạn gà mái khác và luôn mang trong lòng sự tự ti về bản thân. Cuộc đời của Turu bước sang một trang mới khi cô gà bé nhỏ được nhận nuôi bởi Isabel, một giáo viên âm nhạc đã nghỉ hưu. Quyết định chơi các bài hát với hy vọng rằng âm nhạc sẽ giúp Turu đẻ trứng, Isabel khám phá ra rằng cô gà của mình có thể hiểu được tiếng người và còn có một giọng hát vô cùng truyền cảm. Tai nạn không may khiến Isablel phải rời xa nông trang. Để gặp lại được Isabel, Turu sẽ trải qua một hành trình đặc biệt mà cô không hề ngờ tới.",
@@ -1009,6 +1153,8 @@
       "movie": ""
     },
     {
+      "view": 395,
+      "like": 0,
       "id": "37609795-983c-4a86-a021-dd616f396747",
       "title": "Sonic The Hedgehog",
       "content": "SONIC THE HEDGEHOG: Bộ phim xoay quanh về hành trình phiêu lưu của chú nhím huyền thoại Sonic và cảnh sát trưởng Tom Wachowski trong chuyến phiêu lưu đến San Francisco chống lại bác sĩ xấu xa Robotnik. Kể từ lần “debut” đầu tiên vào năm 1991 cho đến nay, những trò chơi về chú nhím xanh Sonic đến từ hãng Sega đã được bán ra hơn 360 triệu bản trên nhiều nền tảng và trở thành đối thủ trực tiếp với Mario của Nintendo. Được lấy cảm hứng từ nhân vật Sonic trong các trò chơi điện tử, bộ phim với sự pha trộn giữa thể loại live-action và công nghệ mô phỏng CGI đã mang chú nhím Sonic đến với đời thật một cách chân thực nhất để cùng khán giả trở lại tuổi thơ, đắm chìm trong một thế giới mới với những màn rượt đổi đầy tốc độ nhưng cũng không kém ...",
@@ -1023,6 +1169,8 @@
       "movie": ""
     },
     {
+      "view": 474,
+      "like": 0,
       "id": "e28643aa-a06f-4ab8-a1ea-cfde2781022d",
       "title": "Monster Hunter",
       "content": "Khi Lt. Artemis và những người lính trung thành của cô được đưa đến một thế giới mới, họ tham gia vào một cuộc chiến tuyệt vọng để sinh tồn chống lại những kẻ thù khổng lồ với sức mạnh đáng kinh ngạc. Phim truyện dựa trên trò chơi điện tử của Capcom. ",
@@ -1037,6 +1185,8 @@
       "movie": ""
     },
     {
+      "view": 15,
+      "like": 0,
       "id": "20a7b375-6c43-4343-97fa-9322dee31078",
       "title": "Killer Shark",
       "content": "Vài người bạn thân cùng nhau dùng du thuyền tư nhân rời bến dạo chơi. Không ngờ va phải đá ngầm, thuyền lật ngay giữa biển rộng, mọi người đều rơi xuống nước. Điều đáng sợ là cá mập đột biến gen đột nhiên tấn công! Nó không chỉ điên cuồng mà còn có kích thước cực lớn. Trôi dạt giữa biển lớn mênh mông, có thể rơi vào nguy hiểm bị cá mập tấn công bất kỳ lúc nào; họ còn phải đối diện với nguy cơ và thử thách lớn hơn thế.",
@@ -1051,6 +1201,8 @@
       "movie": ""
     },
     {
+      "view": 267,
+      "like": 0,
       "id": "1ef161cf-5c62-4ebb-9b0a-f161516cc4cf",
       "title": "Kitty Love: A Homage To Cats",
       "content": "Chú mèo nổi tiếng Abatutu mang đến màn tôn vinh loài mèo đầy hấp dẫn với hàng loạt khoảnh khắc đẹp và vui nhộn nhất của chúng qua một bộ sưu tập video gia đình.",
@@ -1065,6 +1217,8 @@
       "movie": ""
     },
     {
+      "view": 594,
+      "like": 0,
       "id": "023cc54a-2f0a-47f2-9c2d-d11b977a5b05",
       "title": "Army of the Dead",
       "content": "Đội Quân Người Chết là câu chuyện khi zombie lan tràn ở Las Vegas, một nhóm lính đánh thuê quyết định chơi canh bạc cuối khi mạo hiểm tiến vào khu cách ly để thực hiện vụ trộm lớn nhất từ trước đến nay.",
@@ -1079,6 +1233,8 @@
       "movie": ""
     },
     {
+      "view": 112,
+      "like": 0,
       "id": "6d7696b1-e94e-46d3-9349-41c4e32311ed",
       "title": "Kamen Rider Saber: The Phoenix Swordsman and the Book of Ruin",
       "content": "Kamen Rider Saber: Kiếm Sĩ Phượng Hoàng Và Phá Diệt Cổ Thư được biết đến là một bộ phim siêu anh hùng của Nhật Bản phục vụ là bộ phim chuyển thể từ Phim mùa đông của Kamen Rider Saber ",
@@ -1093,6 +1249,8 @@
       "movie": ""
     },
     {
+      "view": 671,
+      "like": 0,
       "id": "df481d8a-7286-4231-b6d7-fb56cd0db111",
       "title": "Morbius",
       "content": "Nhà sinh hóa học Michael Morbius cố gắng tự chữa khỏi căn bệnh máu hiếm, nhưng thay vào đó, anh lại vô tình tự lây nhiễm cho mình một dạng ma cà rồng.",
@@ -1107,6 +1265,8 @@
       "movie": ""
     },
     {
+      "view": 522,
+      "like": 0,
       "id": "a1b851f3-6059-47a3-9ecb-e365b72c4e73",
       "title": "Minions 2: The Rise of Gru",
       "content": "Câu chuyện chưa kể về ước mơ trở thành siêu tội phạm vĩ đại nhất thế giới của một cậu bé mười hai tuổi.",
@@ -1121,6 +1281,8 @@
       "movie": ""
     },
     {
+      "view": 233,
+      "like": 0,
       "id": "9f64e045-e48f-486e-9434-aff3b4b40824",
       "title": "Venom: Let There Be Carnage",
       "content": "Cốt truyện không xác định. Phần tiếp theo của bộ phim năm 2018 'Venom'.",
@@ -1135,6 +1297,8 @@
       "movie": ""
     },
     {
+      "view": 559,
+      "like": 0,
       "id": "546ef008-4291-4a37-896b-6d7c5c27f05a",
       "title": "Top Gun: Maverick",
       "content": "Sau hơn ba mươi năm phục vụ với tư cách là một trong những phi công hàng đầu của Hải quân, Pete Mitchell đã là nơi anh thuộc về, thúc đẩy phong cách như một phi công thử nghiệm can đảm và né tránh sự thăng tiến trong cấp bậc sẽ khiến anh ta khó khăn.",
@@ -1149,6 +1313,8 @@
       "movie": ""
     },
     {
+      "view": 156,
+      "like": 0,
       "id": "a0b148eb-1da7-4e07-8dd0-32966aca4d48",
       "title": "Fast & Furius 9: The Fast Saga",
       "content": "Cipher nhờ sự giúp đỡ của Jakob, em trai của Dom để trả thù Dom và nhóm của anh ta.",
@@ -1163,6 +1329,8 @@
       "movie": ""
     },
     {
+      "view": 500,
+      "like": 0,
       "id": "8ba5df58-b5f5-465c-8fb1-b7d314a911c8",
       "title": "The New Mutants",
       "content": "The New Mutants (Dị Nhân Thế Hệ Mới) là câu chuyện về năm dị nhân trẻ khám phá ra sức mạnh dị phàm của họ trong khi bị giam cầm ở một khu phức hợp. Họ phải chiến đấu để được tự do.",
@@ -1177,6 +1345,8 @@
       "movie": ""
     },
     {
+      "view": 652,
+      "like": 0,
       "id": "77119d59-25c2-4dc6-bade-df387a7dcf77",
       "title": "Black Widow",
       "content": "Một bộ phim về Natasha Romanoff trong các nhiệm vụ của cô giữa hai bộ phim Civil War và Infinity War.",
@@ -1191,6 +1361,8 @@
       "movie": ""
     },
     {
+      "view": 782,
+      "like": 0,
       "id": "a58bffac-daf6-499c-a850-ea68545841c7",
       "title": "No Time to Die",
       "content": "James Bond đã rời quân ngũ. Sự bình yên của anh chỉ tồn tại trong thời gian ngắn khi Felix Leiter, một người bạn cũ từ CIA, đến nhờ giúp đỡ, dẫn Bond vào dấu vết của một nhân vật phản diện bí ẩn được trang bị công nghệ mới nguy hiểm.",
@@ -1205,6 +1377,8 @@
       "movie": ""
     },
     {
+      "view": 497,
+      "like": 0,
       "id": "e909c1c3-11a0-4860-96c4-d4fc1ddb338e",
       "title": "Jungle Cruise",
       "content": "Dựa trên chuyến đi trong công viên giải trí của Disneyland, nơi một chiếc thuyền nhỏ trên sông đưa một nhóm du khách băng qua khu rừng rậm đầy động vật và loài bò sát nguy hiểm nhưng có yếu tố siêu nhiên.",
@@ -1219,6 +1393,8 @@
       "movie": ""
     },
     {
+      "view": 814,
+      "like": 0,
       "id": "02e44717-16db-44c1-a20c-4129aaa8b5a7",
       "title": "Ghostbusters: Afterlife",
       "content": "Khi một người mẹ đơn thân và hai đứa con của cô ấy đến một thị trấn nhỏ, họ bắt đầu khám phá ra mối liên hệ của mình với Ghostbusters gốc và di sản bí mật mà ông nội của họ để lại.",
@@ -1233,6 +1409,8 @@
       "movie": ""
     },
     {
+      "view": 1742,
+      "like": 0,
       "id": "a3d7cd20-8fad-4ba2-9bd9-d485b196ebb2",
       "title": "Rumble",
       "content": "Trong một thế giới mà đấu vật quái vật là một môn thể thao toàn cầu và quái vật là những vận động viên siêu sao, Winnie tuổi teen tìm cách tiếp bước cha mình bằng cách huấn luyện một con quái vật kém cỏi đáng yêu trở thành nhà vô địch.",
@@ -1249,15 +1427,16 @@
   ],
   "users": [
     {
+      "favor": [
+        "00cae9eb-ed3c-4c7c-b232-bd7fa26a60b5"
+      ],
       "id": "1",
       "role": "Admin",
       "firstName": "Babii",
       "lastName": "Boss'ss",
       "username": "a",
       "email": "a@sfsf",
-      "password": "a",
-      "active": true,
-      "verify": ""
+      "password": "a"
     },
     {
       "id": "71e7a24c-cd2b-4409-b641-b758eb23b2e0",

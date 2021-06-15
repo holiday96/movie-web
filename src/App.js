@@ -177,6 +177,42 @@ function App() {
     axios.post("/users", item).catch((e) => console.log(e));
   };
 
+  const updateViewCount = async (data) => {
+    const newData = {
+      view: data.view++,
+      ...data,
+    };
+    await axios
+      .put(`/movies/${newData.id}`, newData)
+      .catch((e) => console.log(e));
+  };
+
+  const increaseLikeCount = async (data) => {
+    console.log("like before: ", data.like);
+    const newData = {
+      like: data.like++,
+      ...data,
+    };
+    await axios
+      .put(`/movies/${newData.id}`, newData)
+      .catch((e) => console.log(e));
+    console.log("like after: ", newData.like);
+  };
+
+  const decreaseLikeCount = async (data) => {
+    if (data.like > 0) {
+      console.log("like before: ", data.like);
+      const newData = {
+        like: data.like--,
+        ...data,
+      };
+      await axios
+        .put(`/movies/${newData.id}`, newData)
+        .catch((e) => console.log(e));
+      console.log("like after: ", newData.like);
+    }
+  };
+
   return (
     <Routers
       movies={movies}
@@ -193,6 +229,9 @@ function App() {
       onEditUser={editUser}
       onRemoveUser={removeUser}
       onRegister={register}
+      updateViewCount={updateViewCount}
+      increaseLikeCount={increaseLikeCount}
+      decreaseLikeCount={decreaseLikeCount}
     />
   );
 }

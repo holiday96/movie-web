@@ -438,3 +438,41 @@ a:hover {
   line-height: normal !important;
   font-size: 15px;
 }
+
+/* movie-more-info */
+.movie-more-info {
+  margin-left: -7px;
+}
+
+.movie-view,
+.movie-like,
+.movie-star {
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+.movie-view-icon,
+.movie-like-icon {
+  margin: 0 4px;
+}
+
+.movie-view-text,
+.movie-like-text {
+  margin-top: 1px;
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.movie-like-icon {
+  color: red;
+}
+
+.movie-star {
+  margin-left: 3px;
+}
+
+.movie-star-icon {
+  margin-top: -3px;
+  color: #ff6500;
+}

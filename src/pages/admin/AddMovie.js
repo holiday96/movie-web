@@ -47,6 +47,7 @@ const AddMovie = ({ onAddMovie }) => {
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-floating input-movie">
+          <label htmlFor="title">Title</label>
           <input
             type="text"
             className="form-control"
@@ -59,9 +60,9 @@ const AddMovie = ({ onAddMovie }) => {
               Chưa nhập tiêu đề phim.
             </div>
           )}
-          <label htmlFor="title">Title</label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="content">Content</label>
           <textarea
             class="form-control"
             placeholder="Leave a comment here"
@@ -74,9 +75,11 @@ const AddMovie = ({ onAddMovie }) => {
               Chưa nhập nội dung phim.
             </div>
           )}
-          <label htmlFor="content">Content</label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="episodes" className="form-label">
+            Episodes
+          </label>
           <input
             type="number"
             className="form-control"
@@ -89,11 +92,11 @@ const AddMovie = ({ onAddMovie }) => {
               Chưa nhập số tập phim.
             </div>
           )}
-          <label htmlFor="episodes" className="form-label">
-            Episodes
-          </label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="runtime" className="form-label">
+            Runtime (.min)
+          </label>
           <input
             type="number"
             className="form-control"
@@ -106,11 +109,11 @@ const AddMovie = ({ onAddMovie }) => {
               Chưa nhập thời lượng phim.
             </div>
           )}
-          <label htmlFor="runtime" className="form-label">
-            Runtime (.min)
-          </label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="actor" className="form-label">
+            Actors
+          </label>
           <input
             type="text"
             className="form-control"
@@ -123,11 +126,11 @@ const AddMovie = ({ onAddMovie }) => {
               Chưa nhập tên diễn viên trong phim.
             </div>
           )}
-          <label htmlFor="actor" className="form-label">
-            Actors
-          </label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="country" className="form-label">
+            Country
+          </label>
           <input
             type="text"
             className="form-control"
@@ -140,11 +143,11 @@ const AddMovie = ({ onAddMovie }) => {
               Chưa nhập quốc gia phim.
             </div>
           )}
-          <label htmlFor="country" className="form-label">
-            Country
-          </label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="genre" className="form-label">
+            Genre
+          </label>
           <input
             type="text"
             className="form-control"
@@ -157,11 +160,11 @@ const AddMovie = ({ onAddMovie }) => {
               Chưa nhập thể loại phim.
             </div>
           )}
-          <label htmlFor="genre" className="form-label">
-            Genre
-          </label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="release" className="form-label">
+            Releases
+          </label>
           <input
             type="text"
             className="form-control"
@@ -174,11 +177,11 @@ const AddMovie = ({ onAddMovie }) => {
               Chưa nhập năm phát hành phim.
             </div>
           )}
-          <label htmlFor="release" className="form-label">
-            Releases
-          </label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="poster" className="form-label">
+            Poster (URL)
+          </label>
           <input
             type="text"
             className="form-control"
@@ -191,11 +194,11 @@ const AddMovie = ({ onAddMovie }) => {
               Chưa nhập ảnh bìa phim.
             </div>
           )}
-          <label htmlFor="poster" className="form-label">
-            Poster (URL)
-          </label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="trailer" className="form-label">
+            Trailer (URL)
+          </label>
           <input
             type="text"
             className="form-control"
@@ -208,11 +211,11 @@ const AddMovie = ({ onAddMovie }) => {
               Chưa nhập trailer phim.
             </div>
           )}
-          <label htmlFor="trailer" className="form-label">
-            Trailer (URL)
-          </label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="movie" className="form-label">
+            Link of Movie (URL)
+          </label>
           <input
             type="text"
             className="form-control"
@@ -220,11 +223,8 @@ const AddMovie = ({ onAddMovie }) => {
             placeholder="Link of Movie"
             {...register("movie")}
           />
-          <label htmlFor="movie" className="form-label">
-            Link of Movie (URL)
-          </label>
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary mt-3">
           Confirm
         </button>
       </form>

@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Carousel } from "3d-react-carousal";
+import { BsEyeFill } from "react-icons/bs";
+import { RiHeartsFill } from "react-icons/ri";
+import { ImStarFull, ImStarHalf, ImStarEmpty } from "react-icons/im";
 
 const WebPageContainer = styled(motion.div)`
   background-color: #111;
@@ -73,6 +76,7 @@ const WebHomePage = (props) => {
 
   useEffect(() => {
     getSlides(postArray);
+    window.scrollTo(0, 0);
   }, [postArray]);
 
   useEffect(() => {
@@ -99,10 +103,14 @@ const WebHomePage = (props) => {
               <motion.li
                 variants={item}
                 key={index}
-                className="film-item item mx-3"
+                className="film-item item mx-3 mt-4"
                 style={{ width: 180 }}
               >
-                <Link to={`/${movie.id}`} className="rounded">
+                <Link
+                  to={`/${movie.id}`}
+                  onClick={() => props.updateViewCount(movie)}
+                  className="rounded"
+                >
                   <img
                     src={movie.poster}
                     className="rounded"
@@ -111,10 +119,46 @@ const WebHomePage = (props) => {
                     alt=""
                   />
                 </Link>
+                <div
+                  key={index}
+                  to={`/${movie.id}`}
+                  className="d-flex text-warning movie-more-info"
+                >
+                  <div className="movie-view">
+                    <BsEyeFill className="movie-view-icon" />
+                    <span className="movie-view-text">
+                      {movie.view >= 1000
+                        ? (movie.view - (movie.view % 1000)) / 1000 +
+                          "." +
+                          ((movie.view % 1000) - (movie.view % 100)) / 100 +
+                          "K"
+                        : movie.view}
+                    </span>
+                  </div>
+                  <div className="movie-like">
+                    <RiHeartsFill className="movie-like-icon" />
+                    <span className="movie-like-text">
+                      {movie.like >= 1000
+                        ? (movie.like - (movie.like % 1000)) / 1000 +
+                          "." +
+                          ((movie.like % 1000) - (movie.like % 100)) / 100 +
+                          "K"
+                        : movie.like}
+                    </span>
+                  </div>
+                  <div className="movie-star">
+                    <ImStarFull className="movie-star-icon" />
+                    <ImStarFull className="movie-star-icon" />
+                    <ImStarFull className="movie-star-icon" />
+                    <ImStarHalf className="movie-star-icon" />
+                    <ImStarEmpty className="movie-star-icon" />
+                  </div>
+                </div>
                 <Link
                   key={index}
                   to={`/${movie.id}`}
-                  className="d-flex text-warning justify-content-center p-2 fs-5"
+                  onClick={() => props.updateViewCount(movie)}
+                  className="d-flex text-warning justify-content-center pb-2 fs-5"
                 >
                   <h3 className="movie-title">{movie.title}</h3>
                 </Link>

@@ -7,6 +7,9 @@ import { ImHeart, ImHeartBroken } from "react-icons/im";
 import { RiHeartAddFill } from "react-icons/ri";
 import Swal from "sweetalert2";
 import PropagateLoader from "react-spinners/PropagateLoader";
+import { BsEyeFill } from "react-icons/bs";
+import { RiHeartsFill } from "react-icons/ri";
+import { ImStarFull, ImStarHalf, ImStarEmpty } from "react-icons/im";
 
 const FilterContainer = styled.div`
   margin-top: 147px;
@@ -126,6 +129,7 @@ const FilterGenre = (props) => {
         title: "Added to your library successfully",
       });
       props.getUser();
+      props.increaseLikeCount(movie);
     }
   };
 
@@ -165,6 +169,7 @@ const FilterGenre = (props) => {
       title: "Removed from library successfully",
     });
     props.getUser();
+    props.decreaseLikeCount(movie);
   };
 
   useEffect(() => {
@@ -292,6 +297,14 @@ const FilterGenre = (props) => {
                         <td className="table-head">Releases</td>
                         <td className="table-value">{movie.releases}</td>
                       </tr>
+                      <tr>
+                        <td className="table-head">View</td>
+                        <td className="table-value">{movie.view}</td>
+                      </tr>
+                      <tr>
+                        <td className="table-head">Like</td>
+                        <td className="table-value">{movie.like}</td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -315,7 +328,11 @@ const FilterGenre = (props) => {
                   className="film-item item mx-3"
                   style={{ width: 180 }}
                 >
-                  <Link to={`/${movie.id}`} className="rounded">
+                  <Link
+                    to={`/${movie.id}`}
+                    onClick={() => props.updateViewCount(movie)}
+                    className="rounded"
+                  >
                     <img
                       src={movie.poster}
                       className="rounded"
@@ -324,9 +341,45 @@ const FilterGenre = (props) => {
                       alt=""
                     />
                   </Link>
+                  <div
+                    key={index}
+                    to={`/${movie.id}`}
+                    className="d-flex text-warning movie-more-info"
+                  >
+                    <div className="movie-view">
+                      <BsEyeFill className="movie-view-icon" />
+                      <span className="movie-view-text">
+                        {movie.view >= 1000
+                          ? (movie.view - (movie.view % 1000)) / 1000 +
+                            "." +
+                            ((movie.view % 1000) - (movie.view % 100)) / 100 +
+                            "K"
+                          : movie.view}
+                      </span>
+                    </div>
+                    <div className="movie-like">
+                      <RiHeartsFill className="movie-like-icon" />
+                      <span className="movie-like-text">
+                        {movie.like >= 1000
+                          ? (movie.like - (movie.like % 1000)) / 1000 +
+                            "." +
+                            ((movie.like % 1000) - (movie.like % 100)) / 100 +
+                            "K"
+                          : movie.like}
+                      </span>
+                    </div>
+                    <div className="movie-star">
+                      <ImStarFull className="movie-star-icon" />
+                      <ImStarFull className="movie-star-icon" />
+                      <ImStarFull className="movie-star-icon" />
+                      <ImStarHalf className="movie-star-icon" />
+                      <ImStarEmpty className="movie-star-icon" />
+                    </div>
+                  </div>
                   <Link
                     key={index}
                     to={`/${movie.id}`}
+                    onClick={() => props.updateViewCount(movie)}
                     className="d-flex text-warning justify-content-center p-2 fs-5"
                   >
                     <h3 className="movie-title">{movie.title}</h3>

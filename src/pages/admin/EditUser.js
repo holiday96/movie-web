@@ -59,6 +59,7 @@ const EditUser = ({ onEditUser }) => {
           <option value={"Admin"}>Admin</option>
         </select>
         <div className="form-floating input-movie">
+          <label htmlFor="role">Role</label>
           <input
             type="text"
             className="form-control"
@@ -72,9 +73,9 @@ const EditUser = ({ onEditUser }) => {
               Chưa nhập vai trò.
             </div>
           )}
-          <label htmlFor="role">Role</label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="firstName">Firstname</label>
           <input
             type="text"
             className="form-control"
@@ -83,9 +84,11 @@ const EditUser = ({ onEditUser }) => {
             defaultValue={user.firstName}
             {...register("firstName", {required: false})}
           ></input>
-          <label htmlFor="firstName">Firstname</label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="lastName" className="form-label">
+            Lastname
+          </label>
           <input
             type="text"
             className="form-control"
@@ -94,11 +97,11 @@ const EditUser = ({ onEditUser }) => {
             defaultValue={user.lastName}
             {...register("lastName")}
           />
-          <label htmlFor="lastName" className="form-label">
-            Lastname
-          </label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="username" className="form-label">
+            Username
+          </label>
           <input
             type="text"
             className="form-control"
@@ -112,11 +115,11 @@ const EditUser = ({ onEditUser }) => {
               Chưa nhập tên đăng nhập.
             </div>
           )}
-          <label htmlFor="username" className="form-label">
-            Username
-          </label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="email" className="form-label">
+            Email
+          </label>
           <input
             type="email"
             className="form-control"
@@ -130,11 +133,11 @@ const EditUser = ({ onEditUser }) => {
               Chưa nhập Email.
             </div>
           )}
-          <label htmlFor="email" className="form-label">
-            Email
-          </label>
         </div>
         <div className="form-floating input-movie">
+          <label htmlFor="password" className="form-label">
+            Password
+          </label>
           <input
             type="password"
             className="form-control"
@@ -148,11 +151,8 @@ const EditUser = ({ onEditUser }) => {
               Chưa nhập mật khẩu.
             </div>
           )}
-          <label htmlFor="password" className="form-label">
-            Password
-          </label>
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary mt-3">
           Confirm
         </button>
       </form>

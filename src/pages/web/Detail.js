@@ -102,6 +102,7 @@ const Detail = (props) => {
         icon: "success",
         title: "Added to your library successfully",
       });
+      props.increaseLikeCount(movie);
       props.getUser();
     }
   };
@@ -140,6 +141,7 @@ const Detail = (props) => {
       title: "Removed from library successfully",
     });
     props.getUser();
+    props.decreaseLikeCount(movie);
   };
 
   useEffect(() => {
@@ -242,6 +244,14 @@ const Detail = (props) => {
                 <tr>
                   <td className="table-head">Releases</td>
                   <td className="table-value">{movie.releases}</td>
+                </tr>
+                <tr>
+                  <td className="table-head">View</td>
+                  <td className="table-value">{movie.view}</td>
+                </tr>
+                <tr>
+                  <td className="table-head">Like</td>
+                  <td className="table-value">{movie.like}</td>
                 </tr>
               </tbody>
             </table>

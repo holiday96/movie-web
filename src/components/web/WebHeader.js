@@ -28,8 +28,8 @@ const WebHeader = (props) => {
     const { value: formValues } = await Swal.fire({
       title: "Profile",
       html:
-        `Firstname<input type="text" value="${props.user.firstName}" placeholder="Firstname" id="swal-input-firstName" class="swal2-input">` +
-        `Lastname<input type="text" value="${props.user.lastName}" placeholder="Lastname" id="swal-input-lastName" class="swal2-input">` +
+        `<input type="text" value="${props.user.firstName}" placeholder="Firstname" id="swal-input-firstName" class="swal2-input">` +
+        `<input type="text" value="${props.user.lastName}" placeholder="Lastname" id="swal-input-lastName" class="swal2-input">` +
         `<input type="text" value="${props.user.username}" placeholder="Username" id="swal-input-username" class="swal2-input">` +
         `<input type="email" disabled value="${props.user.email}" placeholder="Email" id="swal-input-email" class="swal2-input">`,
       focusConfirm: false,
@@ -42,15 +42,23 @@ const WebHeader = (props) => {
         ];
       },
     });
-    if (formValues[0] === "" || formValues[1] === "" || formValues[2] === "") {
-      Swal.fire({
-        icon: "error",
-        title: "Failed",
-        text: "Please fill all fields!",
-      });
-    } else {
-      Swal.fire("Nice work!", "Your profile has been updated!", "success").then(
-        () => {
+    if (formValues) {
+      if (
+        formValues[0] === "" ||
+        formValues[1] === "" ||
+        formValues[2] === ""
+      ) {
+        Swal.fire({
+          icon: "error",
+          title: "Failed",
+          text: "Please fill all fields!",
+        });
+      } else {
+        Swal.fire(
+          "Nice work!",
+          "Your profile has been updated!",
+          "success"
+        ).then(() => {
           const newData = {
             ...props.user,
             firstName: formValues[0],
@@ -59,11 +67,11 @@ const WebHeader = (props) => {
           };
           props.onEditUser(newData);
           props.setUser(newData);
-        }
-      );
-    }
-    if (formValues === 0) {
-      console.log(true);
+        });
+      }
+      if (formValues === 0) {
+        console.log(true);
+      }
     }
   };
 
@@ -83,42 +91,44 @@ const WebHeader = (props) => {
         ];
       },
     });
-    if (formValues[0] === "") {
-      Swal.fire({
-        icon: "info",
-        title: "Miss something??",
-        text: "Please type current password first!",
-      });
-    } else if (formValues[0] !== props.user.password) {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Current password incorrect!",
-      });
-    } else {
-      if (formValues[1] === "") {
+    if (formValues) {
+      if (formValues[0] === "") {
         Swal.fire({
           icon: "info",
-          title: "One more step??",
-          text: "Please type new password!",
+          title: "Miss something??",
+          text: "Please type current password first!",
         });
-      } else if (formValues[1] !== formValues[2]) {
+      } else if (formValues[0] !== props.user.password) {
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: "Confirm password incorrect!",
+          text: "Current password incorrect!",
         });
       } else {
-        Swal.fire("Nice work!", "Password has been changed!", "success").then(
-          () => {
-            const newData = {
-              ...props.user,
-              password: formValues[2],
-            };
-            props.onEditUser(newData);
-            props.setUser(newData);
-          }
-        );
+        if (formValues[1] === "") {
+          Swal.fire({
+            icon: "info",
+            title: "One more step??",
+            text: "Please type new password!",
+          });
+        } else if (formValues[1] !== formValues[2]) {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Confirm password incorrect!",
+          });
+        } else {
+          Swal.fire("Nice work!", "Password has been changed!", "success").then(
+            () => {
+              const newData = {
+                ...props.user,
+                password: formValues[2],
+              };
+              props.onEditUser(newData);
+              props.setUser(newData);
+            }
+          );
+        }
       }
     }
   };
