@@ -29,7 +29,7 @@ export const sendEmailReset = (user_email, to_name, link_verify) => {
     to_name: to_name,
     subject: "Reset Password Account from WaMo",
     message:
-      "We are honored that you choose our service. Please click on the link below to reset your password. ",
+      "We are honored that you choose our service. Please click on the link below to reset your password. Note that this link will expires in 15 minutes.",
     link_verify: link_verify,
   };
 

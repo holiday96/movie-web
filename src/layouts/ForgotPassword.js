@@ -3,9 +3,9 @@ import { NavLink, useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { axios } from "../axios";
 import Swal from "sweetalert2";
-import { v4 as uuidv4 } from "uuid";
 import { sendEmailReset } from "../utils/email";
 import env from "react-dotenv";
+import jwt from "jsonwebtoken";
 
 const ForgotPasswordLayout = () => {
   let history = useHistory();
@@ -35,7 +35,7 @@ const ForgotPasswordLayout = () => {
       } else {
         const newData = {
           ...res.data[0],
-          verify: uuidv4(),
+          verify: jwt.sign(res.data[0],'reset', {expiresIn: 900}), //in seconds
         };
         sendEmailReset(
           newData.email,

@@ -145,8 +145,8 @@
       "movie": ""
     },
     {
-      "view": 81487,
       "like": 0,
+      "view": 81487,
       "id": "86427ceb-d86d-4ad7-9c91-ebbedbea8e87",
       "title": "Anna",
       "content": "Ẩn sau vẻ đẹp thần bí của Anna là những kỹ năng chiến đấu vô cùng ấn tượng. Điều này biến cô trở thành một trong những sát thủ nguy hiểm nhất thế giới...",
@@ -1448,6 +1448,16 @@
       "password": "admin",
       "active": true,
       "verify": ""
+    },
+    {
+      "favor": [],
+      "id": "dbe6567d-3d5e-438e-98f8-1fc837e0babd",
+      "role": "User",
+      "firstName": "d",
+      "lastName": "d",
+      "username": "d",
+      "email": "ducbvph12717@fpt.edu.vn",
+      "password": "d"
     }
   ]
 }
