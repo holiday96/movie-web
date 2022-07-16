@@ -59,26 +59,14 @@ const Detail = (props) => {
         const newList = [id];
         const newData = {
           favor: newList,
-          id: props.user.id,
-          role: props.user.role,
-          firstName: props.user.firstName,
-          lastName: props.user.lastName,
-          username: props.user.username,
-          email: props.user.email,
-          password: props.user.password,
+          ...props.user
         };
         await axios.put(`/users/${props.user.id}`, newData);
       } else {
         props.user.favor.push(id);
         const newData = {
           favor: props.user.favor,
-          id: props.user.id,
-          role: props.user.role,
-          firstName: props.user.firstName,
-          lastName: props.user.lastName,
-          username: props.user.username,
-          email: props.user.email,
-          password: props.user.password,
+          ...props.user
         };
         await axios.put(`/users/${props.user.id}`, newData);
       }
@@ -118,6 +106,8 @@ const Detail = (props) => {
       username: props.user.username,
       email: props.user.email,
       password: props.user.password,
+      active: props.user.active,
+      verify: props.user.verify
     };
     await axios.put(`/users/${props.user.id}`, newData);
     const Toast = Swal.mixin({
